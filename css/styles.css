@@ -18,3 +18,6 @@ h1{
     margin-left: 350px;
     padding: 40px;
 }
+.imagen img{
+    width: 700px; height: 500px;
+  }
