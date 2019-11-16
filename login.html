@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.css">
 	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<!-- Custom fonts for this template-->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -22,18 +24,33 @@
 						<form class="form-signin">
 							<div class="form-label-group">
 								<h6>Correo electronico</h6>
-								<input type="email" id="inputEmail" class="form-control" required autofocus>
-								<label for="inputEmail"></label>
+								<div class="input-group flex-nowrap">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="addon-wrapping"><i
+												class="fas fa-user"></i></span>
+									</div>
+									<input type="email" id="inputEmail" class="form-control" required autofocus
+										style="border-radius: 0.3rem;">
+									<label for="inputEmail"></label>
+								</div>
 							</div>
 							<br>
 							<div class="form-label-group">
 								<h6>Contraseña</h6>
-								<input type="password" id="inputPassword" class="form-control" required>
-								<label for="inputPassword"></label>
+								<div class="input-group flex-nowrap">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="addon-wrapping"><i
+												class="fas fa-lock"></i></span>
+									</div>
+									<input type="password" id="inputPassword" class="form-control" required
+										style="border-radius: 0.3rem;">
+									<label for="inputPassword"></label>
+								</div>
 							</div>
 							<br>
-							<button class="btn btn-lg btn-warning btn-block text-uppercase" type="submit">Iniciar
-								sesión</button>
+							<button class="btn btn-lg btn-warning btn-block text-uppercase" type="submit">
+								Iniciar sesión
+							</button>
 						</form>
 					</div>
 				</div>

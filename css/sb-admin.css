@@ -11084,6 +11084,14 @@ body {
     .sidebar.toggled .nav-item.dropdown .dropdown-toggle::after {
         display: none;
     }
+    .sidebar.toggled .navbar-brand span {
+        font-size: 0.80rem;
+        margin-left: 10px;
+    }
+
+    .sidebar.toggled .nav-item img {
+      width: 50px;
+    }
 }
 
 .card-body-icon {
