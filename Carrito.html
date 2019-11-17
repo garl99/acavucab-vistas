@@ -7,18 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Carrito</title>
     <!-- Bootstrap CSS -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body>
 
     <!-- Logo de la pagina -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <a href="#" class="navbar-brand">
-            <img src="img/logo.jpeg" width="40" height="40" class="d-inline-block align-top" alt="">
-            ACAVUCAB
+            <img src="img/ARTESANALES_opt.png" width="50" height="50" class="d-inline-block align-top" alt="">
+            <a class="navbar-brand text-white text-center" href="#">
+                <span><h5>ACAVUCAB</h5></span>
+            </a>
         </a>
 
         <!-- Navbar -->
@@ -38,16 +42,18 @@
                     <a href="#" class="nav-link">Cliente</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#"><img src="img/carrito.png" width="30" height="30"
+                    <a class="nav-link" href="/Carrito.html"><img src="img/carrito.png" width="30" height="30"
                             class="d-inline-block align-top" alt="">
-                        </i> </a>
+                        </i>
+                    </a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <!-- Titulo -->
-    <div class="container py-3">
+    <div class="container mt-3 py-3">
+        <br><br><br>
         <h1 class="text-center">Carrito de compras</h1>
     </div>
 
@@ -163,20 +169,21 @@
                 <h5>TOTAL= Bs.S 10000</h5>
 
                 <div class="py-5">
-                    <button type="button" class="btn btn-primary btn-sm btn-block">Proceso de pago</button>
+                    <button type="button" class="btn btn-warning btn-sm btn-block">Proceso de pago</button>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!--FOOTER-->
-    <footer class="text-center bg-dark text-white py-2">
-        <p> Copyright &copy; 2019-2020</p>
+    <footer class="text-center text-white py-2 mt-3">
+        <p> Copyright &copy; ACAVUCAB 2019-2020 <i class="fab fa-instagram ml-3"></i> <i
+                class="fab fa-twitter ml-3"></i> <i class="fab fa-google ml-3"></i></p>
     </footer>
 
-
-
+    <!-- Bootstrap core JavaScript-->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
 </body>
 
 </html>
