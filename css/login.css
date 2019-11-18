@@ -60,14 +60,6 @@ body {
   margin-bottom: 1rem;
 }
 
-<<<<<<< HEAD
-.form-label-group input {
-  height: auto;
-  border-radius: 15px;
-}
-
-=======
->>>>>>> a0cab9067904eefa1a11a7b8991e070350b25fb2
 .form-label-group>input,
 .form-label-group>label {
   padding: var(--input-padding-y) var(--input-padding-x);

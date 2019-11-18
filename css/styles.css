@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-html, body {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-
-=======
->>>>>>> a0cab9067904eefa1a11a7b8991e070350b25fb2
 footer {
     background-color: rgb(42, 41, 40);
     position: relative;
@@ -23,14 +13,8 @@ footer {
 .navbar{
     background-color: rgb(42,41,40);
     height: 60px;
-<<<<<<< HEAD
   }
   
-h1{
-=======
-}
-
->>>>>>> a0cab9067904eefa1a11a7b8991e070350b25fb2
 
 .navbar-nav .nav-item .nav-link {
     color: white;
