@@ -331,8 +331,8 @@ Create table vacacion(
 
 Create table horario(
 	id 				serial			not null,
-	hora_entrada	date 			not null,
-	hora_salida		date 			not null,
+	hora_entrada	timestamp			not null,
+	hora_salida		timestamp			not null,
 	CONSTRAINT PK_id_horario PRIMARY KEY (id)
 );
 
@@ -422,7 +422,7 @@ Create table proveedor_evento(
 	CONSTRAINT FK_fk_proveedor_proveedor_evento FOREIGN KEY(fk_proveedor) REFERENCES proveedor(id)
 ); 
 
-Create table status(
+Create table status (
 	id 		serial		not null,
 	nombre varchar(20)	not null,
 	CONSTRAINT PK_id_status PRIMARY KEY(id)

@@ -18,6 +18,8 @@ Insert INTO presupuesto(fecha, total_presupuesto, fk_clienten, fk_clientej) valu
 
 Insert INTO ale(descripcion) values('cerveza muy fuerte');
 
+INSERT INTO lager (descripcion) values ('muy buena');
+
 Insert INTO caracteristica(densidad_inicial, densidad_final, ibus, nivel_alcohol, color) values(12, 14, 10, 2, 20);
 
 Insert INTO tipo_cerveza(nombre, descripcion, fk_caracteristica, fk_ale, fk_lager) values('invento', 'descripcion de cerveza',
@@ -50,4 +52,74 @@ Insert INTO entrada(fk_evento, fk_persona, numero_entrada, fk_efectivo, fk_tarje
 			fk_clienten, fk_clientej, fk_tiendaf, fk_tiendao, fecha_compra, precio) values(1, 1, 1010, 1, 2, 1, 1, 1, 1, 1,
 			 1, 1, '20-10-2020', 1000000 );
 
+INSERT INTO venta (numero_factura,fecha, total_pagar,fk_clienteN,fk_clienteJ, fk_tiendaO ,fk_tiendaF) values ('11111','27-11-2019 7:00:00', 100000, 1,0, 1,0);
+
+INSERT INTO pedido (descripción, fk_venta) values ('Cervezas artesanales', 1);
+
+INSERT INTO pago (fk_venta,fk_efectivo,fk_tarjetaC,fk_tarjetaD,fk_punto,fk_cheque, monto_total	) values (1,1,0,0,0,0,1000000);
+
+Insert INTO departamento (tipo_departamento,fk_tiendaF ) values ( 'DTI', 1);
+
+Insert INTO empleado(cedula, nombre, apellido , salario, fk_departamento) values ( 11111, 'alberto', 'perez', 12000, 1);
+
+Insert INTO cargo ( nombre) values ('jefe');
+
+INSERT INTO vacacion (descripcion) values ('vacaciones colectivas');
+
+INSERT INTO horario (hora_entrada, hora_salida) values ('27-11-2019 8:00:00', '27-11-2019 17:00:00');
+
+INSERT INTO empleado_vacacion (	fk_empleado, fk_vacacion, fecha_inicio , fecha_final , pagada) values (1, 1, '27-11-2019', '29-11-2019',1 );
+
+INSERT INTO empleado_cargo (fk_empleado , fk_cargo, fecha_inicio, fecha_fin) values (1, 1, '12-12-2007', '12-03-2018');
+
+INSERT INTO empleado_horario (fk_empleado1, fk_empleado2, fk_horario, fecha) values (1, 1, 1, '27-11-2019 9:00:00');
+
+INSERT INTO  beneficio (nombre, descripcion) values ( 'Bono', 'Bono vacacional');
+
+INSERT INTO beneficio_empleado (fk_beneficio, fk_empleado) values (1,1);
+
+INSERT INTO diario (fecha_emision, fk_empleado ) values ('27-11-2019 11:00:00', 1);
+
 Insert INTO correo_electronico(nombre, dominio, fk_clienten) values('angel', 'angelito', 1);
+
+INSERT INTO usuario (contraseña,fk_correoE) values ('1234', 1);
+
+INSERT INTO proveedor_evento (fk_evento, fk_proveedor) values (1, 1);
+
+INSERT INTO status (nombre) values ('Listo'); 
+
+INSERT INTO ingrediente (nombre) values ('alcohol'); 
+
+INSERT INTO pasillo (numero_pasillo, zona_pasillo, capacidad_anaqueles ,fk_tiendaF) values (8, 1, 100000, 1);
+
+INSERT INTO anaquel (numero_anaquel,capacidad, numero_repisas , fk_pasillo1, fk_pasillo2) values (8, 100000, 4,1,1);
+
+INSERT INTO tipoCerveza_ingrediente (fk_tipoC, fk_ingrediente,cantidad_ingrediente) values (1,1,100);
+
+INSERT INTO pedido_status (fk_pedido,fk_status ,fecha_status, fk_empleado) values (1,1,'27-11-2019 10:00:00', 1);
+
+INSERT INTO permiso (nombre, descripcion) values ('Completo', 'Acceso a toda la informacion');
+
+INSERT INTO rol (nombre) values ('Administrador');
+
+INSERT INTO rol_permiso (fk_rol, fk_permiso) values (1,1);
+
+INSERT INTO usuario_rol (fk_rol , fk_usuario) values (1, 1);
+
+INSERT INTO cerveza (nombre, precio_unitario, fk_tipoC) values ('Pale Ale', 100000, 1);
+
+INSERT INTO detalle_factura (fk_cerveza, fk_venta,cantidad_cervezas) values (1, 1, 4); 
+
+INSERT INTO compra (fk_cerveza,fk_proveedor, cantidad_cervezas, fecha_compra,fk_efectivo ) values (1,1,5, '27-11-2019 9:00:00', 1);
+
+INSERT INTO inventario (cantidad_total,fk_tiendaO,	fk_tiendaF,fk_venta1,fk_venta2,fk_compra1, fk_compra2) values (4,1,1,1,1,1,1);
+
+INSERT INTO detalle_presupuesto (fk_cerveza, fk_presupuesto, cantidad_cervezas) values (1,1,8);
+
+INSERT INTO cerveza_anaquel (fk_cerveza,fk_anaquel,cantidad_cervezas) values (1,1, 800);
+
+INSERT INTO sistema_reposicion(fk_anaquel, fk_empleado, fecha_reposicion, cantidad_repuesta,  fk_cerveza ) values (1,1,'28-11-2019 4:00:00', 10000,1);
+
+INSERT INTO detalle_diario (fk_cerveza,fk_diario, porcentaje_descuento, precio_unitario_descuento) values (1,1, 0.70, 10000);
+
+
