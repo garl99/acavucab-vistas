@@ -259,14 +259,14 @@ Create table entrada(
 );
 
 Create table venta(
-	numero_factura 		numeric(8)	not null,
+	id 					numeric(8)	not null, /*VIENE SIENDO NUMERO_ENTRADA*/
 	fecha 				timestamp   not null,
 	total_pagar			numeric(15)	not null,
 	fk_clienteN 		integer 	not null,
 	fk_clienteJ 		integer 	not null,
 	fk_tiendaO 			integer 	not null,
 	fk_tiendaF			integer 	not null,
-	CONSTRAINT PK_numero_factura_venta PRIMARY KEY(numero_factura),
+	CONSTRAINT PK_numero_factura_venta PRIMARY KEY(id),
 	CONSTRAINT FK_fk_clienteN_venta FOREIGN KEY(fk_clienteN) REFERENCES cliente_natural(id),
 	CONSTRAINT FK_fk_clienteJ_venta FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
 	CONSTRAINT FK_fk_tiendaO_venta FOREIGN KEY(fk_tiendaO) REFERENCES tienda_online(id),
@@ -275,10 +275,10 @@ Create table venta(
 
 Create table pedido(
 	id 					serial			not null,
-	descripción 		varchar(255)	not null,
+	descripcion 		varchar(255)	not null,
 	fk_venta 			numeric(8)		not null,
 	CONSTRAINT PK_id_pedido PRIMARY KEY(id),
-	CONSTRAINT FK_fk_venta_pedido FOREIGN KEY(fk_venta) REFERENCES venta(numero_factura)
+	CONSTRAINT FK_fk_venta_pedido FOREIGN KEY(fk_venta) REFERENCES venta(id)
 );
 
 Create table pago(
@@ -290,7 +290,7 @@ Create table pago(
 	fk_cheque 			integer,
 	monto_total			bigint(15)	not null,
 	CONSTRAINT PK_fk_venta_pago PRIMARY KEY(fk_venta),
-	CONSTRAINT FK_fk_venta_pago FOREIGN KEY(fk_venta) REFERENCES venta(numero_factura),
+	CONSTRAINT FK_fk_venta_pago FOREIGN KEY(fk_venta) REFERENCES venta(id),
 	CONSTRAINT FK_fk_efectivo_pago FOREIGN KEY(fk_efectivo) REFERENCES efectivo(id),
 	CONSTRAINT FK_fk_tarjetaC_pago FOREIGN KEY(fk_tarjetaC) REFERENCES tarjeta_credito(id),
 	CONSTRAINT FK_fk_tarjetaD_pago FOREIGN KEY(fk_tarjetaD) REFERENCES tarjeta_debito(id),
@@ -325,12 +325,12 @@ Create table cargo(
 
 Create table vacacion(
 	id 					serial			not null,
-	descripcion 		varchar(20) 	not null,
+	descripcion 		varchar(65) 	not null,
 	CONSTRAINT PK_id_vacacion PRIMARY KEY(id)
 );
 
 Create table horario(
-	id 				serial			not null,
+	id 				serial				not null,
 	hora_entrada	timestamp			not null,
 	hora_salida		timestamp			not null,
 	CONSTRAINT PK_id_horario PRIMARY KEY (id)
@@ -437,7 +437,7 @@ Create table ingrediente(
 Create table pasillo(
 	numero_pasillo 				numeric(8)	not null  unique,
 	zona_pasillo 				numeric(8)	not null  unique,
-	capacidad_anaqueles 		numeric(5)	not null,
+	capacidad_anaqueles 		numeric(8)	not null,
 	fk_tiendaF 					integer 	not null,
 	CONSTRAINT PK_id_pasillo PRIMARY KEY(numero_pasillo, zona_pasillo),
 	CONSTRAINT FK_fk_tiendaF_pasillo FOREIGN KEY(fk_tiendaF) REFERENCES tienda_fisica(id)
@@ -513,12 +513,12 @@ Create table cerveza(
 );
 
 Create table detalle_factura(
-	fk_cerveza 				integer		not null  unique,
+	fk_cerveza 				integer			not null  unique,
 	fk_venta 				numeric(8)		not null  unique,
 	cantidad_cervezas		numeric(7)		not null,
 	CONSTRAINT PK_id_detalle_factura PRIMARY KEY(fk_cerveza, fk_venta),
 	CONSTRAINT FK_fk_cerveza_detalle_factura FOREIGN KEY(fk_cerveza) REFERENCES cerveza(id),
-	CONSTRAINT FK_fk_venta_detalle_factura FOREIGN KEY(fk_venta) REFERENCES venta(numero_factura)
+	CONSTRAINT FK_fk_venta_detalle_factura FOREIGN KEY(fk_venta) REFERENCES venta(id)
 );
 
 Create table compra(
