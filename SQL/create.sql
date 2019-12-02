@@ -2,9 +2,9 @@ Create database ACAVUCAB;
 
 
 Create table lugar(
-	id  	serial			not null, 
-	nombre	varchar(20)		not null,
-	tipo	varchar(10)		not null,
+	id  	integer			not null, 
+	nombre	varchar(100)		not null,
+	tipo	varchar(100)		not null,
 	fk_lugar integer,
 	CONSTRAINT PK_id_lugar PRIMARY KEY (id),
 	CONSTRAINT FK_fk_lugar_lugar FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
@@ -172,8 +172,8 @@ Create table telefono(
 
 Create table efectivo(
 	id 						serial			not null,
-	cantidad_divisa 		bigint(10) 		not null,
-	cantidad_bolivares 		bigint(10)		not null,
+	cantidad_divisa 		float(10) 		not null,
+	cantidad_bolivares 		float(10)		not null,
 	fk_clienteN 			integer			not null,
 	fk_clienteJ				integer			not null,
 	CONSTRAINT PK_id_efectivo PRIMARY KEY(id),
@@ -221,7 +221,7 @@ Create table cheque(
 
 Create table valor_divisa(
 	id 							serial		not null,
-	precio_unitario_bs 			bigint(15)	not null,
+	precio_unitario_bs 			float(15)	not null,
 	fecha_inicio 				timestamp	not null,
 	fecha_final 				timestamp,
 	fk_efectivo					integer 	not null,
@@ -243,7 +243,7 @@ Create table entrada(
 	fk_tiendaF 			integer 	not null,
 	fk_tiendaO 			integer 	not null,
 	fecha_compra		timestamp	not null,
-	precio 				bigint(15)	not null,
+	precio 				float(15)	not null,
 	CONSTRAINT PK_id_entrada PRIMARY KEY(fk_evento, fk_persona, numero_entrada),
 	CONSTRAINT FK_fk_evento_entrada FOREIGN KEY(fk_evento) REFERENCES evento(id),
 	CONSTRAINT FK_fk_persona_entrada FOREIGN KEY(fk_persona) REFERENCES persona(id),
@@ -288,7 +288,7 @@ Create table pago(
 	fk_tarjetaD 		integer,
 	fk_punto 			integer,
 	fk_cheque 			integer,
-	monto_total			bigint(15)	not null,
+	monto_total			float(15)	not null,
 	CONSTRAINT PK_fk_venta_pago PRIMARY KEY(fk_venta),
 	CONSTRAINT FK_fk_venta_pago FOREIGN KEY(fk_venta) REFERENCES venta(id),
 	CONSTRAINT FK_fk_efectivo_pago FOREIGN KEY(fk_efectivo) REFERENCES efectivo(id),
