@@ -266,7 +266,7 @@ Create table venta(
 	fk_clienteJ 		integer 	not null,
 	fk_tiendaO 			integer 	not null,
 	fk_tiendaF			integer 	not null,
-	CONSTRAINT PK_numero_factura_venta PRIMARY KEY(id),
+	CONSTRAINT PK_id_venta PRIMARY KEY(id),
 	CONSTRAINT FK_fk_clienteN_venta FOREIGN KEY(fk_clienteN) REFERENCES cliente_natural(id),
 	CONSTRAINT FK_fk_clienteJ_venta FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
 	CONSTRAINT FK_fk_tiendaO_venta FOREIGN KEY(fk_tiendaO) REFERENCES tienda_online(id),
@@ -393,12 +393,12 @@ Create table diario(
 
 Create table correo_electronico(
 	id 					serial		not null,
-	nombre 				varchar(20)	not null,
+	correo 				varchar(80)	not null,
 	dominio 			varchar(10)	not null,
-	fk_clienteN 		integer 	not null,
-	fk_clienteJ 		integer 	not null,
-	fk_empleado 		integer  	not null,
-	fk_proveedor 		integer  	not null,
+	fk_clienteN 		integer,
+	fk_clienteJ 		integer,
+	fk_empleado 		integer,
+	fk_proveedor 		integer,
 	CONSTRAINT PK_id_correo_electronico PRIMARY KEY(id),
 	CONSTRAINT fk_clienteN_correo_electronico FOREIGN KEY(fk_clienteN) REFERENCES cliente_natural(id),
 	CONSTRAINT fk_clienteJ_correo_electronico FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
@@ -435,11 +435,12 @@ Create table ingrediente(
 );
 
 Create table pasillo(
+	id 							integer 	not null /*VIENE SIENDO LA UNION ENTRE NUMERO PASILLO Y ZONA PASILLO*/
 	numero_pasillo 				numeric(8)	not null  unique,
 	zona_pasillo 				numeric(8)	not null  unique,
 	capacidad_anaqueles 		numeric(8)	not null,
 	fk_tiendaF 					integer 	not null,
-	CONSTRAINT PK_id_pasillo PRIMARY KEY(numero_pasillo, zona_pasillo),
+	CONSTRAINT PK_id_pasillo PRIMARY KEY(id),
 	CONSTRAINT FK_fk_tiendaF_pasillo FOREIGN KEY(fk_tiendaF) REFERENCES tienda_fisica(id)
 );
 
@@ -448,10 +449,10 @@ Create table anaquel(
 	capacidad 			numeric(5)	not null,
 	numero_repisas 		numeric(3)	not null,
 	fk_pasillo1			numeric(8)	not null,
-	fk_pasillo2			numeric(8) 	not null,
+	/*fk_pasillo2			numeric(8) 	not null,*/
 	CONSTRAINT PK_numero_anaquel_anaquel PRIMARY KEY(numero_anaquel),
-	CONSTRAINT FK_fk_pasillo1 FOREIGN KEY(fk_pasillo1)	REFERENCES pasillo(numero_pasillo),
-	CONSTRAINT FK_fk_pasillo2 FOREIGN KEY(fk_pasillo2)	REFERENCES pasillo(zona_pasillo)
+	CONSTRAINT FK_fk_pasillo FOREIGN KEY(fk_pasillo)	REFERENCES pasillo(id),
+	/*CONSTRAINT FK_fk_pasillo2 FOREIGN KEY(fk_pasillo2)	REFERENCES pasillo(zona_pasillo)*/
 );
 
 Create table tipoCerveza_ingrediente(

@@ -77,7 +77,8 @@ INSERT INTO empleado_vacacion (	fk_empleado, fk_vacacion, fecha_inicio , fecha_f
 
 INSERT INTO empleado_cargo (fk_empleado , fk_cargo, fecha_inicio, fecha_fin) values (1, 1, '12-12-2007', '12-03-2018');
 
-INSERT INTO empleado_horario (fk_empleado1, fk_empleado2, fk_horario, fecha) values (1, 1, 1, '27-11-2019 9:00:00');
+INSERT INTO empleado_horario (fk_empleado1, fk_empleado2, fk_horario, fecha) 
+			values (1, 1, 1, '27-11-2019 9:00:00'); /*FALTA INSERT*/
 
 INSERT INTO  beneficio (nombre, descripcion) values ( 'Bono', 'Bono vacacional');
 
@@ -85,7 +86,7 @@ INSERT INTO beneficio_empleado (fk_beneficio, fk_empleado) values (1,1);
 
 INSERT INTO diario (fecha_emision, fk_empleado ) values ('27-11-2019 11:00:00', 1);
 
-Insert INTO correo_electronico(nombre, dominio, fk_clienten, fk_clientej, fk_empleado, fk_proveedor) 
+Insert INTO correo_electronico(correo, dominio, fk_clienten, fk_clientej, fk_empleado, fk_proveedor) 
 			values('angel', 'angelito', 3, 4, 1, 3);
 
 INSERT INTO usuario (contraseña,fk_correoE) values ('1234', 1);
@@ -98,7 +99,7 @@ INSERT INTO ingrediente (nombre) values ('alcohol');
 
 INSERT INTO pasillo (numero_pasillo, zona_pasillo, capacidad_anaqueles ,fk_tiendaF) values (8, 1, 1000, 2);
 
-INSERT INTO anaquel (numero_anaquel,capacidad, numero_repisas , fk_pasillo1, fk_pasillo2) values (8, 100000, 4,1,1);
+INSERT INTO anaquel (numero_anaquel,capacidad, numero_repisas , fk_pasillo1, fk_pasillo2) values (8, 100000, 4,1,1); /*FALTA INSERT*/
 
 INSERT INTO tipoCerveza_ingrediente (fk_tipoC, fk_ingrediente,cantidad_ingrediente) values (4,1,100);
 
@@ -112,21 +113,25 @@ INSERT INTO rol_permiso (fk_rol, fk_permiso) values (1,1);
 
 INSERT INTO usuario_rol (fk_rol , fk_usuario) values (1, 1);
 
-INSERT INTO cerveza (nombre, precio_unitario, fk_tipoC) values ('Pale Ale', 100000, 1);
+INSERT INTO cerveza (nombre, precio_unitario, fk_tipoC) values ('Pale Ale', 100000, 4);
 
-INSERT INTO detalle_factura (fk_cerveza, fk_venta,cantidad_cervezas) values (1, 1, 4); 
+INSERT INTO detalle_factura (fk_cerveza, fk_venta,cantidad_cervezas) values (3, 11111, 4); 
 
-INSERT INTO compra (fk_cerveza,fk_proveedor, cantidad_cervezas, fecha_compra,fk_efectivo ) values (1,1,5, '27-11-2019 9:00:00', 1);
+INSERT INTO compra (fk_cerveza,fk_proveedor, cantidad_cervezas, fecha_compra,fk_efectivo ) 
+			values (3,3,5, '27-11-2019 9:00:00', 2);
 
-INSERT INTO inventario (cantidad_total,fk_tiendaO,	fk_tiendaF,fk_venta1,fk_venta2,fk_compra1, fk_compra2) values (4,1,1,1,1,1,1);
+INSERT INTO inventario (cantidad_total,fk_tiendaO,	fk_tiendaF,fk_venta1,fk_venta2,fk_compra1, fk_compra2) 
+			values (4,1,1,1,1,1,1); /*FALTA ESTE INSERT*/
 
-INSERT INTO detalle_presupuesto (fk_cerveza, fk_presupuesto, cantidad_cervezas) values (1,1,8);
+INSERT INTO detalle_presupuesto (fk_cerveza, fk_presupuesto, cantidad_cervezas) values (3,3,8);
 
-INSERT INTO cerveza_anaquel (fk_cerveza,fk_anaquel,cantidad_cervezas) values (1,1, 800);
+INSERT INTO cerveza_anaquel (fk_cerveza,fk_anaquel,cantidad_cervezas) values (1,1, 800); /*FALTA INSERT*/
 
-INSERT INTO sistema_reposicion(fk_anaquel, fk_empleado, fecha_reposicion, cantidad_repuesta,  fk_cerveza ) values (1,1,'28-11-2019 4:00:00', 10000,1);
+INSERT INTO sistema_reposicion(fk_anaquel, fk_empleado, fecha_reposicion, cantidad_repuesta,  fk_cerveza ) 
+			values (1,1,'28-11-2019 4:00:00', 10000,1); /*FALTA INSERT*/
 
-INSERT INTO detalle_diario (fk_cerveza,fk_diario, porcentaje_descuento, precio_unitario_descuento) values (1,1, 0.70, 10000);
+INSERT INTO detalle_diario (fk_cerveza,fk_diario, porcentaje_descuento, precio_unitario_descuento) 
+			values (3,1, 0.70, 10000);
 
 
 
