@@ -27,8 +27,8 @@ Create table  evento(
 Create table proveedor(
 	id 							serial			not null,
 	rif							numeric(10)		not null,
-	denomi_comercial 			varchar(50)		not null,
-	razon_social				varchar(50)		not null,
+	denomi_comercial 			varchar(60)		not null,
+	razon_social				varchar(60)		not null,
 	fecha_afiliacion_inicial	date 			not null,
 	fecha_afiliacion_final		date,
 	direccion_fiscal			varchar(100)		not null,
@@ -133,10 +133,8 @@ Create table tipo_cerveza(
 	nombre 					varchar(20)		not null,
 	descripcion				varchar(255)	not null,
 	fk_caracteristica		integer			not null,
-	fk_ale 					integer			not null,
-	fk_lager 				integer 		not null,
-	created_at					timestamp,
-	updated_at 					timestamp,
+	fk_ale 					integer,
+	fk_lager 				integer,
 	CONSTRAINT PK_id_tipo_cerveza 	PRIMARY KEY(id),
 	CONSTRAINT FK_fk_caracteristica_tipo_cerveza  FOREIGN KEY(fk_caracteristica) REFERENCES caracteristica(id),	
 	CONSTRAINT FK_fk_ale_tipo_cerveza  FOREIGN KEY(fk_ale) REFERENCES ale(id),
@@ -313,6 +311,7 @@ Create table venta(
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_numero_factura_venta PRIMARY KEY(id),
+	CONSTRAINT PK_id_venta PRIMARY KEY(id),
 	CONSTRAINT FK_fk_clienteN_venta FOREIGN KEY(fk_clienteN) REFERENCES cliente_natural(id),
 	CONSTRAINT FK_fk_clienteJ_venta FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
 	CONSTRAINT FK_fk_tiendaO_venta FOREIGN KEY(fk_tiendaO) REFERENCES tienda_online(id),
@@ -531,12 +530,12 @@ Create table anaquel(
 	capacidad 			numeric(5)	not null,
 	numero_repisas 		numeric(3)	not null,
 	fk_pasillo1			numeric(8)	not null,
-	--fk_pasillo2			numeric(8) 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
+	/*fk_pasillo2			numeric(8) 	not null,*/
 	CONSTRAINT PK_numero_anaquel_anaquel PRIMARY KEY(numero_anaquel),
-	CONSTRAINT FK_fk_pasillo1 FOREIGN KEY(fk_pasillo1)	REFERENCES pasillo(numero_pasillo),
-	--CONSTRAINT FK_fk_pasillo2 FOREIGN KEY(fk_pasillo2)	REFERENCES pasillo(zona_pasillo)
+	CONSTRAINT FK_fk_pasillo FOREIGN KEY(fk_pasillo)	REFERENCES pasillo(id),
+	/*CONSTRAINT FK_fk_pasillo2 FOREIGN KEY(fk_pasillo2)	REFERENCES pasillo(zona_pasillo)*/
 );
 
 Create table tipoCerveza_ingrediente(
@@ -602,7 +601,7 @@ Create table usuario_rol(
 
 Create table cerveza(
 	id 						serial			not null,
-	nombre 					varchar(20)		not null,
+	nombre 					varchar(40)		not null,
 	precio_unitario 		float(15)		not null,			
 	fk_tipoC 				integer 		not null,
 	created_at					timestamp,
