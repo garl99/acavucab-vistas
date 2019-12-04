@@ -113,7 +113,7 @@ INSERT INTO rol_permiso (fk_rol, fk_permiso) values (1,1);
 
 INSERT INTO usuario_rol (fk_rol , fk_usuario) values (1, 1);
 
-INSERT INTO cerveza (nombre, precio_unitario, fk_tipoC) values ('Pale Ale', 100000, 4);
+INSERT INTO cerveza (nombre, precio_unitario, fk_tipoC, fk_inventario) values ('Pale Ale', 100000, 4,1);
 
 INSERT INTO detalle_factura (fk_cerveza, fk_venta,cantidad_cervezas) values (3, 11111, 4); 
 

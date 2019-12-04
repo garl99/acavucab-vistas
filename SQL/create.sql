@@ -23,8 +23,8 @@ Create table  evento(
 Create table proveedor(
 	id 							serial			not null,
 	rif							numeric(10)		not null,
-	denomi_comercial 			varchar(20)		not null,
-	razon_social				varchar(20)		not null,
+	denomi_comercial 			varchar(60)		not null,
+	razon_social				varchar(60)		not null,
 	fecha_afiliacion_inicial	date 			not null,
 	fecha_afiliacion_final		date,
 	direccion_fiscal			varchar(50)		not null,
@@ -113,8 +113,8 @@ Create table tipo_cerveza(
 	nombre 					varchar(20)		not null,
 	descripcion				varchar(255)	not null,
 	fk_caracteristica		integer			not null,
-	fk_ale 					integer			not null,
-	fk_lager 				integer 		not null,
+	fk_ale 					integer,
+	fk_lager 				integer,
 	CONSTRAINT PK_id_tipo_cerveza 	PRIMARY KEY(id),
 	CONSTRAINT FK_fk_caracteristica_tipo_cerveza  FOREIGN KEY(fk_caracteristica) REFERENCES caracteristica(id),	
 	CONSTRAINT FK_fk_ale_tipo_cerveza  FOREIGN KEY(fk_ale) REFERENCES ale(id),
@@ -506,7 +506,7 @@ Create table usuario_rol(
 
 Create table cerveza(
 	id 						serial			not null,
-	nombre 					varchar(20)		not null,
+	nombre 					varchar(40)		not null,
 	precio_unitario 		float(15)		not null,			
 	fk_tipoC 				integer 		not null,
 	CONSTRAINT PK_id_cerveza PRIMARY KEY(id),
