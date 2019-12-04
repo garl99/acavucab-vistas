@@ -515,7 +515,7 @@ Create table ingrediente(
 );
 
 Create table pasillo(
-	id 							integer 	not null /*VIENE SIENDO LA UNION ENTRE NUMERO PASILLO Y ZONA PASILLO*/
+	id 							integer 	not null, /*VIENE SIENDO LA UNION ENTRE NUMERO PASILLO Y ZONA PASILLO*/
 	numero_pasillo 				numeric(8)	not null  unique,
 	zona_pasillo 				numeric(8)	not null  unique,
 	capacidad_anaqueles 		numeric(8)	not null,
@@ -535,7 +535,7 @@ Create table anaquel(
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_numero_anaquel_anaquel PRIMARY KEY(numero_anaquel),
-	CONSTRAINT FK_fk_pasillo1 FOREIGN KEY(fk_pasillo1)	REFERENCES pasillo(numero_pasillo),
+	CONSTRAINT FK_fk_pasillo1 FOREIGN KEY(fk_pasillo1)	REFERENCES pasillo(numero_pasillo)
 	--CONSTRAINT FK_fk_pasillo2 FOREIGN KEY(fk_pasillo2)	REFERENCES pasillo(zona_pasillo)
 );
 
