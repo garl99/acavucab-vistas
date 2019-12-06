@@ -112,4 +112,8 @@ Drop table sistema_reposicion Cascade;
 
 Drop table detalle_diario Cascade;
 
+Drop table comentario Cascade;
+
+Drop table comentario_tipo_cerveza Cascade;
+
 Drop database ACAVUCAB;
