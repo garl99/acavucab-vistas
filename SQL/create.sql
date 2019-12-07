@@ -498,7 +498,6 @@ Create table diario(
 Create table correo_electronico(
 	id 					serial		not null,
 	correo 				varchar(80)	not null,
-	dominio 			varchar(30)	not null,
 	fk_clienteN 		integer,
 	fk_clienteJ 		integer,
 	fk_empleado 		integer,
