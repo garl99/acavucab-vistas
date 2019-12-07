@@ -51,12 +51,15 @@ Create table cliente_juridico(
 	razon_social		varchar(20)				not null,
 	capital_social 		float(15)				not null,
 	direccion_fiscal	varchar(100)			not null,
+	direccion_fisica	varchar(100)			not null,
 	pagina_web			varchar(50)				not null,
 	fk_lugar 			integer 				not null,
+	fk_lugar2 			integer 				not null,
 	created_at			timestamp,
 	updated_at 			timestamp,
 	CONSTRAINT PK_id_cliente_juridico PRIMARY KEY(id),
-	CONSTRAINT Fk_fk_lugar_cliente_juridico FOREIGN KEY(fk_lugar) REFERENCES lugar(id)
+	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id),
 ); 
 
 Create table persona(
@@ -190,18 +193,19 @@ Create table movimiento_punto(
 
 Create table proveedor(
 	id 							serial					not null,
-	rif							numeric(10)		unique not null,
+	rif							numeric(10)		unique 	not null,
 	denomi_comercial 			varchar(60)				not null,
 	razon_social				varchar(60)				not null,
-	/*fecha_afiliacion_inicial	date 					not null,*/
-	/*fecha_afiliacion_final		date,*/
 	direccion_fiscal			varchar(100)			not null,
+	direccion_fisica			varchar(100)			not null,
 	pagina_web					varchar(50)				not null,
 	fk_lugar 					integer		 			not null, 
+	fk_lugar2 					integer		 			not null, 
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_proveedor PRIMARY KEY (id),
-	CONSTRAINT FK_fk_lugar_proveedor FOREIGN KEY(fk_lugar) REFERENCES lugar(id)
+	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id),
 );
 
 Create table cuota_afiliacion(
@@ -348,7 +352,6 @@ Create table venta(
 	fk_tiendaF			integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
-	/*CONSTRAINT PK_numero_factura_venta PRIMARY KEY(id),*/
 	CONSTRAINT PK_id_venta PRIMARY KEY(id),
 	CONSTRAINT FK_fk_clienteN_venta FOREIGN KEY(fk_clienteN) REFERENCES cliente_natural(id),
 	CONSTRAINT FK_fk_clienteJ_venta FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
