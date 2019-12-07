@@ -2,7 +2,7 @@ Create database ACAVUCAB2;
 
 
 Create table lugar(
-	id  	integer				not null, 
+	id  	serial				not null, 
 	nombre	varchar(100)		not null,
 	tipo	varchar(100)		not null,
 	fk_lugar integer,
