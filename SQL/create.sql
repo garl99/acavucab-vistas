@@ -26,23 +26,6 @@ Create table  evento(
 	CONSTRAINT FK_fk_lugar_evento FOREIGN KEY(fk_lugar) REFERENCES lugar(id)
 );
 
-Create table proveedor(
-	id 							serial					not null,
-	rif							numeric(10)		unique not null,
-	denomi_comercial 			varchar(60)				not null,
-	razon_social				varchar(60)				not null,
-	/*fecha_afiliacion_inicial	date 					not null,*/
-	/*fecha_afiliacion_final		date,*/
-	direccion_fiscal			varchar(100)			not null,
-	pagina_web					varchar(50)				not null,
-	fk_lugar 					integer		 			not null, 
-	fk_cuota_afiliacion 		integer 				not null,
-	created_at					timestamp,
-	updated_at 					timestamp,
-	CONSTRAINT PK_id_proveedor PRIMARY KEY (id),
-	CONSTRAINT FK_fk_lugar_proveedor FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT FK_fk_cuota_afiliacion_pago_cuota FOREIGN KEY(fk_cuota_afiliacion) REFERENCES cuota_afiliacion(id)
-);
 
 Create table cliente_natural(
 	id 					serial					not null,
@@ -203,6 +186,34 @@ Create table movimiento_punto(
 	CONSTRAINT FK_fk_historico_movimiento_punto FOREIGN KEY(fk_historico) REFERENCES historico_punto(id),
 	CONSTRAINT FK_fk_clienteN_movimiento_punto FOREIGN KEY(fk_clienteN) REFERENCES cliente_natural(id),
 	CONSTRAINT FK_fk_clienteJ_movimiento_punto FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id)
+);
+
+Create table proveedor(
+	id 							serial					not null,
+	rif							numeric(10)		unique not null,
+	denomi_comercial 			varchar(60)				not null,
+	razon_social				varchar(60)				not null,
+	/*fecha_afiliacion_inicial	date 					not null,*/
+	/*fecha_afiliacion_final		date,*/
+	direccion_fiscal			varchar(100)			not null,
+	pagina_web					varchar(50)				not null,
+	fk_lugar 					integer		 			not null, 
+	created_at					timestamp,
+	updated_at 					timestamp,
+	CONSTRAINT PK_id_proveedor PRIMARY KEY (id),
+	CONSTRAINT FK_fk_lugar_proveedor FOREIGN KEY(fk_lugar) REFERENCES lugar(id)
+);
+
+Create table cuota_afiliacion(
+	id 				serial 		not null,
+	monto_total 	timestamp 	not null,
+	fecha_inicio 	timestamp	not null, 
+	fecha_final 	timestamp 	not null,
+	fk_proveedor 	integer 	not null,
+	created_at					timestamp,
+	updated_at 					timestamp,
+	CONSTRAINT PK_id_cuota_afiliacion PRIMARY KEY(id),
+	CONSTRAINT FK_fk_proveedor_cuota_afiliacion FOREIGN KEY(fk_proveedor) REFERENCES proveedor(id)
 );
 
 Create table telefono(
@@ -742,7 +753,7 @@ Create table inventario(
 	fk_venta 				integer,
 	fk_compra 				integer,
 	fk_cerveza 				integer,
-	fk_cerveza_en_evento 	integer,    not null,
+	fk_cerveza_en_evento 	integer    not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_inventario PRIMARY KEY(id),
@@ -773,17 +784,6 @@ Create table comentario_tipo_cerveza(
 	CONSTRAINT FK_fk_comentario FOREIGN KEY(fk_comentario) REFERENCES comentario(id)
 );
 
-Create table cuota_afiliacion(
-	id 				serial 		not null,
-	monto_total 	timestamp 	not null,
-	fecha_inicio 	timestamp	not null, 
-	fecha_final 	timestamp 	not null,
-	fk_proveedor 	integer 	not null,
-	created_at					timestamp,
-	updated_at 					timestamp,
-	CONSTRAINT PK_id_cuota_afiliacion PRIMARY KEY(id),
-	CONSTRAINT FK_fk_proveedor_cuota_afiliacion FOREIGN KEY(fk_proveedor) REFERENCES proveedor(id)
-);
 
 Create table pago_cuota(
 	id 							serial 			not null,
