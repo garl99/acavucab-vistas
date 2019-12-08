@@ -2,7 +2,7 @@ Create database ACAVUCAB2;
 
 
 Create table lugar(
-	id  	serial				not null, 
+	id  	integer				not null, 
 	nombre	varchar(100)		not null,
 	tipo	varchar(100)		not null,
 	fk_lugar integer,
@@ -59,7 +59,7 @@ Create table cliente_juridico(
 	updated_at 			timestamp,
 	CONSTRAINT PK_id_cliente_juridico PRIMARY KEY(id),
 	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
 ); 
 
 Create table persona(
@@ -90,7 +90,6 @@ Create table presupuesto(
 Create table caracteristica(
 	id 						serial			not null,
 	nombre 					varchar(60)		not null,
-	descripcion				varchar(255)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_caracteristica PRIMARY KEY(id)
@@ -99,7 +98,6 @@ Create table caracteristica(
 Create table tipo_cerveza(		/*Hubo cambios aqui*/
 	id 						serial			not null,
 	nombre 					varchar(20)		not null,
-	descripcion				varchar(255)	not null,
 	fk_tipoC 				integer, 
 	created_at				timestamp,
 	updated_at 				timestamp,
@@ -143,8 +141,8 @@ Create table tienda_fisica(
 Create table punto(
 	id 						serial		not null,
 	puntos_canjeados 		numeric(10)	not null,
-	fk_clienteN 			integer		not null,
-	fk_clienteJ				integer 	not null,
+	fk_clienteN 			integer,
+	fk_clienteJ				integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_punto PRIMARY KEY(id),
@@ -205,12 +203,12 @@ Create table proveedor(
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_proveedor PRIMARY KEY (id),
 	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
 );
 
 Create table cuota_afiliacion(
 	id 				serial 		not null,
-	monto_total 	timestamp 	not null,
+	monto_total 	float(10) 	not null,
 	fecha_inicio 	timestamp	not null, 
 	fecha_final 	timestamp 	not null,
 	fk_proveedor 	integer 	not null,
@@ -241,8 +239,8 @@ Create table efectivo(
 	id 						serial			not null,
 	cantidad_divisa 		float(10) 		not null,
 	cantidad_bolivares 		float(10)		not null,
-	fk_clienteN 			integer			not null,
-	fk_clienteJ				integer			not null,
+	fk_clienteN 			integer,
+	fk_clienteJ				integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_efectivo PRIMARY KEY(id),
@@ -256,8 +254,8 @@ Create table tarjeta_credito(
 	num_tarjeta 			numeric(19)	unique	not null,
 	fecha_vencimiento 		date 				not null,
 	cvv 					numeric(3)			not null,
-	fk_clienteN 			integer 			not null,
-	fk_clienteJ 			integer 			not null,
+	fk_clienteN 			integer,
+	fk_clienteJ 			integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_tarjeta_credito PRIMARY KEY(id),
@@ -271,8 +269,8 @@ Create table tarjeta_debito(
 	num_tarjeta 			numeric(19)	unique 	not null,
 	fecha_vencimiento 		date 				not null,
 	cvv 					numeric(3)			not null,
-	fk_clienteN 			integer 			not null,
-	fk_clienteJ 			integer 			not null,
+	fk_clienteN 			integer,
+	fk_clienteJ 			integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_tarjeta_debito PRIMARY KEY(id),
@@ -285,8 +283,8 @@ Create table cheque(
 	num_cta					numeric(20)	not null,
 	num_cheque				numeric(20)	not null, /*REVISA AQUI el numero de cheque*/
 	banco 					varchar(30)	not null,
-	fk_clienteN 			integer 	not null,
-	fk_clienteJ 			integer 	not null,
+	fk_clienteN 			integer,
+	fk_clienteJ 			integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_cheque PRIMARY KEY(id),
@@ -684,7 +682,7 @@ Create table detalle_presupuesto(
 	fk_cerveza 				integer 	not null,
 	fk_presupuesto 			integer 	not null,
 	cantidad_cervezas		numeric(8)	not null,
-	precio 					float(10)	not null,
+	precio_unitario 		float(10)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_detalle_presupuesto PRIMARY KEY(id),
