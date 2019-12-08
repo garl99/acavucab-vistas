@@ -1,4 +1,4 @@
-Insert INTO lugar(nombre, tipo, fk_lugar) values('sucre', 'Parroquia', null);
+﻿Insert INTO lugar(nombre, tipo, fk_lugar) values('Sucre', 'Parroquia', null);
 
 Insert INTO evento(nombre, descripcion, fk_lugar) values ('Octoberfest', 'cerveza en octubre', 1);
 

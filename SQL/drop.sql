@@ -12,10 +12,6 @@ Drop table persona Cascade;
 
 Drop table presupuesto Cascade;
 
-Drop table ale Cascade;
-
-Drop table lager Cascade;
-
 Drop table caracteristica Cascade;
 
 Drop table tipo_cerveza Cascade;
@@ -43,8 +39,6 @@ Drop table valor_divisa Cascade;
 Drop table entrada Cascade;
 
 Drop table venta Cascade;
-
-Drop table pedido Cascade;
 
 Drop table pago Cascade;
 
@@ -86,15 +80,11 @@ Drop table anaquel Cascade;
 
 Drop table tipoCerveza_ingrediente Cascade;
 
-Drop table pedido_status Cascade;
-
 Drop table permiso Cascade;
 
 Drop table rol Cascade;
 
 Drop table rol_permiso Cascade;
-
-Drop table usuario_rol Cascade;
 
 Drop table cerveza Cascade;
 
@@ -116,4 +106,24 @@ Drop table comentario Cascade;
 
 Drop table comentario_tipo_cerveza Cascade;
 
+Drop table asistencia Cascade;
+
+Drop table cerveza_en_evento Cascade;
+
+Drop table cuota_afiliacion Cascade;
+
+Drop table detalle_compra Cascade;
+
+Drop table historico_divisa Cascade;
+
+Drop table historico_punto Cascade;
+
+Drop table movimiento_punto Cascade;
+
+Drop table pago_cuota Cascade;
+
+Drop table tipo_cerveza_caracteristica Cascade;
+
+Drop table venta_status Cascade;
+	
 Drop database ACAVUCAB;
