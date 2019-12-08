@@ -14,7 +14,7 @@ Insert INTO cliente_juridico(rif, cantidad_puntos, denomi_comercial, razon_socia
 
 Insert INTO persona(cedula, nombre, apellido, fk_clientej) values('122334', 'Gabriel', 'Romero', 4);
 
-Insert INTO presupuesto(fecha, total_presupuesto, fk_clienten, fk_clientej) values('02-02-2019', 100000, 3, 4);
+Insert INTO presupuesto(fecha, total_presupuesto, fk_clienten, fk_clientej) values('05-02-2019', 100000, 3, 4);
 
 Insert INTO ale(descripcion) values('cerveza muy fuerte');
 

@@ -59,7 +59,7 @@ Create table cliente_juridico(
 	updated_at 			timestamp,
 	CONSTRAINT PK_id_cliente_juridico PRIMARY KEY(id),
 	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
 ); 
 
 Create table persona(
@@ -164,8 +164,6 @@ Create table valor_punto(
 
 Create table historico_punto(
 	id 					serial    not null,
-	/*fecha_inicio 		timestamp not null,*/
-	/*fecha_final 		timestamp not null,*/
 	fk_valor_punto 		integer   not null,
 	fk_punto 			integer   not null,
 	created_at					timestamp,
@@ -205,7 +203,7 @@ Create table proveedor(
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_proveedor PRIMARY KEY (id),
 	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
 );
 
 Create table cuota_afiliacion(
@@ -684,7 +682,7 @@ Create table detalle_presupuesto(
 	fk_cerveza 				integer 	not null,
 	fk_presupuesto 			integer 	not null,
 	cantidad_cervezas		numeric(8)	not null,
-	precio 					float(10)	not null,
+	precio_unitario 		float(10)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_detalle_presupuesto PRIMARY KEY(id),
