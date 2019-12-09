@@ -114,7 +114,7 @@ Create table tipo_cerveza_caracteristica(		/*Hubo cambios aqui*/
 	valor 					integer,
 	created_at				timestamp,
 	updated_at 				timestamp,	
-	CONSTRAINT PK_id_tipo_cerveza_caracteristica PRIMARY KEY(fk_tipoC),  
+	CONSTRAINT PK_id_tipo_cerveza_caracteristica PRIMARY KEY(id),  
 	CONSTRAINT FK_fk_tipoC_tipo_cerveza_caracteristica FOREIGN KEY(fk_tipoC) REFERENCES tipo_cerveza(id),
 	CONSTRAINT FK_fk_caracteristica_tipo_cerveza_caracteristica FOREIGN KEY(fk_caracteristica) REFERENCES caracteristica(id)
 
@@ -202,8 +202,8 @@ Create table proveedor(
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_proveedor PRIMARY KEY (id),
-	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
+	CONSTRAINT Fk_fk_lugar_proveedor FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_lugar2_proveedor FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
 );
 
 Create table cuota_afiliacion(
@@ -747,7 +747,8 @@ Create table detalle_compra(
 
 Create table inventario(
 	id 						serial		not null, 
-	cantidad_total 			numeric(8)	not null,
+	cantidad_inicial 		numeric(8)	not null,
+	cantidad_actual 		numeric(8)	not null,
 	fk_tiendaO 				integer,
 	fk_tiendaF 				integer,
 	fk_venta 				integer,
