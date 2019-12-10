@@ -58,8 +58,8 @@ Create table cliente_juridico(
 	created_at			timestamp,
 	updated_at 			timestamp,
 	CONSTRAINT PK_id_cliente_juridico PRIMARY KEY(id),
-	CONSTRAINT Fk_fk_direccion_fisica FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT Fk_fk_direccion_fiscal FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
+	CONSTRAINT Fk_fk_lugar_cliente_juridico FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
+	CONSTRAINT Fk_fk_lugar2_cliente_juridico FOREIGN KEY(fk_lugar2) REFERENCES lugar(id)
 ); 
 
 Create table persona(
@@ -98,6 +98,7 @@ Create table caracteristica(
 Create table tipo_cerveza(		/*Hubo cambios aqui*/
 	id 						serial			not null,
 	nombre 					varchar(20)		not null,
+	historia 	 			varchar(300)	not null,
 	fk_tipoC 				integer, 
 	created_at				timestamp,
 	updated_at 				timestamp,
@@ -132,6 +133,7 @@ Create table tienda_fisica(
 	id 							serial		not null,
 	nombre 						varchar(60)	not null,
 	fk_lugar 					integer 	not null,
+	direccion_fisica 			varchar(100) not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_tienda_fisica PRIMARY KEY(id),
@@ -616,7 +618,7 @@ Create table rol_permiso(			/*Hubo cambios aqui*/
 
 Create table usuario(
 	id 					serial		not null,
-	contrasena 			varchar(20)	not null,
+	contrasena 			varchar(200)	not null,
 	fk_correoE 			integer 	not null,
 	fk_rol  			integer 	not null,
 	created_at					timestamp,
