@@ -1513,52 +1513,15 @@ INSERT into lugar (id, nombre, tipo, fk_lugar) values
   (1451,'Raúl Cuenca','Parroquia',358);
 
 
---Puntos
+--EVENTO
 
-INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values 
+INSERT INTO evento (nombre, descripcion, fk_lugar) values
 
-(0.50, '2019-09-01', '2019-09-30'),
-(0.75, '2019-10-01', '2019-10-31'),
-(1, '2019-11-01', '2019-11-30'),
-(1.25, '2019-12-01', '2019-12-31'),
-(1.50, '2020-01-01', '2020-01-31');
-
---Divisas 
-
-INSERT INTO (precio_unitario_bs,fecha_inicio,fecha_final) values
-
-(20000, '2019-07-01', '2019-07-31'),
-(25000, '2019-08-01', '2019-08-31'),
-(30000, '2019-09-01', '2019-09-30'),
-(40000, '2019-10-01', '2019-10-31'),
-(45000, '2019-11-01', '2019-11-30');
-
---Proveedor
-
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (1, 997980484, 'Cerveceira Tovar', 'Cerveceira Tovar', 'Av. Moran Edif. Macaira Apt 4E', 'Av. Sucre de Catia Edif. Aleluya Ofic 3B', 'www.tovar.com', 1204, 1270);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (2, 830562233, 'Los Cerveceros', 'Los Cerveceros', 'Urb. Guzman Blanco Edif. Los Altos Apt 3C', 'Urb. Abraham Lincoln Edif. Las Rosas Ofic 1F', 'www.lacerverza.com', 437, 555);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (3, 555760085, 'Cervezas Zulia', 'Tillman, Langworth and Borer', 'Av. Casanova Edif Los Toledos Apt 6D', 'Urb. Guzman Blanco Edif. Los Altos Ofic 3C', 'https://cam.ac.ve', 968, 1394);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (4, 318247996, 'Latina Beer Company', 'Gaylord, Morissette and Cremin', 'Urb. Abraham Lincoln Edif. Las Rosas Apt 1F', 'Av. Universidad Edif. Las Esmeraldas Ofic 5A', 'https://4shared.com', 673, 662);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (5, 937972583, 'Los Polarcitos', 'McClure-Stehr', 'Urb. Bolivar Edif Divertu Apt. 9D', 'Av. Francisco Solano Lopez Edif. Solarium Ofic 7C', 'http://www.cerv.com', 468, 371);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (6, 127720977, 'Mi Cerveza', 'Gerlach, McGlynn and DuBuque', 'Av. Simon Bolivar Edif. Mijonete Apt 7C', 'Urb. Abraham Lincoln Edif. Las Rosas Ofic 1F', 'www.micerveza.com', 1071, 1086);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (7, 962470559, 'Javier y la Cerveza', 'O''Conner, Frami and Hamill', 'Av. Universidad Edif. Las Esmeraldas Apt 5A', 'Urb. Guzman Blanco Edif. Los Altos Ofic 3C', 'https://discuz.net', 659, 1191);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (8, 458676831, 'Kozaka', 'Labadie, Crona and Emmerich', 'Av. Baralt Edif. Maca Apt 9E', 'Av. Baralt Edif. Maca Ofic 9E', 'www.kozaka.com', 482, 592);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (9, 963947518, 'Cerveceria Lago', 'Funk-Gutkowski', 'Av. Sucre de Catia Edif. Aleluya Apt 3B', 'Av. Baralt Edif. Maca Ofic 9E', 'www.cervecerialago.com', 859, 682);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (10, 118642488, 'Aldarra', 'Aufderhar LLC', 'Av. Boyaca Edif. MisHijos Apt 7D', 'Av. Libertador Edif. El Principito Ofic 5A', 'www.aldarra.com', 362, 1249);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (11, 831861437, 'Cerveceria Benitz', 'Rogahn Group', 'Av. Urdaneta Edif. Las Vegas Apt 6C', 'Av. Boyaca Edif. MisHijos Ofic 7D', 'www.cervezeriabenitz.com', 649, 361);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (12, 623418619, 'Mito Brewhouse', 'Casper LLC', 'Av. Andres Bello Edif. Nueva York Apt 1A', 'Av. Moran Edif. Macaira Ofic 4E', 'www.mitobrewhouse.com', 884, 889);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (13, 226502143, 'Cerveza Branett', 'Shanahan Inc', 'Av. Lecuna Edif. El Bosque Apt 8C', 'Av. Panteon Edif. Alto Ofic 10C', 'www.cervezabranett.gov', 789, 388);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (14, 628502080, 'Pisse des Gottes', 'Williamson, Walter and Toy', 'Av. Panteon Edif. Alto Apt 10C', 'Av. Andres Bello Edif. Nueva York Ofic 1A', 'www.pissedesgottes.com', 964, 1183);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (15, 409552041, 'Social Club', 'Koepp Group', 'Av. Libertador Edif. El Principito Apt 5A', 'Urb. Abraham Lincoln Edif. Las Rosas Ofic 1F', 'www.Social Club.com', 677, 657);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (16, 915621984, 'Bolas Criollas', 'Bogisich-Wisozk', 'Av. Francisco Solano Lopez Edif. Solarium Apt 7C', 'Urb. Abraham Lincoln Edif. Las Rosas Ofic 1F', 'www.mipolarcita.com', 1238, 1015);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (17, 607352489, 'Cerveceria Destilo CA', 'Brakus LLC', 'Av. Moran Edif. Macaira Apt 7D', 'Av. Lecuna Edif. El Bosque Ofic 8C', 'www.over-blog.com', 374, 607);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (18, 400339950, 'Los Muchachos', 'Champlin, Walter and Moen', 'Urb. Guzman Blanco Edif. Los Saltos Apt 3C', 'Av. Urdaneta Edif. Las Vegas Ofic 6C', 'www.losmuchachos.com', 821, 1322);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (19, 363307448, 'Amante de la Cerveza', 'Jakubowski Group', 'Av. Casanova Edif Mi Hogar Apt 5C', 'Av. Casanova Edif Los Toledos Ofic 6D', 'www.amantecerveza.com', 556, 1298);
-insert into proveedor (id, rif, denomi_comercial , razon_social, direccion_fiscal, direccion_fisica, pagina_web, fk_lugar , fk_lugar2) values (20, 436507762, 'Golazo', 'Boehm Group', 'Urb. Abraham Lincoln Edif. Buena Vista Apt 1F', 'Urb. Bolivar Edif Divertu Ofic. 9D', 'www.golazo.com', 881, 970);
-
-
-
-
+('UBirra', 'Evento anual organizado por ACAVUCAB, cuenta con la participación de artistas reconocidos y venta de cervezas a excelentes precios', 1484),
+('Viva la Cerveza', 'Charlas sobre cómo es elaborada las diferentes cervezas y degustaciones ', 953),
+('Oktoberfest', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 1348),
+('Cervezada', 'Fiesta y juegos con cervezas, DJ mundialmente reconocidos serán los protagonitas de la celebraación', 954),
+('Saber Cerveza', 'Charlas y talleres dirigido por grandes ponencias para explicar el proceso de elaboración de las cervezas artesanales', 642);
 
 --PROVEEDOR
 
