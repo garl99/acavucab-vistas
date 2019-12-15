@@ -1,6 +1,6 @@
 --INSERTS TODAS LAS TABLAS
 
-  -- LUGAR   
+  -- 1)LUGAR  (Todos los estados, municipios y parroquias) 
 INSERT into lugar (id, nombre, tipo) values
   -- Estados 
   (1,'Amazonas','Estado'),
@@ -1514,7 +1514,7 @@ INSERT into lugar (id, nombre, tipo, fk_lugar) values
 
 
 
---Tipo Cerveza
+--2) 40 Tipo Cerveza (2 padres y los hijos)
 
 --Familias principales
 
@@ -1834,9 +1834,95 @@ insert into comentario_tipo_cerveza (fk_tipo_cerveza	, fk_comentario) values (40
 insert into comentario_tipo_cerveza (fk_tipo_cerveza	, fk_comentario) values (40, 5);
 insert into comentario_tipo_cerveza (fk_tipo_cerveza	, fk_comentario) values (40, 1);
 
+--Cervezas (84 en total, 2 por cada tipo de cerveza)
 
 
---Puntos
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Chester Beer Dos', 66827, 1, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Alma Nativa Amber', 75747, 1, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Austral Lager', 59808, 2, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Escudo', 95303, 2, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Stella Artois', 76525, 3, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Orval', 57952, 3, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Blazing World', 59101, 4, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Capital Amber Ale', 24627, 4, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Autral Calafate', 71939, 5, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Brugge Valerie', 10158, 5, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Capital Pale Ale', 5132, 6, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Altamira American', 47576, 6, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Duvel', 98636, 7, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Bush Blonde', 20471, 7, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Hard Decision', 94639, 8, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Baja Oatmeal Stout', 51743, 8, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Achel', 12356, 9, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Chimay', 10736, 9, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Malta Morenita', 24241, 10, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Grosse Gerste', 74075, 10, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Emperador Old Ale', 46281, 11, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Baladin Nora', 63593, 11, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Banks''s Original', 50117, 12, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Greene King XX Mild', 81476, 12, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Escape', 40995, 13, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Viven Imperial IPA', 12845, 13, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('La Primera Roja', 48160, 14, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Baron Rojo', 95582, 14, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Leyenda Porter', 66082, 15, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('XVPorter', 23777, 15, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Point Bock', 93042, 16, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Aass Bock', 20555, 16, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Kunstmann HonigAle (Miel)', 86026, 17, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Calle Calle Cutipay', 66133, 17, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Aldarra Mestiza', 45214, 18, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Letra A Weiss', 15986, 18, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Bonvivant Ciao Amigo', 18105, 19, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Eterna Rubia', 38707, 19, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Atrapaniebla', 42602, 20, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Bundor Nessie', 92419, 20, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Quebrada Brown Ale', 86613, 21, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Cerro Alegre Brown', 12810, 21, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Polar Ice', 51194, 22, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Corona Extra', 98108, 22, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Szot Rubia al Vapor', 17706, 23, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Frontera CautÃ­n', 69955, 23, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Erdinger Dunkel', 8461, 24, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Montseny Blat', 72426, 24, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Benitz Stout', 52881, 25, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Kuikas QuirachÃº', 18050, 25, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Toro Golden', 53981, 26, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('7 Mares Tortuga', 28269, 26, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Rasputin', 13307, 27, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Marina Kremat', 14522, 27, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('San Miguel', 83859, 28, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Daura', 49482, 28, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Yakka Tripel 340', 13953, 29, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Guineu', 8165, 29, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Lervig', 59717, 30, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Omnipollo Bruno', 66210, 30, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Ayinger Celebration', 51403, 31, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Olvi Tuplapukki', 88543, 31, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Cruzcampo Dubble Belga', 61758, 32, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Roy The Bull Monk', 55815, 32, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Castrena 88 Super', 9144, 33, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Mertxe Courtois', 92781, 33, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Kross Lupulus', 37848, 34, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('BrÃ¼nett Barcelona', 59862, 34, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Blackmill Ink', 23284, 35, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Fauna Danza Macabra', 86455, 35, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Tesela Reserva Roble', 95264, 36, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Rogue Dead â€™Nâ€™ Dead', 17062, 36, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Nortada Vienna Lager', 88145, 37, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Colima Colimota Cinco', 65569, 37, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Griffin Dry Cider', 52959, 38, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Araeta Sidra de Pera', 37537, 38, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Ambar Clasica', 96444, 39, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Caleya Milenta', 19805, 39, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Gran Rabbits', 55231, 40, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Outboard', 22097, 40, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Mito Brewhouse Mora Lionza', 64956, 41, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Althaia Rabosa', 79574, 41, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Tyris Marzen', 31665, 42, 'ruta.jpg');
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta) values ('Solera Marzen', 49570, 42, 'ruta.jpg');
+
+--9)Puntos
 
 INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values 
 
@@ -1846,7 +1932,7 @@ INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values
 (1.25, '2019-12-01', '2019-12-31'),
 (1.50, '2020-01-01', '2020-01-31');
 
---Divisas 
+--10)Divisas 
 
 INSERT INTO (precio_unitario_bs,fecha_inicio,fecha_final) values
 
@@ -1856,7 +1942,7 @@ INSERT INTO (precio_unitario_bs,fecha_inicio,fecha_final) values
 (40000, '2019-10-01', '2019-10-31'),
 (45000, '2019-11-01', '2019-11-30');
 
---Proveedor
+--13) Proveedor (20 en total)
 
 insert into proveedor (rif, denomi_comercial , razon_social, direccion_fisica, direccion_fiscal, pagina_web, fk_lugar , fk_lugar2) values (997980484, 'Cerveceira Tovar', 'Cerveceira Tovar', 'Av. Moran Edif. Macaira Apt 4E', 'Av. Sucre de Catia Edif. Aleluya Ofic 3B', 'www.tovar.com', 1204, 1270);
 insert into proveedor (rif, denomi_comercial , razon_social, direccion_fisica, direccion_fiscal, pagina_web, fk_lugar , fk_lugar2) values (830562233, 'Los Cerveceros', 'Los Cerveceros', 'Urb. Guzman Blanco Edif. Los Altos Apt 3C', 'Urb. Abraham Lincoln Edif. Las Rosas Ofic 1F', 'www.lacerverza.com', 437, 555);
@@ -2132,38 +2218,39 @@ insert into tienda_fisica (nombre, fk_lugar, direccion_fisica) values ("Tienda A
 insert into departamento (tipo_departamento	, fk_tiendaF ) values ('Dept.Despacho', 1);
 insert into departamento (tipo_departamento	, fk_tiendaF ) values ('Dept.Entrega', 1);
 insert into departamento (tipo_departamento	, fk_tiendaF ) values ('Dpto.Compras', 1);
-
+insert into departamento (tipo_departamento	, fk_tiendaF ) values ('Dpto.Informatica', 1);
+insert into departamento (tipo_departamento	, fk_tiendaF ) values ('Dpto.Recursos Humanos', 1);
 
 --Horario
 
-insert into horario (hora_entrada, hora_salida, dia) values ('10:42 AM', '3:15 PM', 'Lunes');
-insert into horario (hora_entrada, hora_salida, dia) values ('9:37 AM', '5:00 PM', 'Martes');
-insert into horario (hora_entrada, hora_salida, dia) values ('10:58 AM', '7:55 PM', 'Miercoles');
-insert into horario (hora_entrada, hora_salida, dia) values ('3:41 PM', '10:55 PM', 'Jueves');
-insert into horario (hora_entrada, hora_salida, dia) values ('9:26 AM', '2:56 PM', 'Viernes');
+insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Lunes');
+insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Martes');
+insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Miercoles');
+insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Jueves');
+insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Viernes');
 
 
---Empleado
+--5)Empleado (20 en total)
 
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (22911941, 'Frazer', 'Austick', 4772065, 1);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (10208640, 'Juliane', 'Extil', 4384134, 3);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (11887823, 'Oralle', 'Osban', 3966510, 2);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (24305297, 'Hank', 'Nestoruk', 5337787, 1);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (2657931, 'Mariya', 'Dorsett', 5983484, 2);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (5752119, 'Bryant', 'Hinze', 2601480, 2);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (23618966, 'Alexandra', 'Fernandez', 5000000, 4);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (10208640, 'Gabriel', 'Romero', 5000000, 4);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (11887823, 'Daniel', 'Diaz', 5000000, 4);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (24305297, 'Hank', 'Nestoruk', 5337787, 2);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (2657931, 'Mariya', 'Dorsett', 5983484, 3);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (5752119, 'Bryant', 'Hinze', 2601480, 3);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (24429534, 'Claudine', 'Dossettor', 5736532, 2);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (19517314, 'Davie', 'Ayer', 9126258, 2);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (25299989, 'Anni', 'Hubback', 1292159, 2);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (13812083, 'Darcie', 'Ganing', 5433729, 3);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (13812083, 'Darcie', 'Ganing', 5433729, 5);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (16736896, 'Guglielmo', 'O'' Faherty', 3494705, 3);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (9065741, 'Guthrey', 'Searsby', 5205719, 1);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (13394356, 'Giraud', 'Dael', 6831093, 3);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (14111388, 'Bevon', 'Bemwell', 7217906, 2);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (25887986, 'Cary', 'Debenham', 2821616, 2);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (25887986, 'Cary', 'Debenham', 2821616, 5);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (18606888, 'Melosa', 'Birtle', 4264594, 2);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (27879896, 'Buffy', 'Govinlock', 2488441, 2);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (3569622, 'Calli', 'Felderer', 1359239, 1);
-insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (13426026, 'Ardelia', 'Toplis', 6594725, 3);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (569622, 'Calli', 'Felderer', 1359239, 1);
+insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (13426026, 'Ardelia', 'Toplis', 6594725, 5);
 insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values (15036604, 'Zak', 'Semeniuk', 3636955, 2);
 
 --Empleado-Horario
@@ -2693,9 +2780,7 @@ insert into asistencia (fecha, hora_entrada, hora_salida, fk_empleado) values ('
 
 
 
-
-
---Cliente Natural
+--7)Cliente Natural (1 por estado, 24 en total)
 
 insert into cliente_natural (rif, cantidad_puntos, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fk_lugar) values (254406211, 62317, 23526731, 'Blinny', 'Brandice', 'Le Grand', 'Alennikov', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
 insert into cliente_natural (rif, cantidad_puntos, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fk_lugar) values (466154093, 10053, 13068640, 'Cindelyn', 'Annetta', 'Bourdas', 'Jedrzaszkiewicz', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=2 order by p.id limit 1));
@@ -2722,7 +2807,7 @@ insert into cliente_natural (rif, cantidad_puntos, cedula, primer_nombre, segund
 insert into cliente_natural (rif, cantidad_puntos, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fk_lugar) values (817176888, 15367, 7179411, 'Stevena', 'Mordy', 'Million', 'Stoffersen', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=23 order by p.id limit 1));
 insert into cliente_natural (rif, cantidad_puntos, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fk_lugar) values (827685357, 24981, 2492199, 'Joana', 'Berkly', 'Paoletto', 'Tomisch', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=24 order by p.id limit 1));
 
---Cliente Juridico
+--7)Cliente Juridico (1 por estado, 24 en total)
 
 insert into cliente_juridico (rif, cantidad_puntos, denomi_comercial, razon_social	, capital_social 	, direccion_fiscal, direccion_fisica	, pagina_web	, fk_lugar, fk_lugar2 ) values (315851562, 6053, 'Moen, Armstrong and Thiel', 'Rodriguez, Lebsack and Harris', 33570766, 'Av. Moran Edif. Macaira Ofic 4E', 'Av. Boyaca Edif. MisHijos Apt 7D', 'https://surveymonkey.com', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1), (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
 insert into cliente_juridico (rif, cantidad_puntos, denomi_comercial, razon_social	, capital_social 	, direccion_fiscal, direccion_fisica	, pagina_web	, fk_lugar, fk_lugar2 ) values (402475172, 6585, 'Hammes, Collier and Harris', 'Dicki-O''Keefe', 45624693, 'Urb. Guzman Blanco Edif. Los Altos Ofic 3C', 'Av. Baralt Edif. Maca Apt 9E', 'https://privacy.gov.au', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=2 order by p.id limit 1), (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=2 order by p.id limit 1));
@@ -2749,35 +2834,595 @@ insert into cliente_juridico (rif, cantidad_puntos, denomi_comercial, razon_soci
 insert into cliente_juridico (rif, cantidad_puntos, denomi_comercial, razon_social	, capital_social 	, direccion_fiscal, direccion_fisica	, pagina_web	, fk_lugar, fk_lugar2 ) values (705672101, 63434, 'Kemmer and Sons', 'Christiansen Group', 36135795, 'Av. Universidad Edif. Las Esmeraldas Ofic 5A', 'Av. Simon Bolivar Edif. Mijonete Apt 7C', 'https://earthlink.net', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=23 order by p.id limit 1), (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=23 order by p.id limit 1));
 insert into cliente_juridico (rif, cantidad_puntos, denomi_comercial, razon_social	, capital_social 	, direccion_fiscal, direccion_fisica	, pagina_web	, fk_lugar, fk_lugar2 ) values (449072899, 82243, 'Gislason, Ratke and Stiedemann', 'Bruen-Lesch', 99492864, 'Av. Baralt Edif. Maca Ofic 9E', 'Av. Libertador Edif. El Principito Apt 5A', 'https://yahoo.com', (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=24 order by p.id limit 1), (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=24 order by p.id limit 1));
 
+--4)Evento (24 eventos, 1 por estado)
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Saber Cerveza', 'Fiesta y juegos con cervezas DJ mundialmente reconocidos seran los protagonitas de la celebracion', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Viva la Cerveza', 'Fiesta y juegos con cervezas DJ mundialmente reconocidos seran los protagonitas de la celebracion', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('UBirra', 'Fiesta y juegos con cervezas DJ mundialmente reconocidos seran los protagonitas de la celebracion', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Oktoberfest', 'Evento anual organizado por ACAVUCAB cuenta con la participaciÃ³n de artistas reconocidos y venta de cervezas a excelentes precios', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Viva la Cerveza', 'Fiesta y juegos con cervezas DJ mundialmente reconocidos seran los protagonitas de la celebracion', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Saber Cerveza', 'Fiesta y juegos con cervezas DJ mundialmente reconocidos seran los protagonitas de la celebracion', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Oktoberfest', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Cerva-Com', 'Evento anual organizado por ACAVUCAB cuenta con la participaciÃ³n de artistas reconocidos y venta de cervezas a excelentes precios', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Oktoberfest', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Saber Cerveza', 'Evento anual organizado por ACAVUCAB cuenta con la participaciÃ³n de artistas reconocidos y venta de cervezas a excelentes precios', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Saber Cerveza', 'Evento anual organizado por ACAVUCAB cuenta con la participaciÃ³n de artistas reconocidos y venta de cervezas a excelentes precios', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('UBirra', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('UBirra', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Cervezada', 'Evento anual organizado por ACAVUCAB cuenta con la participaciÃ³n de artistas reconocidos y venta de cervezas a excelentes precios', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Cervezada', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Viva la Cerveza', 'Fiesta y juegos con cervezas DJ mundialmente reconocidos seran los protagonitas de la celebracion', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Cerva-Com', 'Evento anual organizado por ACAVUCAB cuenta con la participaciÃ³n de artistas reconocidos y venta de cervezas a excelentes precios', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Saber Cerveza', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Viva la Cerveza', 'Charlas sobre como es elaborada las diferentes cervezas y degustaciones', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Viva la Cerveza', 'Charlas sobre como es elaborada las diferentes cervezas y degustaciones', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Cerva-Com', 'Tradicional Oktoberfest cuenta con varios productores de cervezas tradicionales entre ellos ACAVUCAB', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('UBirra', 'Charlas y talleres dirigido por grandes ponencias para explicar el proceso de elaboracion de las cervezas artesanales', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Viva la Cerveza', 'Al estilo de un Comic-Con pero con cervezas habra juegos disfraces y todo lo relacionado con cervezas', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_entrada_actual , fk_lugar ) values ('Cerva-Com', 'Fiesta y juegos con cervezas DJ mundialmente reconocidos seran los protagonitas de la celebracion', 20, 20, (select p.id from lugar p inner join lugar m on m.id=p.fk_lugar inner join lugar e on e.id=m.fk_lugar where e.id=1 order by p.id limit 1));
+
+
+--Cerveza en evento
+
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 105, 1, 1);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 966, 1, 2);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 137, 2, 3);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 331, 2, 4);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1551, 3, 5);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 789, 3, 6);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 143, 4, 7);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 941, 4, 8);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1836, 5, 9);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1373, 5, 10);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1681, 6, 11);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1220, 6, 12);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1095, 7, 13);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 754, 7, 14);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1908, 8, 15);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 698, 8, 16);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1219, 9, 17);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 116, 9, 18);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 703, 10, 19);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 564, 10, 20);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 516, 11, 21);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 251, 11, 22);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 260, 12, 23);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1466, 12, 24);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 518, 13, 1);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1039, 13, 2);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1258, 14, 3);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 126, 14, 4);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1212, 15, 5);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 830, 15, 6);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1940, 16, 7);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1831, 16, 8);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 525, 17, 9);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 273, 17, 10);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1325, 18, 11);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 883, 18, 12);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 283, 19, 13);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 831, 19, 14);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 80, 20, 15);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 900, 20, 16);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1905, 21, 17);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1655, 21, 18);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1445, 22, 19);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1988, 22, 20);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 343, 23, 21);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1764, 23, 22);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1870, 24, 23);
+insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 963, 24, 24);
+
+
+--11) Presupuesto (10 en total)
+
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-11-20', 99087, null, 6);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-11-09', 57707, null, 5);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-10-16', 60584, null, 9);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-11-14', 15803, null, 8);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-11-12', 81684, null, 10);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-10-12', 67370, null, 7);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-11-01', 51986, null, 2);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-11-07', 59089, null, 4);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-10-26', 44836, null, 3);
+insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ ) values ('2019-10-10', 58131, null, 1);
+
+
+--Correo electronico
+
+--Para los clientes naturales
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('nwheeler0@goo.ne.jp', 1, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gphinn1@hubpages.com', 2, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('wellissen2@w3.org', 3, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('rrossbrook3@trellian.com', 4, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('lmellon4@loc.gov', 5, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('ifrayne5@mit.edu', 6, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('kharkin6@whitehouse.gov', 7, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('jtibbs7@illinois.edu', 8, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('ftosh8@marketwatch.com', 9, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('bcordell9@tamu.edu', 10, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('rripshera@wikipedia.org', 11, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('zlecordierb@scientificamerican.com', 12, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('jcarlylec@japanpost.jp', 13, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('rpoundfordd@si.edu', 14, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('dbarnewalle@wikimedia.org', 15, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('cburwinf@craigslist.org', 16, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('jwestg@webs.com', 17, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('apeaddieh@delicious.com', 18, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('bcoomi@fda.gov', 19, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gtrillowj@trellian.com', 20, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('mmeak@about.com', 21, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('brileyl@harvard.edu', 22, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('freym@businessinsider.com', 23, null, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('jpaulen@narod.ru', 24, null, null, null);
+
+--Para los clientes juridicos
+
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('msaban0@ycombinator.com', null, 1, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('ckidstone1@ft.com', null, 2, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gfattorini2@vinaora.com', null, 3, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('jjanse3@netscape.com', null, 4, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('dsmogur4@fema.gov', null, 5, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('bscarman5@unesco.org', null, 6, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('tmonard6@imdb.com', null, 7, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('chaggart7@nsw.gov.au', null, 8, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('pwornum8@flavors.me', null, 9, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('ctynan9@unesco.org', null, 10, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('bpentlowa@hp.com', null, 11, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('sfidianb@google.co.jp', null, 12, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('msteerc@globo.com', null, 13, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('mjozefiakd@nps.gov', null, 14, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('nheyfielde@va.gov', null, 15, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('kdreverf@spotify.com', null, 16, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('imclarnong@bloglovin.com', null, 17, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('nfarendenh@vk.com', null, 18, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('etylori@slideshare.net', null, 19, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('glascellj@tinypic.com', null, 20, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gprendergrassk@delicious.com', null, 21, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('wcornfieldl@ted.com', null, 22, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('ecornwellm@dailymail.co.uk', null, 23, null, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gmalickin@ucoz.ru', null, 24, null, null);
+
+
+--Para los empleados
+
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('alexandra@gmail.com', null, null, 1, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gabriel@gmail.com', null, null, 2, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('daniel@gmail.com', null, null, 3, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('blalor3@mozilla.com', null, null, 4, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('sjuszczyk4@wikia.com', null, null, 5, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('tmussen5@tripadvisor.com', null, null, 6, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('cdedam6@answers.com', null, null, 7, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gbranigan7@sakura.ne.jp', null, null, 8, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('svivien8@intel.com', null, null, 9, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('dbernadot9@dailymotion.com', null, null, 10, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('jskirlinga@omniture.com', null, null, 11, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('apanterb@weather.com', null, null, 12, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('hosiaghailc@earthlink.net', null, null, 13, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('cdrewetd@tripod.com', null, null, 14, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('jallicocke@livejournal.com', null, null, 15, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('tjanzf@cdbaby.com', null, null, 16, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('xmccomiskieg@dion.ne.jp', null, null, 17, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('azornh@booking.com', null, null, 18, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('gbardsleyi@google.com.hk', null, null, 19, null);
+insert into correo_electronico (correo, fk_clienteN , fk_clienteJ , fk_empleado , fk_proveedor ) values ('kcadallederj@ted.com', null, null, 20, null);
+
+
+--Rol
+
+insert into rol (nombre) values ('rol_admin');
+insert into rol (nombre) values ('rol_clienten');
+insert into rol (nombre) values ('rol_clientej');
+insert into rol (nombre) values ('rol_proveedor');
+insert into rol (nombre) values ('rol_cajera');
+insert into rol (nombre) values ('rol_j_pasillo');
+insert into rol (nombre) values ('rol_j_compra');
+insert into rol (nombre) values ('rol_e_entrega');
+insert into rol (nombre) values ('rol_e_despacho');
+insert into rol (nombre) values ('rol_gerente');
+
+
+--14) Usuarios (24 para clienteN, 24 para ClienteJ y 20 para empleados)
+
+--Para los clientes naturales
+
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('bn7RTpadm', 1, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('aVazDXSNud', 2, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('mu2hhxXFrd21', 3, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('A8DthV', 4, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('AlBYRq7', 5, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('KRWGBoKUu', 6, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ZJPQ7oI', 7, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Mj8gZrZ', 8, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RvU1SN', 9, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IPySSE', 10, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dbtaTrP', 11, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('nDlqgE', 12, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('wfpyJXGNPI', 13, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iDVm0PtZE3a', 14, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('rqN1CD', 15, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('19uAQAHxQTsT', 16, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('fA50zVGFUWrM', 17, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('2D4H2T9XK76J', 18, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('yNgBFyqEX', 19, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('kPvJ8II', 20, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('XfCbHSH7', 21, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zAQthDvz', 22, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xt56GtyHPa', 23, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('xUc7Zx', 24, 2);
 
 
 
---PROVEEDOR
+--Para los clientes juridicos
 
-INSERT INTO proveedor (rif, denomi_comercial, razon_social, fecha_afiliacion_inicial, fecha_afiliacion_final,direccion_fiscal, pagina_web, fk_lugar) values
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RKOPJW', 25, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('fMbFjm', 26, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('2rHwr715fk', 27, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ZHd6PSIzvQsj', 28, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('rWJK0G3oxL', 29, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('aicQwYW', 30, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('m4jkBYNYlLV', 31, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('0XW4EV', 32, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('5gFJG2Aex', 33, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('qoNH4v', 34, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('9onaBSW', 35, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('23O04C9M', 36, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('JdYfgigJ3', 37, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RtgurbJgjVE', 38, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ayaAH5YzNTN', 39, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('i5MTjJBus', 40, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Cow40hf', 41, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('r3GdEPBoM', 42, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zgubMp4T', 43, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('qq3GSj', 44, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zsGj9Hng', 45, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('r3pEqlSAIS', 46, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('3jfKDiawT3', 47, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('K92rFiNZ', 48, 3);
 
-(302597005, 'Cervecería Tovar', 'Cerveceros T', '10-10-2019','10-10-2020', 'Colonia Tovar, Edo. Aragua', 'www.cerveriatovar.com.ve', 470), 
-(603547356, 'Cerveza Zulia', 'Zulia Cerveza', '19-09-2019', '19-09-2020', 'Av. 17 Los Haticos, No. 112-113 Maracaibo, estado Zulia', 'www.cervezazulia.com.ve', 1351),
-(576433448, 'Latina Beer Company', 'Company Beer', '02-12-2019', '02-12-2020', 'Av. Bolívar Norte - Valencia, Edo. Carabobo', 'www.latinabeercompany.com.ve',112 ),
-(481203740, 'Latina Beer Company', 'Company Beer', '02-12-2019', '02-12-2020', 'Av. Bolívar Norte - Valencia, Edo. Carabobo', 'www.latinabeercompany.com.ve',112 ),
-(989643442, 'Cerveceria Destilo', 'Cervecería Destilo C.A', '01-10-2019', '01-10-2020','Distrito Metropolitano de Caracas', 'wwww.cervezadestilo.com', 1485);
 
---CLIENTE NATURAL
+--para los empleados
 
-INSERT INTO cliente_natural(rif, cantidad_puntos, cedula, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido,fk_lugar) values 
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 49, 1);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 50, 1);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 51, 1);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('6kySOgFjb', 52, 6);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('OrVltxSuo', 53, 7);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('b2QyPMVH', 54, 10);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('x1DCULY', 55, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ivYaolctr', 56, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xw9Klt4VT', 57, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('D8FRJSWGaY', 58, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('NCykWUnBci', 59, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('BGGPrbTiporj', 60, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iGrfCre7wqjk', 61, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('QJO1Pv', 62, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('7Y6pa60Y', 63, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ubsRLW', 64, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dEQb0sOxvwGz', 65, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('O6aeDbH', 66, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IW2ePkUc1', 67, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 68, 8);
 
-(927086019, 100, 27086019, 'Daniel', 'Esteban', 'Pérez', 'Zavarce', 1422),
-(762340201, 59, 24678983, 'Angélica', 'María', 'Gómez', 'Torrealba', 1403),
-(345183902, 87, 6789123, 'Héctor', 'Mujica', 'Gonzalez', 1403),
-(273832847, 150, 18983120, 'Pablo', 'Emilio', 'Tovar', 'Pérez', 1354),
-(455653221, 90, 20934576, 'Juana', 'Antonieta', 'Márquez', 'Nadal', 1390);
 
---CLIENTE JURÍDICO
+--Ofertas (revisar esto-tengo dudas)
 
-INSERT INTO cliente_juridico (rif, cantidad_puntos, denomi_comercial, razon_social, capital_social, direccion_fiscal, pagina_web, fk_lugar) values
+insert into diario (fecha_emision, fk_empleado ) values ('2019-10-05', 54);
+insert into diario (fecha_emision, fk_empleado ) values ('2019-10-25', 54);
+insert into diario (fecha_emision, fk_empleado ) values ('2019-11-06', 54);
+insert into diario (fecha_emision, fk_empleado ) values ('2019-11-11', 54);
+insert into diario (fecha_emision, fk_empleado ) values ('2019-12-02', 54);
 
-(782382245, 1000, 'Prolicor', 'Prolicor C.A', 7500000, 'Av. Panteón San Bernardino Anauco, Quinta', 'www.prolicor.com.ve',1484),
-(233312113, 1200, 'Mi Bodeguita', 'Pérez y Asociados', 1200000, 'Calle Colombia Nueva Caracas, 2 Av. Edif. Chersi ', 'www.mibodeguita.com', 203 ),
-(983292011, 2000, 'Cerveza Caracas', 'CCaracas C.A', 90912000, '', 'www.cervezacaracas.com.ve', 1 ),
-(44648, 1000, 'inventado', 'inventado', 215846, 'inventado', 'inventado', 1 ),
-(44648, 1000, 'inventado', 'inventado', 215846, 'inventado', 'inventado', 1 );
+
+
+--8)Ventas (50 en tiendaF y 50 en Online 2 unidades x compra) 
+
+--Venta en tienda fisica
+
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-29', 86360, null, 2, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-01', 69950, 9, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-12-02', 65348, 16, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-12-05', 50732, 1, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-21', 97367, 9, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-12-09', 49350, 11, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-12-07', 84092, 2, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-21', 56656, 5, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-04', 88753, 22, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-31', 35172, 1, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-08', 43374, 14, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-28', 8323, 3, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-09', 43715, null, 3, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-11', 76223, 12, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-28', 20652, 15, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-09', 60347, 12, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-22', 70781, 4, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-19', 99316, 11, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-21', 16230, 19, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-13', 40954, 5, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-24', 15673, 17, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-02', 84826, 3, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-23', 68841, 24, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-12-11', 77346, 5, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-01', 81046, 18, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-15', 75080, 4, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-11', 49792, null, 5, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-02', 59372, null, 4, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-28', 76404, 12, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-28', 3212, 23, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-08', 54167, null, 7, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-11', 79262, 16, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-25', 72062, 22, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-18', 64752, null, 5, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-04', 6340, null, 4, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-04', 84761, null, 3, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-19', 43124, 14, 2, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-13', 52890, null, 8, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-17', 61482, null, 6, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-26', 22636, 8, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-02', 77642, 16, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-16', 69164, 8, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-23', 74223, 10, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-24', 7643, 19, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-24', 66777, 12, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-09-15', 94851, 5, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-25', 75695, 14, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-19', 13482, 20, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-10-21', 34848, 17, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values ('2019-11-10', 20933, 13, null, 1);
+
+--Venta en tienda online
+
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-12-11', 55342, 16, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-02', 60002, 8, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-27', 2368, 10, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-03', 95479, 3, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-27', 59301, 23, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-21', 34498, 7, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-26', 37812, 17, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-12', 53133, 4, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-12-02', 15275, 8, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-23', 52630, null, 25, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-29', 56224, 3, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-21', 59431, 1, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-08', 87644, 10, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-23', 20830, 19, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-04', 47154, 2, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-11', 79297, 11, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-27', 44938, 2, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-12-03', 18508, 2, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-17', 2012, 5, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-30', 23923, 11, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-29', 26374, 17, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-02', 78428, 22, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-01', 69281, 24, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-12', 79528, 24, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-21', 89140, 11, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-21', 55618, 16, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-09', 87438, 14, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-04', 25541, 19, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-25', 31718, 7, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-01', 32764, null, 30, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-30', 26131, null, 40, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-27', 18783, 22, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-11', 24051, null, 29, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-14', 66159, 10, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-12-03', 72771, 4, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-23', 16597, 11, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-25', 32339, null, 31, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-17', 88803, null, 32, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-18', 72236, null, 45, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-30', 62965, null, 29, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-12-01', 48814, 13, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-07', 38224, null, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-26', 53978, 20, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-07', 49559, null, 30, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-21', 2050, null, 37, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-22', 58365, 19, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-06', 82327, 21, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-09-12', 20932, null, 39, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-11-01', 68339, 7, null, 1);
+insert into venta (fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values ('2019-10-02', 40888, 13, null, 1);
+
+
+--Detalle Factura (Aqui sale las 2 cervezas por compra)
+
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (11, 1, 21, 15130);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (36, 1, 15, 86132);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (53, 2, 19, 62668);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (58, 2, 29, 72247);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (24, 3, 19, 9346);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (11, 3, 35, 42054);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (46, 4, 45, 63637);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (32, 4, 29, 60576);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (37, 5, 44, 34957);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (28, 5, 25, 70185);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (30, 6, 36, 20288);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (16, 6, 33, 57287);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (27, 7, 39, 66710);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (32, 7, 34, 83898);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (41, 8, 33, 80678);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (26, 8, 34, 95770);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (80, 9, 7, 64359);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (48, 9, 32, 81748);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (49, 10, 44, 92500);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (54, 10, 3, 40470);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (26, 11, 16, 47691);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (69, 11, 36, 6344);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (13, 12, 49, 85506);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (1, 12, 47, 65633);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (25, 13, 26, 9003);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (82, 13, 26, 14251);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (70, 14, 36, 75699);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (34, 14, 39, 9246);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (42, 15, 44, 97017);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (56, 15, 40, 91771);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (83, 16, 24, 10498);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (23, 16, 26, 23760);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (1, 17, 8, 95199);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (52, 17, 47, 4688);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (13, 18, 23, 92086);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (16, 18, 40, 11886);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (77, 19, 50, 78544);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (47, 19, 22, 77683);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (35, 20, 49, 78826);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (18, 20, 30, 556);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (33, 21, 36, 41437);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (38, 21, 10, 31383);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (1, 22, 16, 38860);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (22, 22, 44, 5135);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (78, 23, 31, 12324);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (42, 23, 11, 36016);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (31, 24, 42, 65657);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (52, 24, 7, 68702);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (1, 25, 30, 19410);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (13, 25, 34, 20073);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (38, 26, 30, 89237);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (81, 26, 33, 26439);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (80, 27, 9, 68421);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (78, 27, 49, 23261);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (9, 28, 50, 45640);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (25, 28, 46, 69174);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (10, 29, 50, 33725);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (49, 29, 38, 48108);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (44, 30, 18, 12903);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (76, 30, 39, 58484);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (3, 31, 8, 30275);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (82, 31, 5, 37547);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (44, 32, 2, 29101);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (77, 32, 33, 46205);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (37, 33, 47, 75956);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (19, 33, 27, 77466);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (79, 34, 14, 84498);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 34, 16, 60786);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (1, 35, 20, 28159);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (81, 35, 5, 89554);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (35, 36, 47, 91490);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (41, 36, 38, 49758);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (4, 37, 22, 60020);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (43, 37, 46, 30263);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (11, 38, 37, 8662);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (41, 38, 9, 23796);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (30, 39, 37, 9943);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (48, 39, 49, 27968);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (8, 40, 29, 30644);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (53, 40, 16, 81448);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (67, 41, 29, 64289);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (4, 41, 7, 45335);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (48, 42, 43, 3965);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (23, 42, 16, 81851);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (47, 43, 2, 82563);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (32, 43, 46, 41402);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (5, 44, 11, 65783);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (34, 44, 41, 29296);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (55, 45, 31, 30381);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (74, 45, 37, 56080);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (13, 46, 35, 73520);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (40, 46, 12, 28375);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (5, 47, 41, 51429);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (22, 47, 21, 34867);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (48, 48, 49, 84264);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (59, 48, 16, 96836);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (38, 49, 18, 24588);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (36, 49, 33, 69117);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 50, 7, 40370);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (23, 50, 43, 65532);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (1, 51, 4, 62619);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (64, 51, 1, 54883);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (4, 52, 11, 80241);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (34, 52, 18, 39058);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (37, 53, 50, 39842);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (18, 53, 21, 4799);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (27, 54, 23, 30617);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (14, 54, 37, 72834);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (38, 55, 22, 16597);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (4, 55, 31, 14656);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 56, 4, 44588);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 56, 19, 87760);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (74, 57, 22, 79062);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (7, 57, 3, 90004);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (17, 58, 16, 81098);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (83, 58, 30, 45438);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (19, 59, 41, 28596);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 59, 34, 87957);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (24, 60, 5, 27823);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (60, 60, 11, 78347);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (13, 61, 39, 80900);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (25, 61, 44, 3250);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (52, 62, 27, 49055);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (81, 62, 34, 60431);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (24, 63, 49, 78870);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (19, 63, 31, 74874);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (32, 64, 17, 78745);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (78, 64, 9, 9620);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (11, 65, 26, 27940);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (59, 65, 15, 82345);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (33, 66, 38, 41274);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 66, 17, 20377);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (49, 67, 29, 51893);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (50, 67, 42, 37208);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (33, 68, 40, 40729);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (4, 68, 10, 10176);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (10, 69, 22, 56440);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (77, 69, 5, 82195);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (67, 70, 19, 98827);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (22, 70, 28, 49591);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (39, 71, 1, 99444);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (11, 71, 24, 10796);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (37, 72, 35, 10981);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (50, 72, 43, 93966);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (69, 73, 50, 85352);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (19, 73, 26, 79013);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (6, 74, 1, 3264);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (65, 74, 11, 90496);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (60, 75, 48, 92395);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (64, 75, 35, 69324);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (43, 76, 18, 38549);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 76, 36, 38273);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (67, 77, 18, 84373);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (10, 77, 43, 28015);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (68, 78, 46, 14330);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (48, 78, 29, 63178);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (43, 79, 24, 56116);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (75, 79, 5, 11829);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (58, 80, 23, 75399);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (29, 80, 43, 25926);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (77, 81, 11, 25420);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (17, 81, 34, 14266);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (62, 82, 8, 5821);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (58, 82, 35, 89479);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (61, 83, 36, 8209);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (6, 83, 24, 57723);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (52, 84, 35, 42478);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (76, 84, 30, 22649);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (44, 85, 24, 52135);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (78, 85, 26, 33439);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (54, 86, 22, 61075);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (60, 86, 27, 71476);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (31, 87, 41, 6861);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (29, 87, 4, 99164);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (18, 88, 14, 34670);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (17, 88, 28, 64692);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (4, 89, 40, 63146);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (55, 89, 6, 46734);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (11, 90, 26, 64050);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (50, 90, 15, 30515);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (83, 91, 23, 84283);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (51, 91, 9, 57424);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (25, 92, 2, 66215);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (7, 92, 45, 27475);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (9, 93, 39, 93903);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (17, 93, 12, 51420);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (47, 94, 30, 18286);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (20, 94, 12, 51900);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (54, 95, 19, 56137);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (14, 95, 12, 75722);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (47, 96, 46, 95933);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (18, 96, 39, 19908);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (56, 97, 37, 25393);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (75, 97, 22, 53693);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (56, 98, 17, 76733);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (50, 98, 43, 75840);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (8, 99, 6, 94543);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (80, 99, 6, 7721);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (82, 100, 4, 84053);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (10, 100, 46, 15778);
+

@@ -76,7 +76,7 @@ Create table persona(
 
 Create table presupuesto(
 	id 						serial		not null,
-	fecha 					timestamp	not null,
+	fecha 					date 		not null,
 	total_presupuesto		float(15)	not null,
 	fk_clienteN 			integer,
 	fk_clienteJ 			integer,
@@ -342,7 +342,7 @@ Create table entrada(			/*Hubo cambios aqui. Revisar los not null porque hay arc
 
 Create table venta(
 	id 					numeric(8)	not null, /*VIENE SIENDO NUMERO_ENTRADA*/
-	fecha 				timestamp   not null,
+	fecha 				date  	not null,
 	total_pagar			numeric(15)	not null,
 	fk_clienteN 		integer,
 	fk_clienteJ 		integer,
@@ -488,7 +488,7 @@ Create table beneficio_empleado(		/*Hubo cambios aqui*/
 
 Create table diario(
 	id 					serial		not null,
-	fecha_emision 		timestamp	not null,
+	fecha_emision 		date	not null,
 	fk_empleado 		integer 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
