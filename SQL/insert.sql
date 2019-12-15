@@ -2863,54 +2863,55 @@ insert into evento (nombre, descripcion, cantidad_entrada_inicial , cantidad_ent
 
 --Cerveza en evento
 
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 105, 1, 1);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 966, 1, 2);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 137, 2, 3);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 331, 2, 4);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1551, 3, 5);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 789, 3, 6);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 143, 4, 7);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 941, 4, 8);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1836, 5, 9);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1373, 5, 10);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1681, 6, 11);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1220, 6, 12);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1095, 7, 13);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 754, 7, 14);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1908, 8, 15);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 698, 8, 16);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1219, 9, 17);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 116, 9, 18);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 703, 10, 19);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 564, 10, 20);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 516, 11, 21);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 251, 11, 22);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 260, 12, 23);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1466, 12, 24);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 518, 13, 1);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1039, 13, 2);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1258, 14, 3);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 126, 14, 4);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1212, 15, 5);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 830, 15, 6);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1940, 16, 7);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1831, 16, 8);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 525, 17, 9);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 273, 17, 10);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1325, 18, 11);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 883, 18, 12);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 283, 19, 13);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 831, 19, 14);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 80, 20, 15);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 900, 20, 16);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1905, 21, 17);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1655, 21, 18);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1445, 22, 19);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1988, 22, 20);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 343, 23, 21);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1764, 23, 22);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 1870, 24, 23);
-insert into cerveza_en_evento (cantidad_cervezas, precio_unitario , fk_evento , fk_cerveza) values (100, 963, 24, 24);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 1, 1);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 1, 3);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 2, 5);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 2, 7);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 3, 9);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 3, 11);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 4, 13);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 4, 15);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 5, 17);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 5, 19);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 6, 21);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 6, 23);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 7, 25);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 7, 27);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 8, 29);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 8, 31);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 9, 33);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 9, 35);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 10, 37);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 10, 39);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 11, 41);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 11, 43);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 12, 45);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 12, 47);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 13, 49);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 13, 51);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 14, 53);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 14, 55);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 15, 57);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 15, 59);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 16, 61);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 16, 63);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 17, 65);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 17, 67);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 18, 69);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 18, 71);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 19, 73);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 19, 75);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 20, 77);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 20, 79);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 21, 81);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 21, 83);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 22, 5);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 22, 7);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 23, 9);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 23, 1);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 24, 3);
+insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values (100, 24, 5);
+
 
 
 --11) Presupuesto (10 en total)
@@ -3426,3 +3427,10 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_un
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (82, 100, 4, 84053);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario ) values (10, 100, 46, 15778);
 
+--Cargo 
+
+insert into cargo (nombre) values ('Gerente');
+insert into cargo (nombre) values ('Jefe');
+insert into cargo (nombre) values ('Coordinador');
+insert into cargo (nombre) values ('Atencion al cliente');
+insert into cargo (nombre) values ('Mantenimiento');
