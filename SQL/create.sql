@@ -164,8 +164,6 @@ Create table valor_punto(
 
 Create table historico_punto(
 	id 					serial    not null,
-	/*fecha_inicio 		timestamp not null,*/
-	/*fecha_final 		timestamp not null,*/
 	fk_valor_punto 		integer   not null,
 	fk_punto 			integer   not null,
 	created_at					timestamp,
@@ -754,19 +752,13 @@ Create table inventario(
 	cantidad_actual 		numeric(8)	not null,
 	fk_tiendaO 				integer,
 	fk_tiendaF 				integer,
-	fk_venta 				integer,
-	fk_compra 				integer,
 	fk_cerveza 				integer,
-	fk_cerveza_en_evento 	integer    not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_inventario PRIMARY KEY(id),
 	CONSTRAINT FK_fk_tiendaO_inventario FOREIGN KEY(fk_tiendaO) REFERENCES tienda_online(id),
 	CONSTRAINT FK_fk_tiendaF_inventario FOREIGN KEY(fk_tiendaF) REFERENCES tienda_fisica(id),
-	CONSTRAINT FK_fk_venta_inventario FOREIGN KEY(fk_venta) REFERENCES detalle_factura(id),
-	CONSTRAINT FK_fk_compra_inventario FOREIGN KEY(fk_compra) REFERENCES detalle_compra(id),
-	CONSTRAINT FK_fk_cerveza_inventario FOREIGN KEY(fk_cerveza) REFERENCES cerveza(id),
-	CONSTRAINT FK_fk_cerveza_en_evento_inventario FOREIGN KEY(fk_cerveza_en_evento) REFERENCES cerveza_en_evento(id)
+	CONSTRAINT FK_fk_cerveza_inventario FOREIGN KEY(fk_cerveza) REFERENCES cerveza(id)
 );
 
 Create table comentario(
@@ -809,7 +801,7 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			timestamp 	
+	fecha 			date 	
 	hora_entrada	timestamp  	
 	hora_salida		timestamp 	
 	fk_empleado 	integer 	not null,
@@ -818,4 +810,18 @@ Create table asistencia(
 	CONSTRAINT PK_id_asistencia PRIMARY KEY(id),
 	CONSTRAINT FK_fk_empleado_asistencia FOREIGN KEY(fk_empleado) REFERENCES empleado(id)
 
+);
+
+
+Create table movimiento_inventario(
+	id 		serial		not null,
+	fecha	date,
+	fk_venta 				integer,
+	fk_compra 				integer,
+	fk_cerveza_en_evento 	integer,
+	fk_inventario 			integer,
+	CONSTRAINT FK_fk_venta_inventario FOREIGN KEY(fk_venta) REFERENCES detalle_factura(id),
+	CONSTRAINT FK_fk_compra_inventario FOREIGN KEY(fk_compra) REFERENCES detalle_compra(id),
+	CONSTRAINT FK_fk_cerveza_en_evento_inventario FOREIGN KEY(fk_cerveza_en_evento) REFERENCES cerveza_en_evento(id),
+	CONSTRAINT FK_fk_inventario FOREIGN KEY(fk_inventario) REFERENCES inventario(id),
 );
