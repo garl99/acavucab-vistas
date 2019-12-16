@@ -98,7 +98,7 @@ Create table caracteristica(
 Create table tipo_cerveza(		/*Hubo cambios aqui*/
 	id 						serial			not null,
 	nombre 					varchar(20)		not null,
-	historia 	 			varchar(600)	not null,
+	historia 	 			varchar(1000)	not null,
 	fk_tipoC 				integer, 
 	created_at				timestamp,
 	updated_at 				timestamp,
@@ -801,9 +801,9 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			date 	
-	hora_entrada	timestamp  	
-	hora_salida		timestamp 	
+	fecha 			date 		not null,
+	hora_entrada	timestamp  	not null,
+	hora_salida		timestamp 	not null,
 	fk_empleado 	integer 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -823,5 +823,5 @@ Create table movimiento_inventario(
 	CONSTRAINT FK_fk_venta_inventario FOREIGN KEY(fk_venta) REFERENCES detalle_factura(id),
 	CONSTRAINT FK_fk_compra_inventario FOREIGN KEY(fk_compra) REFERENCES detalle_compra(id),
 	CONSTRAINT FK_fk_cerveza_en_evento_inventario FOREIGN KEY(fk_cerveza_en_evento) REFERENCES cerveza_en_evento(id),
-	CONSTRAINT FK_fk_inventario FOREIGN KEY(fk_inventario) REFERENCES inventario(id),
+	CONSTRAINT FK_fk_inventario FOREIGN KEY(fk_inventario) REFERENCES inventario(id)
 );
