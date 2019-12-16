@@ -762,7 +762,7 @@ Create table inventario(
 
 Create table comentario(
 	id 						serial			not null, 
-	descripcion 				varchar(100)	not null,
+	descripcion 				varchar(600)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_comentario PRIMARY KEY(id)
