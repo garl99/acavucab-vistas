@@ -99,7 +99,7 @@ Create table caracteristica(
 
 Create table tipo_cerveza(		
 	id 						serial			not null,
-	nombre 					varchar(20)		not null,
+	nombre 					varchar(60)		not null,
 	historia 	 			varchar(1000)	not null,
 	fk_tipoC 				integer, 
 	created_at				timestamp,
@@ -762,7 +762,7 @@ Create table inventario(
 
 Create table comentario(
 	id 						serial			not null, 
-	descricion 				varchar(100)	not null,
+	descripcion 				varchar(100)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_comentario PRIMARY KEY(id)
