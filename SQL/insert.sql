@@ -1596,12 +1596,30 @@ insert into cliente_juridico (rif, cantidad_puntos, denomi_comercial, razon_soci
 
 --5)Persona
 
-insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (10073343, 'Garner', 'Itzkov', 4);
-insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (13526320, 'Heather', 'Maddox', 7);
-insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (25764397, 'Darren', 'Pulster', 6);
-insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (19067389, 'Charla', 'Smail', 12);
-insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (14439291, 'Dyan', 'Measom', 2);
-
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (25940955, 'Fredek', 'Jurkiewicz', 1);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (15018145, 'Joya', 'Frenzl', 2);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (17146049, 'Marisa', 'Petran', 3);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (16899015, 'Freddi', 'Benedek', 4);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (26177580, 'Rube', 'Fudge', 5);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (20210448, 'Viole', 'Bowman', 6);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (11237582, 'Abram', 'Rigmond', 7);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (25641295, 'Neel', 'Arundel', 8);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (12434595, 'Mel', 'Bizley', 9);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (21473252, 'Velvet', 'Conrath', 10);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (13756339, 'Caitlin', 'Lightman', 11);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (9862738, 'Taite', 'Mc Caghan', 12);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (24612105, 'Kym', 'Biggar', 13);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (24275086, 'Sibyl', 'Tripney', 14);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (15127680, 'Maje', 'Kollach', 15);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (9859253, 'Stevy', 'Clackson', 16);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (10995782, 'Deloris', 'Haldene', 17);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (19944411, 'Adorne', 'Goodbar', 18);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (18865920, 'Valdemar', 'Orcas', 19);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (13986780, 'Kiley', 'Roulston', 20);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (6614129, 'Cahra', 'Ivanusyev', 21);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (9021837, 'Candie', 'Calbaithe', 22);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (19769985, 'Hamilton', 'Allmann', 23);
+insert into persona (cedula	, nombre, apellido, fk_clienteJ ) values (25506741, 'Gwennie', 'Sitford', 24);
 --6)Presupuesto 
 
 insert into presupuesto (fecha 	, total_presupuesto, fk_clienteN , fk_clienteJ, carrito ) values ('2019-11-20', 99087, null, 6, false);
@@ -2108,11 +2126,111 @@ insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_provee
 
 --18) Telefono
 
-insert into telefono (clave_area , numero , fk_proveedor , fk_clienteN, fk_clienteJ , fk_persona ) values ('0416', 4481472, 5, null, null, null);
-insert into telefono (clave_area , numero , fk_proveedor , fk_clienteN, fk_clienteJ , fk_persona ) values ('0414', 3563686, null, 3, null, null);
-insert into telefono (clave_area , numero , fk_proveedor , fk_clienteN, fk_clienteJ , fk_persona ) values ('0416', 9469415, null, null, 11, null);
-insert into telefono (clave_area , numero , fk_proveedor , fk_clienteN, fk_clienteJ , fk_persona ) values ('0416', 5862633, null, null, null, 3);
-insert into telefono (clave_area , numero , fk_proveedor , fk_clienteN, fk_clienteJ , fk_persona ) values ('0416', 3086618, null, null, 4, null);
+--Telf.Proveedor
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 3267721, 1);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0414', 8136393, 2);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 6665774, 3);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 9179859, 4);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 6590904, 5);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0416', 3898174, 6);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 4639253, 7);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0414', 6060928, 8);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0416', 4735841, 9);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0414', 9246326, 10);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0414', 7265200, 11);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0416', 7898875, 12);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 6621483, 13);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 3892233, 14);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0416', 7592957, 15);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0414', 6533588, 16);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0412', 5350279, 17);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0416', 4609669, 18);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0416', 7373400, 19);
+insert into telefono (clave_area , numero , fk_proveedor ) values ('0414', 4462664, 20);
+
+--Telf. Cliente Natural
+
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 6568357, 1);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0414', 7687616, 2);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 3664260, 3);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 4863593, 4);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0414', 9618352, 5);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 8888341, 6);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 4323622, 7);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 7451058, 8);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 8669499, 9);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 7531970, 10);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0414', 4658971, 11);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 6513447, 12);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0414', 8389772, 13);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 9114656, 14);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 6241716, 15);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0414', 5659397, 16);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 8048220, 17);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0414', 3001259, 18);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 7367707, 19);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 3387525, 20);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 8531423, 21);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0416', 4985224, 22);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0414', 5069285, 23);
+insert into telefono (clave_area , numero , fk_clienteN) values ('0412', 9402889, 24);
+
+--Telf. Cliente Juridico
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0416', 4514836, 1);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 4107297, 2);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 6244769, 3);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0416', 9919584, 4);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0416', 6019593, 5);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 8483251, 6);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 4580062, 7);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0416', 4926669, 8);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 7074239, 9);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0416', 8299332, 10);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 4608847, 11);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 9030190, 12);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0412', 6215881, 13);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 6012183, 14);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 7952527, 15);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0412', 7640842, 16);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0412', 5625383, 17);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0412', 8166858, 18);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0412', 4338740, 19);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 8505368, 20);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0416', 3456834, 21);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0412', 5608852, 22);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0414', 9331506, 23);
+insert into telefono (clave_area , numero , fk_clienteJ) values ('0416', 9933014, 24);
+
+--Telf. Persona
+insert into telefono (clave_area , numero , fk_persona) values ('0412', 3259246, 1);
+insert into telefono (clave_area , numero , fk_persona) values ('0412', 9664343, 2);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 6929164, 3);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 7929977, 4);
+insert into telefono (clave_area , numero , fk_persona) values ('0412', 7056005, 5);
+insert into telefono (clave_area , numero , fk_persona) values ('0412', 3524668, 6);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 2800212, 7);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 5582445, 8);
+insert into telefono (clave_area , numero , fk_persona) values ('0412', 6471865, 9);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 6569113, 10);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 5542887, 11);
+insert into telefono (clave_area , numero , fk_persona) values ('0412', 8472257, 12);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 7046904, 13);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 3890305, 14);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 4808152, 15);
+insert into telefono (clave_area , numero , fk_persona) values ('0412', 3517322, 16);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 4710423, 17);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 3511971, 18);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 7405773, 19);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 4063975, 20);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 4962875, 21);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 8901139, 22);
+insert into telefono (clave_area , numero , fk_persona) values ('0416', 2735919, 23);
+insert into telefono (clave_area , numero , fk_persona) values ('0414', 2750030, 24);
+
+
+
+
+
 
 
 --19)Tipo de pago efectivo
@@ -2127,11 +2245,65 @@ insert into efectivo (cantidad_divisa , cantidad_bolivares , fk_clienteN , fk_cl
 
 --20)Tipo de pago tarjeta de credito
 
-insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN , fk_clienteJ) values ('Banesco', '3582992977144037', '2021-11-16', 906, 20, null);
-insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN , fk_clienteJ) values ('Banco de Venezuela', '5602220042774483931', '2020-03-24', 228, null, 1);
-insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN , fk_clienteJ) values ('Mercantil', '3533539422202660', '2020-03-11', 230, 23, null);
-insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN , fk_clienteJ) values ('BOD', '4026301816108827', '2021-10-17', 765, 18, null);
-insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN , fk_clienteJ) values ('Banco Exterior', '5108759403332985', '2020-01-07', 810, 2, null);
+--Para cliente Natural
+
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banesco', 3529588411110265, '2019-11-12', 650, 1);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco de Venezuela', 6763381368568885, '2020-09-29', 787, 2);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Mercantil', 3559188942474513, '2022-04-16', 253, 3);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('BOD', 3564779911991868, '2021-06-24', 646, 4);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco Exterior', 56109571205114756, '2022-08-21', 678, 5);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banesco', 5602255582364742, '2019-10-07', 267, 6);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco de Venezuela', 493664806077129140, '2020-12-24', 828, 7);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Mercantil', 337941910035939, '2019-06-16', 150, 8);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('BOD', 30068443690160, '2021-10-06', 448, 9);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco Exterior', 201896901697696, '2022-02-24', 152, 10);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banesco', 3544445666982818, '2021-09-13', 437, 11);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco de Venezuela', 3532025349305977, '2021-09-02', 750, 12);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Mercantil', 3578280148660065, '2019-09-26', 685, 13);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('BOD', 5602247311053589, '2021-06-30', 881, 14);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco Exterior', 3575000686320010, '2022-08-27', 846, 15);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banesco', 3548326487663538, '2021-07-26', 240, 16);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco de Venezuela', 347242847397510, '2021-07-10', 936, 17);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Mercantil', 560222519266082324, '2021-08-05', 811, 18);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('BOD', 3543718887261076, '2022-06-09', 373,19);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco Exterior', 675908612906266840, '2021-12-13', 524, 20);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banesco', 201843233021823, '2022-08-10', 823, 21);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Banco de Venezuela', 3559914709896873, '2021-11-22', 368, 22);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('Mercantil', 50189957630010592, '2022-02-04', 128, 23);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteN ) values ('BOD', 5007667480334661, '2022-08-01', 136, 24);
+
+--Cliente Juridico
+
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banesco', '3585267694264211', '2022-01-07', 349, 1);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco de Venezuela', '3579465028195113', '2021-03-16', 140, 2);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Mercantil', '5174688317800143', '2022-03-06', 417, 3);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('BOD', '5186300474942017', '2022-01-12', 594, 4);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco Exterior', '67719777043571292', '2022-06-04', 158, 5);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banesco', '3567248343223875', '2021-08-29', 953, 6);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco de Venezuela', '3574901116074526', '2019-10-17', 289, 7);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Mercantil', '30352841139982', '2019-06-06', 532, 8);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('BOD', '3545185667792712', '2019-07-08', 551, 9);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco Exterior', '3560950812453621', '2021-12-19', 164, 10);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banesco', '3545966680746656', '2022-07-08', 152, 11);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco de Venezuela', '3542461620243181', '2020-06-25', 721, 12);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Mercantil', '5002356513759079', '2020-05-29', 141, 13);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('BOD', '5010120806980671', '2021-01-12', 821, 14);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco Exterior', '560222539973756614', '2019-11-07', 373, 15);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banesco', '374288071643166', '2020-08-10', 400, 16);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco de Venezuela', '3529771905005452', '2020-09-03', 561, 17);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Mercantil', '4508568302934992', '2020-11-04', 892, 18);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('BOD', '3537797486197673', '2022-07-18', 711, 19);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco Exterior', '6374112371050988', '2019-12-29', 706, 20);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banesco', '3555595245055407', '2019-08-28', 164, 21);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Banco de Venezuela', '201527949455678', '2021-02-22', 819, 22);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('Mercantil', '5100134027853725', '2021-10-03', 333, 23);
+insert into tarjeta_credito (banco , num_tarjeta, fecha_vencimiento, cvv , fk_clienteJ) values ('BOD', '3576711072091390', '2020-01-04', 956, 24);
+
+
+
+
+
+
 
 --21) Tipo de pago tarjeta de debito
 
