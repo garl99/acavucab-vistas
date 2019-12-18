@@ -1,4 +1,4 @@
-Create database ACAVUCAB2;
+--Create database ACAVUCAB2;
 
 
 Create table lugar(
