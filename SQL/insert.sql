@@ -2929,23 +2929,24 @@ insert into empleado_vacacion (fk_empleado, fk_vacacion, fecha_inicio, fecha_fin
 insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (1, 3, '2019-06-26', '2020-02-22');
 insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (2, 3, '2019-10-01', '2020-02-09');
 insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (3, 3, '2019-03-30', '2020-05-10');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (4, 4, '2019-01-18', '2020-06-03');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (5, 3, '2019-08-20', '2020-07-02');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (6, 3, '2019-03-30', '2020-02-19');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (7, 4, '2019-11-14', '2020-08-20');
+
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (4, 2, '2019-01-18', '2020-06-03');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (5, 2, '2019-08-20', '2020-07-02');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (6, 1, '2019-03-30', '2020-02-19');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (7, 3, '2019-11-14', '2020-08-20');
 insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (8, 4, '2019-03-25', '2020-01-29');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (9, 2, '2019-10-24', '2020-04-12');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (10, 1, '2019-05-23', '2020-01-19');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (11, 5, '2019-07-03', '2020-05-11');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (12, 2, '2019-02-03', '2020-03-13');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (13, 3, '2019-06-19', '2020-09-21');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (14, 4, '2019-11-28', '2020-01-17');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (9, 4, '2019-10-24', '2020-04-12');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (10, 4, '2019-05-23', '2020-01-19');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (11, 3, '2019-07-03', '2020-05-11');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (12, 3, '2019-02-03', '2020-03-13');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (13, 4, '2019-06-19', '2020-09-21');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (14, 3, '2019-11-28', '2020-01-17');
 insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (15, 4, '2019-08-30', '2020-12-28');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (16, 1, '2019-11-22', '2020-02-24');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (17, 3, '2019-08-16', '2020-03-29');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (18, 2, '2019-11-08', '2020-07-29');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (19, 5, '2019-01-25', '2020-02-16');
-insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (20, 1, '2019-07-21', '2020-12-04');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (16, 3, '2019-11-22', '2020-02-24');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (17, 4, '2019-08-16', '2020-03-29');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (18, 4, '2019-11-08', '2020-07-29');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (19, 4, '2019-01-25', '2020-02-16');
+insert into empleado_cargo (fk_empleado, fk_cargo, fecha_inicio, fecha_fin) values (20, 5, '2019-07-21', '2020-12-04');
 
 --35) Empleado-Horario (cada empleado tiene su horario)
 
@@ -3074,11 +3075,11 @@ insert into beneficio_empleado (fk_beneficio, fk_empleado) values (1, 10);
 --38) Diario
 
 
-insert into diario (fecha_emision, fk_empleado ) values ('2019-10-05', 4);
-insert into diario (fecha_emision, fk_empleado ) values ('2019-11-05', 4);
-insert into diario (fecha_emision, fk_empleado ) values ('2019-12-05', 4);
-insert into diario (fecha_emision, fk_empleado ) values ('2020-01-05', 4);
-insert into diario (fecha_emision, fk_empleado ) values ('2020-02-05', 4);
+insert into diario (fecha_emision, fk_empleado ) values ('2019-10-05', 5);
+insert into diario (fecha_emision, fk_empleado ) values ('2019-11-05', 5);
+insert into diario (fecha_emision, fk_empleado ) values ('2019-12-05', 5);
+insert into diario (fecha_emision, fk_empleado ) values ('2020-01-05', 5);
+insert into diario (fecha_emision, fk_empleado ) values ('2020-02-05', 5);
 
 --39)Correo electronico
 
