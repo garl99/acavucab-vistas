@@ -1,4 +1,4 @@
-Create database ACAVUCAB2;
+--Create database ACAVUCAB2;
 
 
 Create table lugar(
@@ -15,10 +15,11 @@ Create table lugar(
 
 Create table  evento(
 	id 			serial			not null,
-	nombre		varchar(20)		not null,
+	nombre		varchar(50)		not null,
 	descripcion	varchar(255)	not null,
 	cantidad_entrada_inicial 		numeric(10)  not null,
 	cantidad_entrada_actual 		numeric(10)	 not null,
+	fecha 		date				not null, 
 	fk_lugar 	integer			not null,
 	created_at	timestamp,
 	updated_at timestamp,
@@ -36,6 +37,7 @@ Create table cliente_natural(
 	segundo_nombre 		varchar(20),
 	primer_apellido		varchar(20)				not null,
 	segundo_apellido 	varchar(20),
+	direccion_fisica	varchar(100)			not null,
 	fk_lugar 			integer 				not null,
 	created_at			timestamp,
 	updated_at 			timestamp,
@@ -47,9 +49,9 @@ Create table cliente_juridico(
 	id 					serial					not null,
 	rif					numeric(10)		unique	not null,
 	cantidad_puntos		numeric(10),
-	denomi_comercial	varchar(20)				not null,
-	razon_social		varchar(20)				not null,
-	capital_social 		float(15)				not null,
+	denomi_comercial	varchar(50)				not null,
+	razon_social		varchar(50)				not null,
+	capital_social 		float 					not null,
 	direccion_fiscal	varchar(100)			not null,
 	direccion_fisica	varchar(100)			not null,
 	pagina_web			varchar(50)				not null,
@@ -63,10 +65,10 @@ Create table cliente_juridico(
 ); 
 
 Create table persona(
-	id 				serial		not null,
-	cedula			numeric(10)	not null,
-	nombre 			varchar(20) not null,
-	apellido 		varchar(20)	not null,
+	id 				serial			not null,
+	cedula			numeric(10)		unique 	not null,
+	nombre 			varchar(20) 	not null,
+	apellido 		varchar(20)		not null,
 	fk_clienteJ 	integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -77,9 +79,10 @@ Create table persona(
 Create table presupuesto(
 	id 						serial		not null,
 	fecha 					date 		not null,
-	total_presupuesto		float(15)	not null,
+	total_presupuesto		float	not null,
 	fk_clienteN 			integer,
 	fk_clienteJ 			integer,
+	carrito 					boolean 	not null, 
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_presupuesto PRIMARY KEY(id),
@@ -95,9 +98,9 @@ Create table caracteristica(
 	CONSTRAINT PK_id_caracteristica PRIMARY KEY(id)
 );
 
-Create table tipo_cerveza(		/*Hubo cambios aqui*/
+Create table tipo_cerveza(		
 	id 						serial			not null,
-	nombre 					varchar(20)		not null,
+	nombre 					varchar(60)		not null,
 	historia 	 			varchar(1000)	not null,
 	fk_tipoC 				integer, 
 	created_at				timestamp,
@@ -106,12 +109,10 @@ Create table tipo_cerveza(		/*Hubo cambios aqui*/
 	CONSTRAINT FK_fk_tipoC_tipo_cerveza FOREIGN KEY(fk_tipoC) REFERENCES tipo_cerveza(id)
 );
 
-Create table tipo_cerveza_caracteristica(		/*Hubo cambios aqui*/
+Create table tipo_cerveza_caracteristica(		
 	id						serial		not null,
 	fk_tipoC 				integer,
-	fk_caracteristica 		integer,
-	densidad_inicial		integer,
-	densidad_final			integer,		
+	fk_caracteristica 		integer,		
 	valor 					integer,
 	created_at				timestamp,
 	updated_at 				timestamp,	
@@ -154,9 +155,9 @@ Create table punto(
 
 Create table valor_punto(
 	id 							serial		not null,
-	precio_unitario_bs 			float(5)	not null,
-	fecha_inicio				timestamp	not null,
-	fecha_final 				timestamp,
+	precio_unitario_bs 			decimal(9,2)	not null,
+	fecha_inicio				date	not null,
+	fecha_final 				date,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_valor_punto PRIMARY KEY(id)
@@ -175,12 +176,12 @@ Create table historico_punto(
 
 Create table movimiento_punto(
 	id 						serial   	not null,
-	puntos_iniciales		float(10)	not null,
-	puntos_actuales 		float(10)	not null,
-	fecha 					timestamp	not null,
+	puntos_iniciales		decimal(9,2)	not null,
+	puntos_actuales 		decimal(9,2)	not null,
+	fecha 					date 	not null,
 	fk_historico 			integer 	not null,
-	fk_clienteN 			integer 	not null,
-	fk_clienteJ 			integer 	not null,
+	fk_clienteN 			integer 	,
+	fk_clienteJ 			integer 	,
 	created_at				timestamp,
 	updated_at 				timestamp,
 	CONSTRAINT PK_id_movimiento_punto PRIMARY KEY(id),
@@ -208,9 +209,9 @@ Create table proveedor(
 
 Create table cuota_afiliacion(
 	id 				serial 		not null,
-	monto_total 	float(10) 	not null,
-	fecha_inicio 	timestamp	not null, 
-	fecha_final 	timestamp 	not null,
+	monto_total 	float 		not null,
+	fecha_inicio 	date	not null, 
+	fecha_final 	date 	not null,
 	fk_proveedor 	integer 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -237,15 +238,18 @@ Create table telefono(
 
 Create table efectivo(
 	id 						serial			not null,
-	cantidad_divisa 		float(10) 		not null,
-	cantidad_bolivares 		float(10)		not null,
+	cantidad_divisa 		decimal(9,2) 		,
+	cantidad_bolivares 		decimal(9,2)		,
 	fk_clienteN 			integer,
 	fk_clienteJ				integer,
+	fk_proveedor			integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_efectivo PRIMARY KEY(id),
 	CONSTRAINT FK_fk_clienteN_efectivo FOREIGN KEY(fk_clienteN) REFERENCES cliente_natural(id),
-	CONSTRAINT FK_fk_clienteJ_efectivo FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id)
+	CONSTRAINT FK_fk_clienteJ_efectivo FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
+	CONSTRAINT FK_fk_proveedor_efectivo FOREIGN KEY(fk_proveedor) REFERENCES proveedor(id)
+
 );
 
 Create table tarjeta_credito(
@@ -294,15 +298,14 @@ Create table cheque(
 
 Create table valor_divisa(
 	id 							serial		not null,
-	precio_unitario_bs 			float(15)	not null,
-	fecha_inicio 				timestamp	not null,
-	fecha_final 				timestamp,
-	fk_efectivo					integer 	not null,
+	precio_unitario_bs 			decimal(9,2)	not null,
+	fecha_inicio 				date	not null,
+	fecha_final 				date,
 	created_at					timestamp,
 	updated_at 					timestamp,
-	CONSTRAINT PK_id_valor_divisa PRIMARY KEY(id),
-	CONSTRAINT FK_fk_efectivo_valor_divisa FOREIGN KEY(fk_efectivo) REFERENCES efectivo(id)
+	CONSTRAINT PK_id_valor_divisa PRIMARY KEY(id)
 );
+	
 
 Create table historico_divisa(
 	id 							serial 		not null,
@@ -315,18 +318,18 @@ Create table historico_divisa(
 	CONSTRAINT FK_fk_efectivo_historico_divisa FOREIGN KEY(fk_efectivo) REFERENCES efectivo(id)
 );
 
-Create table entrada(			/*Hubo cambios aqui. Revisar los not null porque hay arco*/ 
+Create table entrada(			
 	fk_evento 			integer 	not null,
 	fk_persona 			integer,
 	numero_entrada  	numeric(8)	not null, 
-	precio 				float(15)	not null,
+	precio 				decimal(9,2)	not null,
 	fk_efectivo			integer,
 	fk_tarjetaC 		integer,
 	fk_tarjetaD 		integer,
 	fk_cheque 			integer,
 	fk_clienteN 		integer,
 	fk_clienteJ 		integer,
-	fecha_compra		timestamp	not null,
+	fecha_compra		date	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_entrada PRIMARY KEY(numero_entrada),
@@ -341,7 +344,7 @@ Create table entrada(			/*Hubo cambios aqui. Revisar los not null porque hay arc
 );
 
 Create table venta(
-	id 					numeric(8)	not null, /*VIENE SIENDO NUMERO_ENTRADA*/
+	id 					numeric(8)	not null, 
 	fecha 				date  	not null,
 	total_pagar			numeric(15)	not null,
 	fk_clienteN 		integer,
@@ -359,7 +362,7 @@ Create table venta(
 
 
 
-Create table pago(							/*Hubo un cambio aqui*/
+Create table pago(							
 	id					serial		not null,
 	fk_venta 			numeric(8)	not null,
 	fk_efectivo			integer,
@@ -367,7 +370,7 @@ Create table pago(							/*Hubo un cambio aqui*/
 	fk_tarjetaD 		integer,
 	fk_punto 			integer,
 	fk_cheque 			integer,
-	monto_total			float(15)	not null,
+	monto_total			float	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_fk_venta_pago PRIMARY KEY(id),
@@ -394,7 +397,7 @@ Create table empleado(
 	cedula 					numeric(10)	unique 		not null,
 	nombre 					varchar(20)				not null,
 	apellido 				varchar(20) 			not null,
-	salario					float(15)				not null,
+	salario					decimal(9,2)				not null,
 	fk_departamento 		integer 				not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -428,7 +431,7 @@ Create table horario(
 	CONSTRAINT PK_id_horario PRIMARY KEY (id)
 );
 
-Create table empleado_vacacion(		/*Hubo cambios aqui*/
+Create table empleado_vacacion(		
 	id				serial		not null,
 	fk_empleado 	integer		not null,
 	fk_vacacion 	integer 	not null,
@@ -442,7 +445,7 @@ Create table empleado_vacacion(		/*Hubo cambios aqui*/
 	CONSTRAINT FK_fk_vacacion_empleado_vacacion FOREIGN KEY(fk_vacacion) REFERENCES vacacion(id)
 );
 
-Create table empleado_cargo(		/*Hubo cambios aqui*/
+Create table empleado_cargo(	
 	id				serial		not null,
 	fk_empleado 	integer 	not null,
 	fk_cargo		integer 	not null,
@@ -455,27 +458,27 @@ Create table empleado_cargo(		/*Hubo cambios aqui*/
 	CONSTRAINT   FK_fk_cargo_empleado_cargo FOREIGN KEY(fk_cargo) REFERENCES cargo(id)
 );
 
-Create table empleado_horario(			/*Hubo cambios aqui*/
+Create table empleado_horario(			
 	id 					serial		not null,
-	fk_empleado 	 	integer 	not null,
+	fk_empleado_cargo 	 	integer 	not null,
 	fk_horario			integer 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_empleado_horario PRIMARY KEY(id),
-	CONSTRAINT FK_fk_empleado_empleado_horario FOREIGN KEY(fk_empleado) REFERENCES empleado(id),
+	CONSTRAINT FK_fk_empleado_cargo_empleado_horario FOREIGN KEY(fk_empleado_cargo) REFERENCES empleado_cargo(id),
 	CONSTRAINT FK_fk_horario_empleado_horario FOREIGN KEY(fk_horario) REFERENCES horario(id)
 );
 
 Create table beneficio(
 	id 					serial			not null,
-	nombre 				varchar(20)		not null,
+	nombre 				varchar(100)		not null,
 	descripcion 		varchar(255) 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_beneficio PRIMARY KEY(id)
 );
 
-Create table beneficio_empleado(		/*Hubo cambios aqui*/
+Create table beneficio_empleado(	
 	id				serial		not null,
 	fk_beneficio	integer 	not null, 
 	fk_empleado 	integer 	not null,
@@ -512,7 +515,7 @@ Create table correo_electronico(
 	CONSTRAINT fk_proveedor_correo_electronico FOREIGN KEY(fk_proveedor) REFERENCES proveedor(id)
 );
 
-Create table proveedor_evento(		/*Hubo cambios aqui*/
+Create table proveedor_evento(	
 	id 					serial			not null,
 	fk_evento 			integer 		not null,
 	fk_proveedor 		integer 		not null,
@@ -541,9 +544,9 @@ Create table ingrediente(
 
 Create table pasillo(
 	id 							serial 		not null,
-	numero_pasillo 				numeric(8)	not null,
+	numero_pasillo 				integer	not null,
 	zona_pasillo 				char(1)		not null,
-	capacidad_anaqueles 		numeric(8)	not null,
+	capacidad_anaqueles 		integer	not null,
 	fk_tiendaF 					integer 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -552,9 +555,9 @@ Create table pasillo(
 );
 
 Create table anaquel(
-	numero_anaquel 		numeric(8)		not null,
-	capacidad 			numeric(5)	not null,
-	numero_repisas 		numeric(3)	not null,
+	numero_anaquel 		integer		not null,
+	capacidad 			integer	 not null,
+	numero_repisas 		integer	 not null,
 	fk_pasillo			integer		not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -578,7 +581,7 @@ Create table venta_status(
 	id 				serial		not null,
 	fk_venta 		numeric(8) 	not null,
 	fk_status 		integer 	not null,
-	fecha_status	timestamp	not null,
+	fecha_status	date	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_venta_status PRIMARY KEY(id),
@@ -588,8 +591,8 @@ Create table venta_status(
 
 Create table permiso(
 	id 				serial	 		not null, 
-	nombre 			varchar(20)		not null,
-	descripcion		varchar(30)		not null,
+	nombre 			varchar(60)		not null,
+	descripcion		varchar(100)		not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_permiso PRIMARY KEY(id)
@@ -603,7 +606,7 @@ Create table rol(
 	CONSTRAINT PK_id_rol PRIMARY KEY(id)
 );
 
-Create table rol_permiso(			/*Hubo cambios aqui*/
+Create table rol_permiso(			
 	id 					serial			not null,
 	fk_rol 				integer  		not null, 
 	fk_permiso 			integer 		not null,
@@ -616,7 +619,7 @@ Create table rol_permiso(			/*Hubo cambios aqui*/
 
 Create table usuario(
 	id 					serial		not null,
-	contrasena 			varchar(200)	not null,
+	contrasena 			varchar(600)	not null,
 	fk_correoE 			integer 	not null,
 	fk_rol  			integer 	not null,
 	created_at					timestamp,
@@ -630,9 +633,10 @@ Create table usuario(
 Create table cerveza(
 	id 						serial			not null,
 	nombre 					varchar(40)		not null,
-	precio_unitario 		float(15)		not null,			
+	precio_unitario 		decimal(9,2)		not null,			
 	fk_tipoC 				integer 		not null,
 	ruta                    varchar(100)	not null, 
+	fk_proveedor			integer			not null,  
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_cerveza PRIMARY KEY(id),
@@ -642,7 +646,6 @@ Create table cerveza(
 Create table cerveza_en_evento(
 	id 							serial 			not null,
 	cantidad_cervezas			numeric(10)		not null,
-	precio_unitario 			float(15)		not null,
 	fk_evento 					integer 		not null,
 	fk_cerveza 					integer 		not null,
 	created_at					timestamp,
@@ -657,7 +660,7 @@ Create table detalle_factura(		/*Hubo cambios aqui: las fk estaban not null y un
 	fk_cerveza 				integer			not null,
 	fk_venta 				numeric(8)		not null,
 	cantidad_cervezas		numeric(7)		not null,
-	precio_unitario 		float(15)		not null,
+	precio_unitario 		decimal(9,2)		not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_detalle_factura PRIMARY KEY(id),
@@ -668,7 +671,7 @@ Create table detalle_factura(		/*Hubo cambios aqui: las fk estaban not null y un
 Create table compra(
 	id 						serial			not null,
 	fk_proveedor 			integer 		not null unique,
-	fecha_compra 			timestamp		not null,
+	fecha_compra 			date		not null,
 	fk_efectivo 			integer 		not null unique,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -683,7 +686,7 @@ Create table detalle_presupuesto(
 	fk_cerveza 				integer 	not null,
 	fk_presupuesto 			integer 	not null,
 	cantidad_cervezas		numeric(8)	not null,
-	precio_unitario 		float(10)	not null,
+	precio_unitario 		decimal(9,2)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_detalle_presupuesto PRIMARY KEY(id),
@@ -691,10 +694,10 @@ Create table detalle_presupuesto(
 	CONSTRAINT FK_fk_presupuesto_detalle_presupuesto FOREIGN KEY(fk_presupuesto) REFERENCES presupuesto(id)
 );
 
-Create table cerveza_anaquel(			/*Hubo un cambio aqui*/
+Create table cerveza_anaquel(		
 	id						serial		not null, 
 	fk_cerveza 				integer,	
-	fk_anaquel 				numeric(8),
+	fk_anaquel 				integer, 
 	cantidad_cervezas		numeric(5)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
@@ -703,11 +706,11 @@ Create table cerveza_anaquel(			/*Hubo un cambio aqui*/
 	CONSTRAINT FK_fk_anaquel_cerveza_anaquel FOREIGN KEY(fk_anaquel) REFERENCES anaquel(numero_anaquel)
 );
 
-Create table sistema_reposicion(			/*Hubo cambios aqui*/
+Create table sistema_reposicion(			
 	id						serial		not null,
-	fk_anaquel 				numeric(8)	not null, 
+	fk_anaquel 				integer	 not null, 
 	fk_empleado 			integer 	not null,
-	fecha_reposicion 		timestamp	not null,
+	fecha_reposicion 		date	not null,
 	cantidad_repuesta 		numeric(8) 	not null, 
 	fk_cerveza 				integer 	not null,
 	created_at					timestamp,
@@ -719,12 +722,11 @@ Create table sistema_reposicion(			/*Hubo cambios aqui*/
 	CONSTRAINT CHECK_cantidad_respuesta_sistema_reposicion CHECK (cantidad_repuesta=10000) /*OJO CON EL CHECK DE AQUI*/
 );
 
-Create table detalle_diario(			/*Hubo cambios aqui*/
+Create table detalle_diario(			
 	id									serial		not null,
 	fk_cerveza 							integer 	not null,
 	fk_diario 							integer 	not null,
 	porcentaje_descuento 				float(3)	not null,
-	precio_unitario_descuento			float(10)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_detalle_diario PRIMARY KEY(id),
@@ -735,7 +737,7 @@ Create table detalle_diario(			/*Hubo cambios aqui*/
 Create table detalle_compra(
 	id 							serial 		not null,
 	cantidad_cervezas 			numeric(8)	not null,
-	precio_unitario 			float(10) 	not null,
+	precio_unitario 			decimal(9,2) 	not null,
 	fk_cerveza 					integer 	not null,
 	fk_compra 					integer 	not null,
 	created_at					timestamp,
@@ -763,7 +765,7 @@ Create table inventario(
 
 Create table comentario(
 	id 						serial			not null, 
-	descricion 				varchar(100)	not null,
+	descripcion 				varchar(600)	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_comentario PRIMARY KEY(id)
@@ -783,7 +785,7 @@ Create table comentario_tipo_cerveza(
 
 Create table pago_cuota(
 	id 							serial 			not null,
-	monto_total 				float(10)		not null,
+	monto_total 				decimal(9,2)		not null,
 	fk_cuota_afiliacion 		integer 		not null,
 	fk_efectivo 				integer, 	 
 	fk_tarjetaD 				integer,
@@ -801,9 +803,9 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			date 		not null,
-	hora_entrada	timestamp  	not null,
-	hora_salida		timestamp 	not null,
+	fecha 			date 		not null, 
+	hora_entrada	time  	,
+	hora_salida		time 	,
 	fk_empleado 	integer 	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,

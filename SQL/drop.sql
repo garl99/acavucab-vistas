@@ -128,4 +128,4 @@ Drop table venta_status Cascade;
 
 Drop table movimiento_inventario Cascade;
 	
-Drop database ACAVUCAB;
+--Drop database ACAVUCAB;
