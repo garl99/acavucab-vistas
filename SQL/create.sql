@@ -10,7 +10,7 @@ Create table lugar(
 	updated_at timestamp,
 	CONSTRAINT PK_id_lugar PRIMARY KEY (id),
 	CONSTRAINT FK_fk_lugar_lugar FOREIGN KEY(fk_lugar) REFERENCES lugar(id),
-	CONSTRAINT CHECK_tipo_lugar CHECK (tipo IN ('Estado', 'Municipio', 'Parroquia'))
+	CONSTRAINT CHECK_tipo_lugar CHECK (tipo IN ('estado', 'municipio', 'parroquia'))
 );
 
 Create table  evento(
