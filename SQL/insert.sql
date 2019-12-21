@@ -3760,6 +3760,29 @@ insert into usuario (contrasena, fk_correoE , fk_rol ) values ('O6aeDbH', 66, 9)
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IW2ePkUc1', 67, 5);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 68, 8);
 
+--para los proveedores
+
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 69, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 70, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 71, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('6kySOgFjb', 72, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('OrVltxSuo', 73, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('b2QyPMVH', 74, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('x1DCULY', 75, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ivYaolctr', 76, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xw9Klt4VT', 77, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('D8FRJSWGaY', 78, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('NCykWUnBci', 79, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('BGGPrbTiporj', 80, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iGrfCre7wqjk', 81, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('QJO1Pv', 82, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('7Y6pa60Y', 83, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ubsRLW', 84, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dEQb0sOxvwGz', 85, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('O6aeDbH', 86, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IW2ePkUc1', 87, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 88, 4);
+
 --51)Cerveza(84 en total, 2 por cada tipo)
 
 insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Chester Beer Dos', 2000, 1, 'chesterbeerdos.jpg', 11);
