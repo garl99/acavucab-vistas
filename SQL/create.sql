@@ -18,7 +18,9 @@ Create table  evento(
 	nombre		varchar(50)		not null,
 	descripcion	varchar(255)	not null,
 	cantidad_entrada_inicial 		numeric(10)  not null,
-	cantidad_entrada_actual 		numeric(10)	 not null,
+	cantidad_entrada_actual 		numeric(10)	 not null,	
+	precio_entrada			 		numeric(10)  not null,	--Añadi esto aqui, porque en ningun momento sabemos en donde se registra ese precio
+															--ACOMODAR INSERTS
 	fecha 		date				not null, 
 	fk_lugar 	integer			not null,
 	created_at	timestamp,
@@ -318,11 +320,12 @@ Create table historico_divisa(
 	CONSTRAINT FK_fk_efectivo_historico_divisa FOREIGN KEY(fk_efectivo) REFERENCES efectivo(id)
 );
 
-Create table entrada(			
+Create table entrada(							--Quite el precio de aqui, no es conveniente porque se repite mucho. 
+												--Esta en evento y por la relacion se sabe cual seria ese precio
+												--ACOMODAR INSERTS
 	fk_evento 			integer 	not null,
 	fk_persona 			integer,
 	numero_entrada  	numeric(8)	not null, 
-	precio 				decimal(9,2)	not null,
 	fk_efectivo			integer,
 	fk_tarjetaC 		integer,
 	fk_tarjetaD 		integer,
