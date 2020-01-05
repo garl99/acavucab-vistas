@@ -363,7 +363,7 @@ Create table venta(
 	CONSTRAINT FK_fk_clienteJ_venta FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
 	CONSTRAINT FK_fk_tiendaO_venta FOREIGN KEY(fk_tiendaO) REFERENCES tienda_online(id),
 	CONSTRAINT FK_fk_tiendaF_venta FOREIGN KEY(fk_tiendaF) REFERENCES tienda_fisica(id),   --Cambie aqui fk_fk_clienteF_venta por fk_fk_tiendaF supongo que eso es a lo que se referia 
-	CONSTRAINT FK_fk_evento_venta FOREIGN KEY(fk_evento) REFERENCES evento(id), 		--Agregue esto porque no se sabia las ventas que venian de los eventos
+	CONSTRAINT FK_fk_evento_venta FOREIGN KEY(fk_evento) REFERENCES evento(id)		--Agregue esto porque no se sabia las ventas que venian de los eventos
 	
 );
 
