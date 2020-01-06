@@ -2824,7 +2824,7 @@ insert into entrada (fk_evento , fk_persona , numero_entrada, fk_efectivo	, fk_t
 
 --Tienda Online
 
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-01', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-01', 5000, null, 1, 1); 
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (2, '2019-10-26', 5000, null, 2, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (3, '2019-11-19', 5000, null, 3, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (4, '2019-06-02', 5000, null, 4, 1);
