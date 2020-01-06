@@ -11056,7 +11056,7 @@ body {
     }
     .sidebar.toggled {
         overflow: visible;
-        width: 100px !important;
+        width: 105px !important;
     }
     .sidebar.toggled .nav-item:last-child {
         margin-bottom: 1rem;
