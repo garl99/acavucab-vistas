@@ -1828,21 +1828,22 @@ insert into tienda_online (nombre) values ('Tienda Online ACAVUCAB');
 insert into tienda_fisica (nombre, fk_lugar, direccion_fisica) values ('Tienda ACAVUCAB',128 ,'Final Av. Teheran, Urb. Montalban');
 
 --12) Punto
-insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (500, 1, null);
-insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (200, 2, null);
-insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (100, 3, null);
-insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (300, 4, null);
-insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (500, 5, null);
+
+insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (1, null, 1);
+insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (1, null, 2);
+insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (1, null, 3);
+insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (1, null, 4);
+insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (1, null, 5);
 
 --13) Valor_punto (1 por cada mes, 5 en total)
 
 INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values 
 
-(0.50, '2019-09-01', '2019-09-30'),
-(0.75, '2019-10-01', '2019-10-31'),
-(1, '2019-11-01', '2019-11-30'),
-(1.25, '2019-12-01', '2019-12-31'),
-(1.50, '2020-01-01', '2020-01-31');
+(0.50, '2019-01-01', '2019-12-31'),
+(0.75, '2020-01-01', '2020-12-31'),
+(1, '2021-01-01', '2021-12-31'),
+(1.25, '2022-01-01', '2022-12-31'),
+(1.50, '2023-01-01', '2023-12-31');
 
 --14) Historico punto
 insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 1);
@@ -1851,12 +1852,15 @@ insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 3);
 insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 4);
 insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 5);
 
+
 --15) Movimiento punto
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (62317, 61817, '2019-09-30', 1, 1, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (10053, 9853, '2019-09-29', 2, 2, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 92814, '2019-09-10', 3, 3, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 7214, '2019-09-16', 4, 4, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 14506, '2019-09-11', 5, 5, null);
+
+
 
 --16)Proveedor (20 en total)
 
@@ -2818,9 +2822,9 @@ insert into entrada (fk_evento , fk_persona , numero_entrada, fk_efectivo	, fk_t
 
 --26)Venta (50 en tienda fisica y 50 en online con 2 cervezas x venta)
 
---Tienda fisica
+--Tienda Online
 
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-10-07', 2680, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-01', 2680, null, 1, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (2, '2019-01-27', 5933, null, 2, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (3, '2019-11-17', 9452, null, 3, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (4, '2019-01-23', 2489, null, 4, 1);
@@ -2869,116 +2873,173 @@ insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tienda
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (47, '2019-08-13', 3339, null, 2, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (48, '2019-02-05', 8544, null, 3, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (49, '2019-08-31', 9699, null, 4, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (50, '2019-07-30', 3935, null, 5, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (50, '2019-12-31', 3935, null, 5, 1);
 
 
---Tienda Online
+--Tienda Fisica
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (51, '2019-01-01', 5000, 1, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (52, '2019-09-29', 5000, 2, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (53, '2019-12-01', 5000, 3, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (54, '2019-05-21', 5000, 4, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (55, '2019-05-31', 5000, 5, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (56, '2019-07-19', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (57, '2019-09-18', 5000, null, 2, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (58, '2019-02-15', 5000, null, 3, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (59, '2019-08-30', 5000, null, 4, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (60, '2019-01-27', 5000, null, 5, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (61, '2019-10-11', 5000, 1, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (62, '2019-11-26', 5000, 2, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (63, '2019-08-27', 5000, 3, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (64, '2019-03-15', 5000, 4, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (65, '2019-03-06', 5000, 5, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (66, '2019-09-16', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (67, '2019-11-04', 5000, null, 2, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (68, '2019-07-11', 5000, null, 3, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (69, '2019-11-20', 5000, null, 4, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (70, '2019-06-06', 5000, null, 5, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (71, '2019-05-21', 5000, 1, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (72, '2019-04-12', 5000, 2, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (73, '2019-11-27', 5000, 3, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (74, '2019-05-16', 5000, 4, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (75, '2019-07-19', 5000, 5, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (76, '2019-06-07', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (77, '2019-07-03', 5000, null, 2, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (78, '2019-12-01', 5000, null, 3, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (79, '2019-01-08', 5000, null, 4, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (80, '2019-06-07', 5000, null, 5, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (81, '2019-04-28', 5000, 1, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (82, '2019-05-11', 5000, 2, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (83, '2019-10-08', 5000, 3, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (84, '2019-11-18', 5000, 4, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (85, '2019-05-30', 5000, 5, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (86, '2019-06-24', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (87, '2019-03-05', 5000, null, 2, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (88, '2019-10-11', 5000, null, 3, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (89, '2019-03-07', 5000, null, 4, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (90, '2019-08-06', 5000, null, 5, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (91, '2019-01-27', 5000, 1, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (92, '2019-01-28', 5000, 2, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (93, '2019-10-30', 5000, 3, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (94, '2019-04-06', 5000, 4, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (95, '2019-10-14', 5000, 5, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (96, '2019-09-25', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (97, '2019-09-08', 5000, null, 2, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (98, '2019-02-05', 5000, null, 3, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (99, '2019-02-21', 5000, null, 4, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaF) values (100, '2019-12-31', 5000, null, 5, 1);
 
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (51, '2019-06-30', 2716, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (52, '2019-12-13', 1916, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (53, '2019-08-18', 4096, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (54, '2019-01-22', 3048, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (55, '2019-11-02', 8220, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (56, '2019-03-27', 526, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (57, '2019-04-20', 4110, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (58, '2019-04-05', 865, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (59, '2019-03-15', 4740, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (60, '2019-02-16', 9207, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (61, '2019-05-23', 9388, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (62, '2019-08-27', 9594, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (63, '2019-01-21', 5281, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (64, '2019-06-28', 9413, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (65, '2019-04-17', 8200, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (66, '2019-01-26', 2448, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (67, '2019-12-05', 3874, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (68, '2019-02-09', 5975, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (69, '2019-12-08', 7098, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (70, '2019-12-08', 1053, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (71, '2019-10-01', 5420, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (72, '2019-06-09', 2228, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (73, '2019-06-14', 9625, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (74, '2019-05-19', 5952, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (75, '2019-08-25', 736, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (76, '2019-07-20', 8621, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (77, '2019-03-24', 1225, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (78, '2019-05-14', 3552, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (79, '2019-11-02', 6303, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (80, '2019-03-02', 4451, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (81, '2019-12-10', 5086, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (82, '2019-02-25', 7333, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (83, '2019-08-13', 5419, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (84, '2019-07-20', 6724, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (85, '2019-06-29', 5838, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (86, '2019-06-27', 8222, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (87, '2019-10-28', 5727, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (88, '2019-07-25', 3290, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (89, '2019-06-22', 3832, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (90, '2019-05-31', 3156, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (91, '2019-11-18', 1179, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (92, '2019-06-23', 5042, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (93, '2019-07-04', 2260, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (94, '2019-06-30', 1455, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (95, '2019-09-02', 6611, 5, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (96, '2019-03-24', 1404, 1, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (97, '2019-05-28', 9653, 2, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (98, '2019-05-25', 215, 3, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (99, '2019-03-26', 7909, 4, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (100, '2019-09-17', 9748, 5, null, 1);
+--Ventas en los eventos 
+
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (101, '2020-05-09', 6290, 19, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (102, '2020-05-11', 3490, 23, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (103, '2020-06-12', 8955, 4, null, 2);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (104, '2020-04-12', 8082, 12, null, 2);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (105, '2020-06-12', 1514, 2, null, 3);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (106, '2020-12-05', 956, 15, null, 3);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (107, '2020-08-03', 181, 9, null, 4);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (108, '2020-03-09', 7754, 3, null, 4);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (109, '2020-08-10', 5195, 21, null, 5);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (110, '2020-10-17', 7511, 5, null, 5);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (111, '2020-03-18', 3583, 8, null, 6);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (112, '2020-03-02', 2672, 14, null, 6);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (113, '2020-08-19', 9101, 11, null, 7);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (114, '2020-06-24', 5541, 14, null, 7);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (115, '2021-02-06', 6931, 5, null, 8);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (116, '2020-03-25', 4415, 21, null, 8);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (117, '2020-05-08', 8563, 11, null, 9);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (118, '2020-03-05', 4230, null, 1, 9);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (119, '2020-12-09', 1882, 1, null, 10);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (120, '2020-11-22', 6876, null, 2, 10);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (121, '2020-05-27', 3566, 10, null, 11);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (122, '2020-05-16', 239, 21, null, 11);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (123, '2020-06-09', 9788, 12, null, 12);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (124, '2020-08-17', 7539, 17, null, 12);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (125, '2020-08-26', 9234, 19, null, 13);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (126, '2020-08-10', 9243, 11, null, 13);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (127, '2020-12-23', 4798, 23, null, 14);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (128, '2020-09-14', 2903, 24, null, 14);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (129, '2020-10-16', 2971, null, 3, 15);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (130, '2020-10-16', 995, 19, null, 15);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (131, '2021-01-01', 8201, null, 4, 16);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (132, '2021-01-27', 7271, 2, null, 16);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (133, '2020-03-30', 7266, null, 5, 17);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (134, '2020-03-12', 8331, 15, null, 17);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (135, '2021-01-31', 6763, 15, null, 18);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (136, '2020-09-30', 5086, 16, null, 18);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (137, '2020-08-10', 1529, 2, null, 19);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (138, '2020-04-14', 5818, 14, null, 19);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (139, '2021-02-19', 4050, null, 6, 20);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (140, '2020-03-23', 1063, 15, null, 20);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (141, '2020-08-29', 6673, 3, null, 21);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (142, '2020-07-18', 6599, 5, null, 21);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (143, '2020-09-24', 3327, 2, null, 22);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (144, '2020-05-02', 1817, 18, null, 22);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (145, '2020-05-28', 6852, 11, null, 23);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (146, '2020-03-26', 6453, 9, null, 23);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (147, '2020-09-03', 8187, null, 7, 24);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (148, '2020-05-02', 8954, 6, null, 24);
+
 
 
 
 --27)Pago
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000001, null, null, null, 1, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000001, 1, null, null, null, null, 4999);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000002, null, null, null, 2, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000002, 1, null, null, null, null, 4999);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000003, null, null, null, 3, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000003, 1, null, null, null, null, 4999);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000004, null, null, null, 4, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000004, 1, null, null, null, null, 4999);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000005, null, null, null, 5, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000005, 1, null, null, null, null, 4999);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000006, null, null, 1, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000007, null, null, 2, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000008, null, null, 3, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000009, null, null, 4, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000010, null, 1, null, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000011, null, null, 1, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000012, null, null, 2, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000013, null, null, 3, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000014, null, null, 4, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000015, null, null, 5, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000016, null, null, 1, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000017, null, null, 2, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000018, null, null, 3, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000019, null, null, 4, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000020, null, 1, null, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000021, null, null, 1, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000022, null, null, 2, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000023, null, null, 3, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000024, null, null, 4, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000025, null, null, 5, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000026, null, null, 1, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000027, null, null, 2, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000028, null, null, 3, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000029, null, null, 4, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000030, null, 1, null, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000031, null, null, 1, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000032, null, null, 2, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000033, null, null, 3, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000034, null, null, 4, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000035, null, null, 5, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000036, null, null, 1, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000037, null, null, 2, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000038, null, null, 3, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000039, null, null, 4, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000040, null, 1, null, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000041, null, null, 1, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000042, null, null, 2, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000043, null, null, 3, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000044, null, null, 4, null, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000045, null, null, 5, null,, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000046, null, null, 1, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000047, null, null, 2, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000048, null, null, 3, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000049, null, null, 4, null, null, 5000);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000050, null, 1, null, null, null, 5000);
 
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000001, null, 1, null, null, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000002, null, 2, 1, null, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000003, null, 3, null, 1, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000004, null, null, 2, null, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000005, null, 4, null, 2, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000006, null, null, 3, null, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000007, null, 5, null, null, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000008, null, 1, 1, null, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000009, null, 2, null, 1, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000010, null, 3, 2, null, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000011, null, null, null, 2, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000012, null, 4, 3, null, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000013, null, null, null, null, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000014, null, 5, 1, null, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000015, null, 1, null, 1, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000016, null, 2, 2, null, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000017, null, 3, null, 2, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000018, null, null, 3, null, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000019, null, 4, null, null, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000020, null, null, 1, null, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000021, null, 5, null, 1, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000022, null, 1, 2, null, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000023, null, 2, null, 2, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000024, null, 3, 3, null, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000025, null, null, null, null, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000026, null, 4, 1, null, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000027, null, null, null, 1, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000028, null, 5, 2, null, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000029, null, 1, null, 2, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000030, null, 2, 3, null, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000031, null, 3, null, null, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000032, null, null, 1, null, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000033, null, 4, null, 1, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000034, null, null, 2, null, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000035, null, 5, null, 2, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000036, null, 1, 3, null, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000037, null, 2, null, null, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000038, null, 3, 1, null, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000039, null, null, null, 1, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000040, null, 4, 2, null, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000041, null, null, null, 2, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000042, null, 5, 3, null, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000043, null, 1, null, null, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000044, null, 2, 1, null, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000045, null, 3, null, 1, null, 1150000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000046, null, null, 2, null, null, 140000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000047, null, 4, null, 2, null, 640000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000048, null, null, 3, null, null, 770000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000049, null, 5, null, null, null, 360000);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000050, null, 1, 1, null, null, 1150000);
+
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000051, null, 2, null, 1, null, 140000);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000052, null, 3, 2, null, null, 640000);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000053, null, null, null, 2, null, 770000);
@@ -3594,56 +3655,7 @@ insert into venta_status (fk_venta, fk_status, fecha_status) values (00000047, 4
 insert into venta_status (fk_venta, fk_status, fecha_status) values (00000048, 2, '2019-12-04');
 insert into venta_status (fk_venta, fk_status, fecha_status) values (00000049, 2, '2019-10-21');
 insert into venta_status (fk_venta, fk_status, fecha_status) values (00000050, 3, '2019-10-14');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000051, 5, '2019-10-01');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000052, 5, '2019-11-27');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000053, 3, '2019-11-01');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000054, 2, '2019-11-02');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000055, 4, '2019-12-07');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000056, 5, '2019-10-24');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000057, 2, '2019-11-08');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000058, 3, '2019-12-08');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000059, 5, '2019-11-15');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000060, 4, '2019-11-30');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000061, 2, '2019-10-31');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000062, 2, '2019-11-10');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000063, 5, '2019-11-24');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000064, 3, '2019-10-26');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000065, 2, '2019-11-24');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000066, 4, '2019-11-01');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000067, 5, '2019-10-01');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000068, 4, '2019-11-24');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000069, 5, '2019-10-27');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000070, 5, '2019-12-09');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000071, 5, '2019-10-10');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000072, 5, '2019-11-15');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000073, 5, '2019-11-12');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000074, 2, '2019-10-26');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000075, 5, '2019-10-12');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000076, 2, '2019-10-15');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000077, 5, '2019-11-27');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000078, 2, '2019-10-30');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000079, 3, '2019-12-01');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000080, 2, '2019-11-09');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000081, 1, '2019-11-19');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000082, 1, '2019-11-30');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000083, 1, '2019-11-09');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000084, 2, '2019-11-09');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000085, 2, '2019-10-16');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000086, 5, '2019-12-07');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000087, 1, '2019-10-10');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000088, 3, '2019-10-25');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000089, 5, '2019-11-09');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000090, 2, '2019-10-27');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000091, 2, '2019-10-30');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000092, 2, '2019-10-11');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000093, 4, '2019-10-23');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000094, 4, '2019-10-17');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000095, 2, '2019-10-04');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000096, 4, '2019-10-05');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000097, 2, '2019-11-10');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000098, 4, '2019-10-17');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000099, 4, '2019-11-15');
-insert into venta_status (fk_venta, fk_status, fecha_status) values (00000100, 3, '2019-12-08');
+
 
 --47)Permiso
 
@@ -3783,18 +3795,18 @@ insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 88, 4)
 
 --51)Cerveza(84 en total, 2 por cada tipo)
 
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Chester Beer Dos', 2000, 1, 'chesterbeerdos.jpg', 11);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Alma Nativa Amber', 6000, 1, 'almanativa amber.jpg', 15);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Austral Lager', 8000, 2, 'australlager.jpg', 1);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Escudo', 10000, 2, 'escudo.jpg', 20);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Stella Artois', 15000, 3, 'stellaartois.jpg', 12);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Orval', 6056, 3, 'orval.jpg', 5);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Blazing World', 8007, 4, 'blazing world.jpg', 14);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Capital Amber Ale', 4397, 4, 'capitalamber ale.jpg', 12);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Autral Calafate', 6209, 5, 'autralcalafate.jpg', 3);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Brugge Valerie', 8410, 5, 'bruggevalerie.jpg', 16);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Capital Pale Ale', 2233, 6, 'capitalpaleale.jpg', 15);
-insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Altamira American', 5827, 6, 'altamiraamerican.jpg', 16);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Chester Beer Dos', 2500, 1, 'chesterbeerdos.jpg', 11);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Alma Nativa Amber', 2500, 1, 'almanativa amber.jpg', 15);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Austral Lager', 2500, 2, 'australlager.jpg', 1);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Escudo', 2500, 2, 'escudo.jpg', 20);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Stella Artois', 2500, 3, 'stellaartois.jpg', 12);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Orval', 2500, 3, 'orval.jpg', 5);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Blazing World', 2500, 4, 'blazing world.jpg', 14);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Capital Amber Ale', 2500, 4, 'capitalamber ale.jpg', 12);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Autral Calafate', 2500, 5, 'autralcalafate.jpg', 3);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Brugge Valerie', 2500, 5, 'bruggevalerie.jpg', 16);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Capital Pale Ale', 2500, 6, 'capitalpaleale.jpg', 15);
+insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Altamira American', 2500, 6, 'altamiraamerican.jpg', 16);
 insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Duvel', 1781, 7, 'duvel.jpg', 7);
 insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Bush Blonde', 2030, 7, 'bushblonde.jpg', 8);
 insert into cerveza (nombre, precio_unitario, fk_tipoC , ruta, fk_proveedor) values ('Hard Decision', 6069, 8, 'harddecision.jpg', 20);
@@ -3921,6 +3933,8 @@ insert into cerveza_en_evento (cantidad_cervezas, fk_evento , fk_cerveza) values
 
 --53)Detalle factura (Aqui sale lo de las 2 cervezas por venta)
 
+--Detalle-Factura de las ventas en tienda Online
+
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (12, 1, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (10, 2, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (11, 3, 2);
@@ -3971,6 +3985,10 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (1
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (6, 48, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (8, 49, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (1, 50, 2);
+
+
+--Detalle-Factura de las ventas en tienda Fisica
+
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (11, 51, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (2, 52, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (9, 53, 2);
@@ -4021,6 +4039,58 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (6
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (1, 98, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (6, 99, 2);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (3, 100, 2);
+
+
+--Detalle-Factura de las ventas en eventos
+
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (1, 101, 3);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (3, 102, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (5, 103, 9);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (7, 104, 5);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (9, 105, 6);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (11, 106, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (13, 107, 1);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (15, 108, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (17, 109, 1);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (19, 110, 8);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (21, 111, 10);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (23, 112, 2);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (25, 113, 10);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (27, 114, 2);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (29, 115, 6);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (31, 116, 1);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (33, 117, 10);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (35, 118, 10);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (37, 119, 2);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (39, 120, 10);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (41, 121, 1);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (43, 122, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (45, 123, 8);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (47, 124, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (49, 125, 8);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (51, 126, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (53, 127, 5);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (55, 128, 10);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (57, 129, 5);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (59, 130, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (61, 131, 10);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (63, 132, 3);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (65, 133, 6);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (67, 134, 2);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (69, 135, 8);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (71, 136, 9);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (73, 137, 8);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (75, 138, 8);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (77, 139, 6);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (79, 140, 1);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (81, 141, 9);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (83, 142, 5);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (1, 143, 6);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (3, 144, 7);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (5, 145, 1);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (7, 146, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (9, 147, 4);
+insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (11, 148, 5);
 
 
 --54)Compra
@@ -4593,105 +4663,3 @@ insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, f
 insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-08', null, 24, null, 00000004);
 insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-15', null, 13, 3, null);
 insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-07', null, 67, null, 00000007);
-
-
---Ventas en los eventos 
-
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (101, '2020-05-09', 6290, 19, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (102, '2020-05-11', 3490, 23, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (103, '2020-06-12', 8955, 4, null, 2);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (104, '2020-04-12', 8082, 12, null, 2);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (105, '2020-06-12', 1514, 2, null, 3);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (106, '2020-12-05', 956, 15, null, 3);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (107, '2020-08-03', 181, 9, null, 4);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (108, '2020-03-09', 7754, 3, null, 4);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (109, '2020-08-10', 5195, 21, null, 5);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (110, '2020-10-17', 7511, 5, null, 5);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (111, '2020-03-18', 3583, 8, null, 6);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (112, '2020-03-02', 2672, 14, null, 6);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (113, '2020-08-19', 9101, 11, null, 7);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (114, '2020-06-24', 5541, 14, null, 7);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (115, '2021-02-06', 6931, 5, null, 8);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (116, '2020-03-25', 4415, 21, null, 8);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (117, '2020-05-08', 8563, 11, null, 9);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (118, '2020-03-05', 4230, null, 1, 9);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (119, '2020-12-09', 1882, 1, null, 10);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (120, '2020-11-22', 6876, null, 2, 10);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (121, '2020-05-27', 3566, 10, null, 11);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (122, '2020-05-16', 239, 21, null, 11);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (123, '2020-06-09', 9788, 12, null, 12);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (124, '2020-08-17', 7539, 17, null, 12);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (125, '2020-08-26', 9234, 19, null, 13);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (126, '2020-08-10', 9243, 11, null, 13);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (127, '2020-12-23', 4798, 23, null, 14);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (128, '2020-09-14', 2903, 24, null, 14);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (129, '2020-10-16', 2971, null, 3, 15);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (130, '2020-10-16', 995, 19, null, 15);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (131, '2021-01-01', 8201, null, 4, 16);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (132, '2021-01-27', 7271, 2, null, 16);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (133, '2020-03-30', 7266, null, 5, 17);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (134, '2020-03-12', 8331, 15, null, 17);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (135, '2021-01-31', 6763, 15, null, 18);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (136, '2020-09-30', 5086, 16, null, 18);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (137, '2020-08-10', 1529, 2, null, 19);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (138, '2020-04-14', 5818, 14, null, 19);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (139, '2021-02-19', 4050, null, 6, 20);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (140, '2020-03-23', 1063, 15, null, 20);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (141, '2020-08-29', 6673, 3, null, 21);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (142, '2020-07-18', 6599, 5, null, 21);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (143, '2020-09-24', 3327, 2, null, 22);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (144, '2020-05-02', 1817, 18, null, 22);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (145, '2020-05-28', 6852, 11, null, 23);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (146, '2020-03-26', 6453, 9, null, 23);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (147, '2020-09-03', 8187, null, 7, 24);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (148, '2020-05-02', 8954, 6, null, 24);
-
-
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (1, 101, 3);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (3, 102, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (5, 103, 9);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (7, 104, 5);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (9, 105, 6);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (11, 106, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (13, 107, 1);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (15, 108, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (17, 109, 1);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (19, 110, 8);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (21, 111, 10);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (23, 112, 2);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (25, 113, 10);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (27, 114, 2);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (29, 115, 6);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (31, 116, 1);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (33, 117, 10);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (35, 118, 10);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (37, 119, 2);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (39, 120, 10);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (41, 121, 1);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (43, 122, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (45, 123, 8);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (47, 124, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (49, 125, 8);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (51, 126, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (53, 127, 5);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (55, 128, 10);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (57, 129, 5);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (59, 130, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (61, 131, 10);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (63, 132, 3);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (65, 133, 6);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (67, 134, 2);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (69, 135, 8);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (71, 136, 9);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (73, 137, 8);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (75, 138, 8);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (77, 139, 6);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (79, 140, 1);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (81, 141, 9);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (83, 142, 5);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (1, 143, 6);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (3, 144, 7);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (5, 145, 1);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (7, 146, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (9, 147, 4);
-insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas) values (11, 148, 5);
