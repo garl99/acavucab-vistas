@@ -3033,7 +3033,7 @@ insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto ,
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000042, null, null, 2, null, null, 1);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000043, null, null, 3, null, null, 1);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000044, null, null, 4, null, null, 1);
-insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000045, null, null, 5, null,, null, 1);
+insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000045, null, null, 5, null,  null, 1);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000046, null, null, 1, null, null, 5000);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000047, null, null, 2, null, null, 5000);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000048, null, null, 3, null, null, 5000);
@@ -4093,6 +4093,7 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_un
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (2, 146, 2, 2910);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (10, 147, 2, 8855);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (3, 148, 2, 8066);
+
 
 
 --54)Compra
