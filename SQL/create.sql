@@ -667,7 +667,7 @@ Create table detalle_factura(		/*Hubo cambios aqui: las fk estaban not null y un
 	fk_cerveza 				integer			not null,
 	fk_venta 				numeric(8)		not null,
 	cantidad_cervezas		numeric(7)		not null,
---	precio_unitario 		decimal(9,2)		not null,                --Lo quite por que ese valor lo agarra en cerveza
+	precio_unitario 		decimal(9,2)	not null,               
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_detalle_factura PRIMARY KEY(id),
