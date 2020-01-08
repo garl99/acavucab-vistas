@@ -2829,26 +2829,26 @@ insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tienda
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (3, '2019-11-19', 5000, null, 3, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (4, '2019-06-02', 5000, null, 4, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (5, '2019-08-27', 5000, null, 5, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (6, '2019-11-15', 5000, null, 1, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (7, '2019-05-07', 5000, null, 2, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (8, '2019-11-05', 5000, null, 3, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (9, '2019-07-13', 5000, null, 4, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (10, '2019-07-24', 5000, null, 5, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (11, '2019-01-24', 5000, null, 1, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (12, '2019-03-06', 5000, null, 2, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (13, '2019-12-14', 5000, null, 3, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (14, '2019-02-08', 5000, null, 4, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (15, '2019-09-09', 5000, null, 5, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (16, '2019-04-13', 5000, null, 1, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (17, '2019-03-31', 5000, null, 2, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (18, '2019-11-21', 5000, null, 3, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (6, '2019-11-15', 5000, 1, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (7, '2019-05-07', 5000, 2, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (8, '2019-11-05', 5000, 3, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (9, '2019-07-13', 5000, null, 6, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (10, '2019-07-24', 5000, null, 7, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (11, '2019-01-24', 5000, 4, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (12, '2019-03-06', 5000, 10, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (13, '2019-12-14', 5000, null, 11, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (14, '2019-02-08', 5000, 11, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (15, '2019-09-09', 5000, null, 14, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (16, '2019-04-13', 5000, 19, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (17, '2019-03-31', 5000, null, 20, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (18, '2019-11-21', 5000, 21, null, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (19, '2019-12-27', 5000, null, 4, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (20, '2019-06-29', 5000, null, 5, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (21, '2019-10-07', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (21, '2019-10-07', 5000, null, 7, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (22, '2019-09-10', 5000, null, 2, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (23, '2019-12-06', 5000, null, 3, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (23, '2019-12-06', 5000, null, 7, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (24, '2019-08-07', 5000, null, 4, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (25, '2019-08-12', 5000, null, 5, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (25, '2019-08-12', 5000, 10, null, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (26, '2019-11-08', 5000, null, 1, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (27, '2019-12-08', 5000, null, 2, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (28, '2019-02-18', 5000, null, 3, 1);
@@ -2871,8 +2871,8 @@ insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tienda
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (45, '2019-10-07', 5000, null, 5, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (46, '2019-12-27', 5000, null, 1, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (47, '2019-09-14', 5000, null, 2, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (48, '2019-07-07', 5000, null, 3, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (49, '2019-12-08', 5000, null, 4, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (48, '2019-07-07', 5000, 8, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (49, '2019-12-08', 5000, null, 7, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (50, '2019-12-31', 5000, null, 5, 1);
 
 
@@ -3142,11 +3142,11 @@ insert into vacacion (descripcion) values ('con remuneracion');
 
 --32) Horario
 
-insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Lunes');
-insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Martes');
-insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Miercoles');
-insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Jueves');
-insert into horario (hora_entrada, hora_salida, dia) values ('7:00 AM', '11:59 PM', 'Viernes');
+insert into horario (hora_entrada, hora_salida, dia) values ('8:00 AM', '8:00 PM', 'Lunes');
+insert into horario (hora_entrada, hora_salida, dia) values ('8:00 AM', '8:00 PM', 'Martes');
+insert into horario (hora_entrada, hora_salida, dia) values ('8:00 AM', '8:00 PM', 'Miercoles');
+insert into horario (hora_entrada, hora_salida, dia) values ('8:00 AM', '8:00 PM', 'Jueves');
+insert into horario (hora_entrada, hora_salida, dia) values ('8:00 AM', '8:00 PM', 'Viernes');
 
 --33) Empleado-vacacion
 
