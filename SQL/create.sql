@@ -363,7 +363,7 @@ Create table venta(
 	CONSTRAINT FK_fk_clienteJ_venta FOREIGN KEY(fk_clienteJ) REFERENCES cliente_juridico(id),
 	CONSTRAINT FK_fk_tiendaO_venta FOREIGN KEY(fk_tiendaO) REFERENCES tienda_online(id),
 	CONSTRAINT FK_fk_tiendaF_venta FOREIGN KEY(fk_tiendaF) REFERENCES tienda_fisica(id),   --Cambie aqui fk_fk_clienteF_venta por fk_fk_tiendaF supongo que eso es a lo que se referia 
-	CONSTRAINT FK_fk_evento_venta FOREIGN KEY(fk_evento) REFERENCES evento(id), 		--Agregue esto porque no se sabia las ventas que venian de los eventos
+	CONSTRAINT FK_fk_evento_venta FOREIGN KEY(fk_evento) REFERENCES evento(id)		--Agregue esto porque no se sabia las ventas que venian de los eventos
 	
 );
 
@@ -667,7 +667,7 @@ Create table detalle_factura(		/*Hubo cambios aqui: las fk estaban not null y un
 	fk_cerveza 				integer			not null,
 	fk_venta 				numeric(8)		not null,
 	cantidad_cervezas		numeric(7)		not null,
---	precio_unitario 		decimal(9,2)		not null,                --Lo quite por que ese valor lo agarra en cerveza
+	precio_unitario 		decimal(9,2)	not null,               
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_detalle_factura PRIMARY KEY(id),
@@ -810,7 +810,7 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			date 		not null, 
+	fecha 			varchar		not null, 
 	hora_entrada	time  	,
 	hora_salida		time 	,
 	fk_empleado 	integer 	not null,
