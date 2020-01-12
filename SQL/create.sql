@@ -810,7 +810,7 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			date 		not null, 
+	fecha 			varchar		not null, 
 	hora_entrada	time  	,
 	hora_salida		time 	,
 	fk_empleado 	integer 	not null,
