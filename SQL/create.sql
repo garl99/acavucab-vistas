@@ -180,7 +180,7 @@ Create table movimiento_punto(
 	id 						serial   	not null,
 	puntos_iniciales		decimal(9,2)	not null,
 	puntos_actuales 		decimal(9,2)	not null,
-	fecha 					date 	not null,
+	fecha 					timestamp 	not null,
 	fk_historico 			integer 	not null,
 	fk_clienteN 			integer 	,
 	fk_clienteJ 			integer 	,
@@ -807,7 +807,7 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			varchar		not null, 
+	fecha 			date 		not null, 
 	hora_entrada	time  	,
 	hora_salida		time 	,
 	fk_empleado 	integer 	not null,
