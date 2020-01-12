@@ -793,12 +793,10 @@ Create table comentario_tipo_cerveza(
 Create table pago_cuota(
 	id 							serial 			not null,				--No van esos tipos pagos
 	monto_total 				decimal(9,2)		not null,
-	fecha										not null, 				--Provisionalmente 
+	fecha						date				not null, 				--Provisionalmente 
 	fk_cuota_afiliacion 		integer 		not null,
-	fk_efectivo 				integer, 	 
 	fk_tarjetaD 				integer,
 	fk_tarjetaC 				integer,
-	fk_cheque 					integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_pago_cuota PRIMARY KEY(id),
