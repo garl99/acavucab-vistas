@@ -791,8 +791,9 @@ Create table comentario_tipo_cerveza(
 
 
 Create table pago_cuota(
-	id 							serial 			not null,
+	id 							serial 			not null,				--No van esos tipos pagos
 	monto_total 				decimal(9,2)		not null,
+	fecha										not null, 				--Provisionalmente 
 	fk_cuota_afiliacion 		integer 		not null,
 	fk_efectivo 				integer, 	 
 	fk_tarjetaD 				integer,
