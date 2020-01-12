@@ -791,21 +791,18 @@ Create table comentario_tipo_cerveza(
 
 
 Create table pago_cuota(
-	id 							serial 			not null,
+	id 							serial 			not null,				--No van esos tipos pagos
 	monto_total 				decimal(9,2)		not null,
+	fecha						date				not null, 				--Provisionalmente 
 	fk_cuota_afiliacion 		integer 		not null,
-	fk_efectivo 				integer, 	 
 	fk_tarjetaD 				integer,
 	fk_tarjetaC 				integer,
-	fk_cheque 					integer,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_pago_cuota PRIMARY KEY(id),
 	CONSTRAINT FK_fk_cuota_afiliacion_pago_cuota FOREIGN KEY(fk_cuota_afiliacion) REFERENCES cuota_afiliacion(id),
-	CONSTRAINT FK_fk_efectivo_pago_cuota FOREIGN KEY(fk_efectivo) REFERENCES efectivo(id),
 	CONSTRAINT FK_fk_tarjetaD_pago_cuota FOREIGN KEY(fk_tarjetaD) REFERENCES tarjeta_debito(id),
-	CONSTRAINT FK_fk_tarjetaC_pago_cuota FOREIGN KEY(fk_tarjetaC) REFERENCES tarjeta_credito(id),
-	CONSTRAINT FK_fk_cheque_pago_cuota FOREIGN KEY(fk_cheque) REFERENCES cheque(id)
+	CONSTRAINT FK_fk_tarjetaC_pago_cuota FOREIGN KEY(fk_tarjetaC) REFERENCES tarjeta_credito(id)
 );
 
 Create table asistencia(
