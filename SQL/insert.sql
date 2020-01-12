@@ -1843,7 +1843,7 @@ INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values
 (0.75, '2020-01-01', '2020-12-31'),
 (1, '2021-01-01', '2021-12-31'),
 (1.25, '2022-01-01', '2022-12-31'),
-(1.50, '2023-01-01', '2023-12-31');
+(1.50, '2023-01-01', '2023-12-31'),
 (0.50, '2019-09-01', '2019-09-30'),
 (0.75, '2019-10-01', '2019-10-31'),
 (1, '2019-11-01', '2019-11-30'),
@@ -3136,11 +3136,11 @@ insert into empleado (cedula, nombre, apellido, salario, fk_departamento) values
 
 
 --30)Cargo
-insert into cargo (nombre) values ('Gerente');
-insert into cargo (nombre) values ('Jefe');
-insert into cargo (nombre) values ('Coordinador');
-insert into cargo (nombre) values ('Atencion al cliente');
-insert into cargo (nombre) values ('Mantenimiento');
+insert into cargo (nombre) values ('gerente');
+insert into cargo (nombre) values ('jefe');
+insert into cargo (nombre) values ('coordinador');
+insert into cargo (nombre) values ('atencion al cliente');
+insert into cargo (nombre) values ('mantenimiento');
 
 --31) Vacacion
 
@@ -4348,6 +4348,9 @@ insert into sistema_reposicion (fk_anaquel, fk_empleado, fecha_reposicion, canti
 
 insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (1, 4, 0.2);
 insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (2, 5, 0.9);
+insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (3, 5, 0.8);
+insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (4, 5, 0.5);
+insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (6, 5, 0.2);
 insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (3, 4, 0.74);
 insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (4, 1, 0.32);
 insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (5, 4, 0.5);
@@ -4979,3 +4982,4 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_un
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (7, 146, 4,10);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (9, 147, 4,10);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (11, 148, 5,10);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-07', null, 67, null, 00000007);
