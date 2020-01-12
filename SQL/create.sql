@@ -180,7 +180,7 @@ Create table movimiento_punto(
 	id 						serial   	not null,
 	puntos_iniciales		decimal(9,2)	not null,
 	puntos_actuales 		decimal(9,2)	not null,
-	fecha 					date 	not null,
+	fecha 					timestamp 	not null,
 	fk_historico 			integer 	not null,
 	fk_clienteN 			integer 	,
 	fk_clienteJ 			integer 	,

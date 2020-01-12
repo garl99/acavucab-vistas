@@ -1843,7 +1843,8 @@ INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values
 (0.75, '2020-01-01', '2020-12-31'),
 (1, '2021-01-01', '2021-12-31'),
 (1.25, '2022-01-01', '2022-12-31'),
-(1.50, '2023-01-01', '2023-12-31');
+(1.25, '2022-01-01', '2022-12-31'),
+(1.50, '2022-01-31', null);
 
 --14) Historico punto
 insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 1);
