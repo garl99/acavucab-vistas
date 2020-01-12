@@ -1839,12 +1839,12 @@ insert into punto (puntos_canjeados , fk_clienteN , fk_clienteJ) values (2, null
 
 INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values 
 
-(0.50, '2019-09-01', '2019-09-30'),
-(0.75, '2019-10-01', '2019-10-31'),
-(1, '2019-11-01', '2019-11-30'),
-(1.25, '2019-12-01', '2019-12-31'),
-(1.50, '2020-01-01', '2020-01-31'),
-(1.50, '2020-01-31', null);
+(0.50, '2019-01-01', '2019-12-31'),
+(0.75, '2020-01-01', '2020-12-31'),
+(1, '2021-01-01', '2021-12-31'),
+(1.25, '2022-01-01', '2022-12-31'),
+(1.25, '2022-01-01', '2022-12-31'),
+(1.50, '2022-01-31', null);
 
 --14) Historico punto
 insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 1);
@@ -2828,7 +2828,6 @@ insert into entrada (fk_evento , fk_persona , numero_entrada, fk_efectivo	, fk_t
 
 --Tienda Online
 
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-01', 5000, null, 1, 1); 
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-03', 5000, null, 1, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (2, '2019-10-26', 5000, null, 2, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (3, '2019-11-19', 5000, null, 3, 1);
