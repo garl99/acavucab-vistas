@@ -1859,6 +1859,9 @@ insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_his
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 92814, '2019-09-10', 3, 3, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 7214, '2019-09-16', 4, 4, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 14506, '2019-09-11', 5, 5, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 1000, '2017-09-10', 3, 15, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 2000, '2018-09-16', 4, 15, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 3000, '2020-09-11', 5, 15, null);
 
 
 

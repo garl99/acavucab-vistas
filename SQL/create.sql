@@ -825,7 +825,7 @@ Create table asistencia(
 
 Create table movimiento_inventario(
 	id 		serial		not null,
-	fecha	date,
+	fecha	timestamp,
 	fk_venta 				integer,
 	fk_compra 				integer,
 	fk_cerveza_en_evento 	integer,
