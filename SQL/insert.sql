@@ -1844,6 +1844,12 @@ INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values
 (1, '2021-01-01', '2021-12-31'),
 (1.25, '2022-01-01', '2022-12-31'),
 (1.50, '2023-01-01', '2023-12-31');
+(0.50, '2019-09-01', '2019-09-30'),
+(0.75, '2019-10-01', '2019-10-31'),
+(1, '2019-11-01', '2019-11-30'),
+(1.25, '2019-12-01', '2019-12-31'),
+(1.50, '2020-01-01', '2020-01-31'),
+(1.50, '2020-01-31', null);
 
 --14) Historico punto
 insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 1);
@@ -1859,6 +1865,9 @@ insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_his
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 92814, '2019-09-10', 3, 3, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 7214, '2019-09-16', 4, 4, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 14506, '2019-09-11', 5, 5, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 1000, '2017-09-10', 3, 15, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 2000, '2018-09-16', 4, 15, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 3000, '2020-09-11', 5, 15, null);
 
 
 
