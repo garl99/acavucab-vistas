@@ -599,7 +599,6 @@ Create table venta_status(
 Create table permiso(
 	id 				serial	 		not null, 
 	nombre 			varchar(60)		not null,
-	descripcion		varchar(100)		not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_permiso PRIMARY KEY(id)
@@ -807,7 +806,7 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			varchar		not null, 
+	fecha 			date		not null, 
 	hora_entrada	time  	,
 	hora_salida		time 	,
 	fk_empleado 	integer 	not null,

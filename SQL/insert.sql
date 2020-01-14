@@ -2834,7 +2834,6 @@ insert into entrada (fk_evento , fk_persona , numero_entrada, fk_efectivo	, fk_t
 --Tienda Online
 
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-01', 5000, null, 1, 1); 
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-03', 5000, null, 1, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (2, '2019-10-26', 5000, null, 2, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (3, '2019-11-19', 5000, null, 3, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (4, '2019-06-02', 5000, null, 4, 1);
@@ -2942,7 +2941,7 @@ insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tienda
 --Ventas en los eventos 
 
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (101, '2020-05-09', 6290, 19, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (102, '2020-05-11', 3490, 23, null, 1);
+
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (103, '2020-06-12', 8955, 4, null, 2);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (104, '2020-04-12', 8082, 12, null, 2);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (105, '2020-06-12', 1514, 2, null, 3);
@@ -3670,13 +3669,36 @@ insert into venta_status (fk_venta, fk_status, fecha_status) values (00000050, 3
 
 --47)Permiso
 
-insert into permiso (nombre, descripcion) values ('Acceso completo', 'Acceso a todos los datos y partes del sistema.');
-insert into permiso (nombre, descripcion) values ('Solo escritura', 'Solo puede escribir.');
-insert into permiso (nombre, descripcion) values ('Solo lectura', 'Solo puede leer.');
-insert into permiso (nombre, descripcion) values ('Acceso restringido', 'No tiene acceso a todos los datos o partes del sistema.');
-insert into permiso (nombre, descripcion) values ('Solo ventas', 'Solo puede vender.');
-insert into permiso (nombre, descripcion) values ('Solo compras', 'Solo puede comprar.');
-insert into permiso (nombre, descripcion) values ('Aprobacion', 'Puede aprobar la orden de reposicion');
+insert into permiso(nombre) values ('crear evento');
+insert into permiso(nombre) values ('modificar evento');
+insert into permiso(nombre) values ('eliminar evento');
+
+insert into permiso(nombre) values ('crear usuario');
+insert into permiso(nombre) values ('modificar usuario');
+insert into permiso(nombre) values ('eliminar usuario');
+
+insert into permiso(nombre) values ('crear rol');
+insert into permiso(nombre) values ('modificar rol');
+insert into permiso(nombre) values ('eliminar rol');
+
+insert into permiso(nombre) values ('crear proveedor');
+insert into permiso(nombre) values ('modificar proveedor'); --Ojo, falta modificar
+insert into permiso(nombre) values ('eliminar proveedor');
+
+insert into permiso(nombre) values ('crear cliente natural');
+insert into permiso(nombre) values ('modificar cliente natural'); --Ojo, falta
+insert into permiso(nombre) values ('eliminar cliente natural');
+
+insert into permiso(nombre) values ('crear cliente juridico');
+insert into permiso(nombre) values ('modificar cliente juridico'); --Ojo, falta
+insert into permiso(nombre) values ('eliminar cliente juridico');
+
+insert into permiso(nombre) values ('crear cerveza');
+insert into permiso(nombre) values ('modificar cerveza');
+insert into permiso(nombre) values ('eliminar cerveza');
+
+insert into permiso(nombre) values ('generar asistencia');
+
 --48)Rol
 
 insert into rol (nombre) values ('rol_admin');
@@ -4885,7 +4907,7 @@ insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, f
 
 --Ventas en los eventos 
 
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (101, '2020-05-09', 6290, 19, null, 1);
+
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (102, '2020-05-11', 3490, 23, null, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (103, '2020-06-12', 8955, 4, null, 2);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (104, '2020-04-12', 8082, 12, null, 2);
