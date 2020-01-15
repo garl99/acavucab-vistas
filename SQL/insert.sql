@@ -2131,6 +2131,30 @@ insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_provee
 insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (6000, '2019-11-01', '2019-12-01', 20);
 insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (6500, '2019-12-01', '2020-01-01', 20);
 
+--Nuevas cuotas enero 2020
+
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 1);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 2);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 3);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 4);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 5);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 6);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 7);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 8);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 9);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 10);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 11);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 12);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 13);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 14);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 15);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 16);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 17);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 18);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 19);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 20);
+
+
 --18) Telefono
 
 --Telf.Proveedor
@@ -3697,58 +3721,58 @@ insert into rol_permiso (fk_rol, fk_permiso) values (10, 3);
 
 --50)Usuario
 
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('bn7RTpadm', 1, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('aVazDXSNud', 2, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('mu2hhxXFrd21', 3, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('A8DthV', 4, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('AlBYRq7', 5, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('KRWGBoKUu', 6, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ZJPQ7oI', 7, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Mj8gZrZ', 8, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RvU1SN', 9, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IPySSE', 10, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dbtaTrP', 11, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('nDlqgE', 12, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('wfpyJXGNPI', 13, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iDVm0PtZE3a', 14, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('rqN1CD', 15, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('19uAQAHxQTsT', 16, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('fA50zVGFUWrM', 17, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('2D4H2T9XK76J', 18, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('yNgBFyqEX', 19, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('kPvJ8II', 20, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('XfCbHSH7', 21, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zAQthDvz', 22, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xt56GtyHPa', 23, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('xUc7Zx', 24, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 1, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 2, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 3, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 4, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 5, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 6, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 7, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 8, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 9, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 10, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 11, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 12, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 13, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 14, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 15, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 16, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 17, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 18, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 19, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 20, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 21, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 22, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 23, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 24, 2);
 
 
 --Para los clientes juridicos
 
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RKOPJW', 25, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('fMbFjm', 26, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('2rHwr715fk', 27, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ZHd6PSIzvQsj', 28, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('rWJK0G3oxL', 29, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('aicQwYW', 30, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('m4jkBYNYlLV', 31, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('0XW4EV', 32, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('5gFJG2Aex', 33, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('qoNH4v', 34, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('9onaBSW', 35, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('23O04C9M', 36, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('JdYfgigJ3', 37, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RtgurbJgjVE', 38, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ayaAH5YzNTN', 39, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('i5MTjJBus', 40, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Cow40hf', 41, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('r3GdEPBoM', 42, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zgubMp4T', 43, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('qq3GSj', 44, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zsGj9Hng', 45, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('r3pEqlSAIS', 46, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('3jfKDiawT3', 47, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('K92rFiNZ', 48, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 25, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 26, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 27, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 28, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 29, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 30, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 31, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 32, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 33, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 34, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 35, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 36, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 37, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 38, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 39, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 40, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 41, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 42, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 43, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 44, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 45, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 46, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 47, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 48, 3);
 
 
 --para los empleados
@@ -3756,46 +3780,46 @@ insert into usuario (contrasena, fk_correoE , fk_rol ) values ('K92rFiNZ', 48, 3
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 49, 1);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 50, 1);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 51, 1);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('6kySOgFjb', 52, 6);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('OrVltxSuo', 53, 7);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('b2QyPMVH', 54, 10);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('x1DCULY', 55, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ivYaolctr', 56, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xw9Klt4VT', 57, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('D8FRJSWGaY', 58, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('NCykWUnBci', 59, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('BGGPrbTiporj', 60, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iGrfCre7wqjk', 61, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('QJO1Pv', 62, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('7Y6pa60Y', 63, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ubsRLW', 64, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dEQb0sOxvwGz', 65, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('O6aeDbH', 66, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IW2ePkUc1', 67, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 68, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 52, 6);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 53, 7);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 54, 10);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 55, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 56, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 57, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 58, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 59, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 60, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 61, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 62, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 63, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 64, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 65, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 66, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 67, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 68, 8);
 
 --para los proveedores
 
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 69, 4);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 70, 4);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 71, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('6kySOgFjb', 72, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('OrVltxSuo', 73, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('b2QyPMVH', 74, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('x1DCULY', 75, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ivYaolctr', 76, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xw9Klt4VT', 77, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('D8FRJSWGaY', 78, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('NCykWUnBci', 79, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('BGGPrbTiporj', 80, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iGrfCre7wqjk', 81, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('QJO1Pv', 82, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('7Y6pa60Y', 83, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ubsRLW', 84, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dEQb0sOxvwGz', 85, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('O6aeDbH', 86, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IW2ePkUc1', 87, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 88, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 72, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 73, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 74, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 75, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 76, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 77, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 78, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 79, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 80, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 81, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 82, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 83, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 84, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 85, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 86, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 87, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 88, 4);
 
 --51)Cerveza(84 en total, 2 por cada tipo)
 
