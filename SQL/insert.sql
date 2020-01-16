@@ -3498,7 +3498,7 @@ insert into proveedor_evento (fk_evento, fk_proveedor) values (24, 2);
 --41)Status
 insert into status (nombre) values ('Pendiente');
 insert into status (nombre) values ('Listo para entregar');
-insert into status (nombre) values ('Entregado');
+insert into status (nombre) values ('Recibido');
 insert into status (nombre) values ('Demorado');
 insert into status (nombre) values ('Cancelado');
 
