@@ -34,12 +34,10 @@ and c.fk_proveedor=1;
 
 --1)Listado de empleados que incumplen horario en un periodo de tiempo
 
-select distinct  E.cedula, E.nombre, E.apellido
-from asistencia as A, empleado as E, empleado_horario EH, horario H, empleado_cargo EC
-where  a.fk_empleado=e.id and A.hora_entrada is not null and Eh.fk_empleado_cargo=ec.fk_empleado and ec.fk_empleado=e.id and  (A.hora_entrada>H.hora_entrada or  A.hora_salida<h.hora_salida) and a.fecha between '2019-11-01' and '2019-11-30'
-
-
-
+select distinct  E.cedula, E.nombre, E.apellido, concat(a.fecha, '  ', A.hora_entrada) as Hora_de_entrada, concat(a.fecha, '  ',A.hora_salida) as Hora_de_salida
+from asistencia as A, empleado as E  
+where  a.fk_empleado=e.id and A.hora_entrada!='0:00' and (A.hora_entrada>'8:00AM' or  A.hora_salida<'8:00PM') and a.fecha between $P{P_STARTDATE} and $P{P_ENDDATE}  
+order by E.cedula
 --2)Top 10 cervezas más vendidas en un periodo de tiempo
 
 select  sum(d.cantidad_cervezas) as "Total cervezas vendidas", c.nombre as "Nombre de la cerveza"
@@ -71,17 +69,27 @@ order by "Total de compras" desc limit 10;
 
 --5)Total de puntos canjeados y otorgados por cada cliente por periodo de tiempo 
 
-select cn.primer_nombre,  sum (d.cantidad_cervezas)               --Esto saca solo otorgados y tengo que ponerlo para juridico tambien
-from detalle_factura d, venta v, cliente_natural cn
-where d.fk_venta=v.id and v.fk_tiendaF is not null and v.fk_clienteN=cn.id  
-group by cn.primer_nombre;
+select cn.primer_nombre cj.denomi_comercial,  sum (d.cantidad_cervezas)               --Esto saca solo otorgados y tengo que ponerlo para juridico tambien
+from detalle_factura d, venta v, cliente_natural cn, cliente_juridico cj
+where d.fk_venta=v.id and v.fk_tiendaF is not null and (v.fk_clienteN=cn.id or v.fk_clienteJ=cj.id) 
+group by cn.primer_nombre, cj.denomi_comercial;
 
 
 --6)Movimiento de inventario de tiendas por periodo de tiempo
 
+select i.cantidad_inicial, i.cantidad_actual, C.nombre
+from inventario i, movimiento_inventario M, Cerveza C
+where M.fk_inventario is not null and M.fk_inventario=i.id and i.fk_cerveza=c.id and m.fecha between '2019-01-01' and '2019-12-31'
+
+
 --7)Listado de ordenes de compra indicando su status,por periodo de tiempo
 
 --8) El tipo de cerveza mas vendido por mes
+
+
+
+
+
 
 --9)Diario de cerveza
 select dt.porcentaje_descuento as Descuento, c.nombre, 
@@ -105,6 +113,16 @@ where fecha_inicio= (
 ) and c.fk_proveedor=p.id and ce.fk_proveedor=p.id and p.id=1;
 
 
+--FICHA DE AFILIACION
 
+select c.fecha_inicio,p.rif, p.denomi_comercial, (select nombre from lugar where id=p.fk_lugar) as Parroquia,
+(select nombre from lugar where id =(select fk_lugar from lugar where id=p.fk_lugar)) as Municipio,
+(select nombre from lugar where id =(select fk_lugar from lugar where id=(select fk_lugar from lugar where id=p.fk_lugar))) as Estado,
+ce.nombre as cervezas from cuota_afiliacion c, 
+proveedor p, cerveza ce
+where fecha_inicio= (
+    SELECT MIN(fecha_inicio)
+    FROM cuota_afiliacion
+) and c.fk_proveedor=p.id and ce.fk_proveedor=p.id and p.id=4;
 
 

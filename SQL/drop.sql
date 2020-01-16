@@ -127,5 +127,7 @@ Drop table tipo_cerveza_caracteristica Cascade;
 Drop table venta_status Cascade;
 
 Drop table movimiento_inventario Cascade;
+
+Drop table compra_status Cascade;
 	
 --Drop database ACAVUCAB;
