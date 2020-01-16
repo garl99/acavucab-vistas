@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DiariodeunaCerveza" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="adc0d59c-b577-4d5b-9e2e-77a61013948f">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="acavucab"/>
+	<queryString language="SQL">
+		<![CDATA[select dt.porcentaje_descuento as Descuento, c.nombre, 
+ROUND(c.precio_unitario-c.precio_unitario*dt.porcentaje_descuento) as Precio_con_descuento, 
+c.precio_unitario as Precio_sin_descuento, d.fecha_emision, d.id as id_del_diario
+from detalle_diario dt, diario d, cerveza c
+where d.fecha_emision= (
+    SELECT MAX(fecha_emision)
+    FROM diario
+) and dt.fk_diario=d.id  and dt.fk_cerveza=c.id;]]>
+	</queryString>
+	<field name="descuento" class="java.lang.Float">
+		<property name="com.jaspersoft.studio.field.label" value="descuento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="detalle_diario"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cerveza"/>
+	</field>
+	<field name="precio_con_descuento" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.label" value="precio_con_descuento"/>
+	</field>
+	<field name="precio_sin_descuento" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="precio_sin_descuento"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cerveza"/>
+	</field>
+	<field name="fecha_emision" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fecha_emision"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="diario"/>
+	</field>
+	<field name="id_del_diario" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_del_diario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="diario"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="fb3db159-5d7f-4900-a204-1662d3e340f7"/>
+				<staticText>
+					<reportElement x="20" y="20" width="320" height="43" forecolor="#FFFFFF" uuid="f6a2a69a-f1d3-4a37-88e1-dff36cb7660e"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[DIARIO DE UNA CERVEZA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="230" y="60" width="350" height="23" forecolor="#FFFFFF" uuid="b87cff6a-2477-45d9-b9ba-dc4e5391ba0b"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[CATALOGO DE OFERTAS DE NUESTRAS CERVEZA]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="80c6af51-f229-401f-af49-dd1bdae85260"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3f3df8be-cf02-447e-ad06-f3e9e359c836">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b5f8780-6ca5-4f23-a9f2-7948bbba03bb"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id_del_diario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="92" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="f06441ce-74d8-4db6-9fc6-78eabdd0e04c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f36b5ed5-faea-4946-9988-2cb6ec3c5279"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="184" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="fc753cac-889b-41a1-b752-0e596b99c93a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77c86294-9323-4471-bda2-41c7ef428bff"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[precio_sin_descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="276" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="64085ab2-5779-4980-8b33-fcecc83e606e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b03b7e4b-e5d9-4bee-be28-512c6053ebf9"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[precio_con_descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="368" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b1ccda54-8c4a-4b83-9af3-09bb07b58367">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fceabab8-4a19-4281-8ba6-44c92e51c93c"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[descuento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="460" y="0" width="92" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="da8d9a93-905c-447b-867d-fb198c7275d7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85afb84d-a5b4-43d5-8f1c-182d4c84efca"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[fecha_emision]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="62f6749c-b454-429d-8455-ce0604083992"/>
+			</line>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="0" y="0" width="92" height="20" uuid="489538a0-b2b8-4cd3-b7a0-85d8ed2c1920">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9b5f8780-6ca5-4f23-a9f2-7948bbba03bb"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_del_diario}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="92" y="0" width="92" height="20" uuid="84f7aafe-15cb-4756-859a-82e35513183a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f36b5ed5-faea-4946-9988-2cb6ec3c5279"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="184" y="0" width="92" height="20" uuid="c1994623-4eab-4f29-888e-7145e722d108">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="77c86294-9323-4471-bda2-41c7ef428bff"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precio_sin_descuento}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="276" y="0" width="92" height="20" uuid="53f97618-dd9b-449c-a766-9900d665eda9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b03b7e4b-e5d9-4bee-be28-512c6053ebf9"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precio_con_descuento}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="368" y="0" width="92" height="20" uuid="b7ca7160-6816-4f62-8d84-798e5dc3c167">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fceabab8-4a19-4281-8ba6-44c92e51c93c"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descuento}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="460" y="0" width="92" height="20" uuid="15f355c9-59d3-452f-baa0-1280de10cf63">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="85afb84d-a5b4-43d5-8f1c-182d4c84efca"/>
+				</reportElement>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_emision}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="d3ac76d5-094e-4f9b-9a86-d04a307ffac5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="63f96424-a47c-439c-aa7b-65c91ad60f62"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="79ed5950-59e1-4e4b-bd7f-4990ad45bda0"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

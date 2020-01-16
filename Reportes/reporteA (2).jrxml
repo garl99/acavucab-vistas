@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteB" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="478d49f4-46cf-4f28-9e03-d8cbf3defc47">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="acavucab"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="P_ENDDATE" class="java.sql.String"/>
+	<parameter name="P_STARTDATE" class="java.sql.String"/>
+	<queryString>
+		<![CDATA[select distinct  E.cedula, E.nombre, E.apellido, concat(a.fecha, '  ', A.hora_entrada) as Hora_de_entrada, concat(a.fecha, '  ',A.hora_salida) as Hora_de_salida
+from asistencia as A, empleado as E  
+where  a.fk_empleado=e.id and A.hora_entrada!='0:00' and (A.hora_entrada>'8:00AM' or  A.hora_salida<'8:00PM') and a.fecha between $P{P_STARTDATE} and $P{P_ENDDATE}  
+order by E.cedula]]>
+	</queryString>
+	<field name="cedula" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="cedula"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleado"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleado"/>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="apellido"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="empleado"/>
+	</field>
+	<field name="hora_de_entrada" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="hora_de_entrada"/>
+	</field>
+	<field name="hora_de_salida" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="hora_de_salida"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-10" y="-10" width="575" height="82" backcolor="#006699" uuid="35a5d747-a149-481d-90ef-71c1ee7d6bc9"/>
+				<staticText>
+					<reportElement x="20" y="20" width="320" height="43" forecolor="#FFFFFF" uuid="48ffef0e-bd71-42a4-99c3-bdedbe378ff4"/>
+					<textElement>
+						<font size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[LISTADO DE EMPLEADOS QUE INCLUMPLEN HORARIO]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="430" y="51" width="20" height="20" forecolor="#FFFFFF" uuid="9806609b-3eab-40c5-bb3a-00e5c3587bdb"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[a]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="339" y="55" width="100" height="16" uuid="3319f2da-af62-4d5e-8556-91e3a3a74cf3"/>
+					<textFieldExpression><![CDATA[$P{P_STARTDATE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="239" y="50" width="100" height="20" forecolor="#FFFFFF" uuid="82505624-d4db-469c-a3de-dddc3cfa44fe"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[En el periodo: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="460" y="53" width="100" height="17" uuid="d24c5667-12e1-40f8-b405-d6f0f09c5ff7"/>
+					<textFieldExpression><![CDATA[$P{P_ENDDATE}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="47">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="31c69c61-51e5-48b2-b5d4-17f8cdba8821"/>
+			</line>
+			<staticText>
+				<reportElement x="57" y="0" width="100" height="21" uuid="1d4ba40b-4b17-4668-940b-93335e10e218">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="552aaa0d-1eca-4868-92eb-405406d2124e"/>
+				</reportElement>
+				<text><![CDATA[cedula]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="2" width="100" height="21" uuid="6070a680-7ee7-42d3-a814-ff736795acb0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f30509e-b40a-48d9-9a4d-0dceb72cc00c"/>
+				</reportElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="248" y="0" width="107" height="21" uuid="e8eab59c-e022-49f5-b94e-1f0c717fe8da">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52339471-4459-46ab-9697-ae47766461c7"/>
+				</reportElement>
+				<text><![CDATA[apellido]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="0" width="100" height="30" uuid="e3e98609-9899-41b4-ba0e-d5136515e0c0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c06474d7-1ebd-4b13-8fef-d8ffbea0c483"/>
+				</reportElement>
+				<text><![CDATA[hora_de_entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="458" y="0" width="100" height="30" uuid="b7252e82-7972-48e0-a277-ee900c29623e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73a11053-aeb4-4755-8153-ae52b02e4745"/>
+				</reportElement>
+				<text><![CDATA[hora_de_salida]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="67">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="c6bed9ac-bdc7-443c-ae07-28fcbe07bbeb"/>
+			</line>
+			<textField>
+				<reportElement x="53" y="4" width="100" height="30" uuid="01ede5f8-5c07-463e-8249-fd23224a10ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="552aaa0d-1eca-4868-92eb-405406d2124e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{cedula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="7" width="100" height="30" uuid="7f8f1d8d-4526-4259-94a6-42c455c4eba0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8f30509e-b40a-48d9-9a4d-0dceb72cc00c"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="3" width="100" height="30" uuid="d8b8c3a1-1bcf-425f-abb7-6c74e3f5d5bb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="52339471-4459-46ab-9697-ae47766461c7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="3" width="100" height="30" uuid="e6cc2ff8-3a5a-4b0e-886d-fc55116599b5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c06474d7-1ebd-4b13-8fef-d8ffbea0c483"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{hora_de_entrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="465" y="4" width="100" height="30" uuid="3590feeb-c386-4bf1-8605-1c35add14bf1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="73a11053-aeb4-4755-8153-ae52b02e4745"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{hora_de_salida}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="6f0d0460-f077-4f64-9baf-bc79339127d3"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="9d56331d-5b24-4bbe-a23d-fe8c372bd327"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="f3646c15-f6b7-4936-98dd-680feeef311e"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

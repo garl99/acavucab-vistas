@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteC2" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7caccdbb-7e5f-4dbb-b239-6220eb24449b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="acavucab"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="P_STARTDATE" class="java.sql.Date"/>
+	<parameter name="P_ENDDATE" class="java.sql.Date"/>
+	<queryString>
+		<![CDATA[select sum(d.cantidad_cervezas) as total_cervezas, c.nombre
+from detalle_factura d, cerveza c, venta v
+where v.fk_evento is not null and d.fk_venta=v.id and d.fk_cerveza=c.id and v.fecha between $P{P_STARTDATE}  and $P{P_ENDDATE}  
+group by c.nombre 
+order by total_cervezas desc limit 5;]]>
+	</queryString>
+	<field name="total_cervezas" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="total_cervezas"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cerveza"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="80e0c09f-b205-4e64-b872-d9ad5edce00d"/>
+				<staticText>
+					<reportElement x="20" y="20" width="410" height="60" forecolor="#FFFFFF" uuid="07336ee2-80a4-4552-a8dc-ec1bcff1c904"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOP 5 CERVEZAS MÁS VENDIDAS EN EVENTOS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="243" y="60" width="100" height="20" forecolor="#FFFFFF" uuid="4040db0c-e603-4ceb-8639-b2e9a13639e9"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[En el periodo: ]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="450" y="60" width="20" height="20" forecolor="#FFFFFF" uuid="92a2ea36-ecd6-4a02-aaf6-e5dcfc34fb66"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[a]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="349" y="63" width="100" height="20" uuid="ef55ab4d-e1b0-4143-8cd4-7eeda527dff0"/>
+					<textFieldExpression><![CDATA[$P{P_STARTDATE}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="482" y="63" width="94" height="19" uuid="6ffbe588-bb15-4b1d-b889-d7ad8bb1ae62"/>
+					<textFieldExpression><![CDATA[$P{P_ENDDATE}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="764e876f-3e6a-4039-8aca-80bb3088023c"/>
+			</line>
+			<staticText>
+				<reportElement x="109" y="0" width="100" height="21" uuid="bdfa2e83-8f75-43c4-b504-b126250df9ae">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac6db7a4-5feb-477b-8fc2-2b807da91453"/>
+				</reportElement>
+				<text><![CDATA[total_cervezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="0" width="100" height="21" uuid="488a8712-2a2a-4114-9d35-e08f0cb82c1b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ac5e964-1071-46b1-83f0-bda79fa876c2"/>
+				</reportElement>
+				<text><![CDATA[nombre]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="a33f8b55-43af-4b34-bace-98455e9f2a06"/>
+			</line>
+			<textField>
+				<reportElement x="109" y="6" width="100" height="30" uuid="8f7c06b1-74f2-432e-8093-21f2b9e00cb0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ac6db7a4-5feb-477b-8fc2-2b807da91453"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{total_cervezas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="4" width="100" height="30" uuid="c169f53c-a042-4d74-a4ab-b71da74333d6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2ac5e964-1071-46b1-83f0-bda79fa876c2"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="934c2f9f-154e-4298-b369-ee1f3c8fd81c"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="072dc886-1be1-4d3c-894d-bde97d6f7c6c"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="b95c202c-03d1-4d13-bfea-c025decd2275"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

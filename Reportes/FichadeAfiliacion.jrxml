@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="FichadeAfiliacion" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="abd2eb3a-0c7b-4dc7-93e4-c952d92500ad">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="acavucab"/>
+	<parameter name="id_proveedor" class="java.lang.Integer"/>
+	<queryString language="SQL">
+		<![CDATA[select c.fecha_inicio,p.rif, p.denomi_comercial, (select nombre from lugar where id=p.fk_lugar) as Parroquia,
+(select nombre from lugar where id =(select fk_lugar from lugar where id=p.fk_lugar)) as Municipio,
+(select nombre from lugar where id =(select fk_lugar from lugar where id=(select fk_lugar from lugar where id=p.fk_lugar))) as Estado,
+ce.nombre as cervezas from cuota_afiliacion c, 
+proveedor p, cerveza ce
+where fecha_inicio= (
+    SELECT MIN(fecha_inicio)
+    FROM cuota_afiliacion
+) and c.fk_proveedor=p.id and ce.fk_proveedor=p.id and p.id= $P{id_proveedor} ;]]>
+	</queryString>
+	<field name="fecha_inicio" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="fecha_inicio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cuota_afiliacion"/>
+	</field>
+	<field name="rif" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="rif"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="proveedor"/>
+	</field>
+	<field name="denomi_comercial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="denomi_comercial"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="proveedor"/>
+	</field>
+	<field name="parroquia" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="parroquia"/>
+	</field>
+	<field name="municipio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="municipio"/>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="estado"/>
+	</field>
+	<field name="cervezas" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="cervezas"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="cerveza"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="240" y="20" width="180" height="30" uuid="dad9f7a9-13a5-4207-aa52-adfe534de93a"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[FICHA DE AFILIACIÓN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="301" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="20" y="20" width="720" height="170" forecolor="#CF302D" backcolor="#FFFFFF" uuid="d6c13d05-9f55-4daf-9a0b-cc96d8aa92d9"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#050505"/>
+				</box>
+				<textField>
+					<reportElement x="111" y="11" width="100" height="30" uuid="0191668b-8435-4328-9f24-5a3705c163a5"/>
+					<textFieldExpression><![CDATA[$F{rif}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="11" width="100" height="30" uuid="21413ee8-9b86-46c8-aa95-84a81c844612"/>
+					<text><![CDATA[rif]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="109" y="45" width="100" height="30" uuid="05b75302-8fbf-4210-9413-c9cc60049259"/>
+					<textFieldExpression><![CDATA[$F{denomi_comercial}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="9" y="45" width="100" height="30" uuid="0b0a3517-8808-447c-9ac2-21436f3c186f"/>
+					<text><![CDATA[denomi_comercial]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="110" y="82" width="100" height="30" uuid="c40254ce-db8a-4294-989f-c0ad8b5fc14f"/>
+					<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="10" y="82" width="100" height="30" uuid="a13d00de-6624-4c30-bc34-7e65869b4023"/>
+					<text><![CDATA[estado]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="316" y="81" width="100" height="30" uuid="61f86863-e3da-426a-926b-94c1b842bdf0"/>
+					<textFieldExpression><![CDATA[$F{municipio}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="216" y="81" width="100" height="30" uuid="c3e05ee5-c017-4d45-b185-66d027deaa1b"/>
+					<text><![CDATA[municipio]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="521" y="80" width="100" height="30" uuid="a01656e6-e2f3-4162-bcae-08a4c70ea705"/>
+					<textFieldExpression><![CDATA[$F{parroquia}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="421" y="80" width="100" height="30" uuid="300cdd27-caad-43c4-8c64-9bc32eceb0c2"/>
+					<text><![CDATA[parroquia]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="111" y="122" width="100" height="30" uuid="2fb59b80-e6c8-4a41-a5d4-226740b9e46f"/>
+					<textFieldExpression><![CDATA[$F{fecha_inicio}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="11" y="122" width="100" height="30" uuid="bffc73ae-213c-41bc-b39b-1aa4a896c146"/>
+					<text><![CDATA[fecha_inicio]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="27" y="264" width="100" height="30" uuid="9ed248bd-df43-4734-aba7-04c0fc7dc374"/>
+				<text><![CDATA[cervezas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="230" width="170" height="30" uuid="88eacd5f-4eae-4d41-937b-5b70c1e89c07"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[CERVEZAS QUE FABRICA:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="27" y="-10" width="100" height="30" uuid="277e71da-aec4-4c8c-8151-01a3d8ca2576"/>
+				<textFieldExpression><![CDATA[$F{cervezas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

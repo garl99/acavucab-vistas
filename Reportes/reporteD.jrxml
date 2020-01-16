@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteD" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c82fd77d-cb79-437c-aa66-0b67f11c5c80">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="acavucab"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="P_ENDDATE" class="java.sql.Date"/>
+	<parameter name="P_STARTDATE" class="java.sql.Date"/>
+	<queryString>
+		<![CDATA[select count(cn.id) as "Total de compras", cn.primer_nombre as "Nombre o Denominacion Comercial", cn.primer_apellido as "Apellido o Razon Social"
+from cliente_natural cn, venta v
+where v.fk_tiendaO is not null and v.fk_clienten=cn.id and v.fecha between '2019-09-01' and '2019-12-31'
+group by cn.primer_nombre,cn.primer_apellido
+union all
+select count(cj.id) as "Total de compras", cj.denomi_comercial, cj.razon_social
+from  venta v, cliente_juridico cj
+where v.fk_tiendaO is not null and  v.fk_clientej=cj.id and v.fecha  between '2019-09-01' and '2019-12-31'
+group by cj.denomi_comercial, cj.razon_social
+order by "Total de compras" desc limit 10]]>
+	</queryString>
+	<field name="Total de compras" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.label" value="Total de compras"/>
+	</field>
+	<field name="Nombre o Denominacion Comercial" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Nombre o Denominacion Comercial"/>
+	</field>
+	<field name="Apellido o Razon Social" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Apellido o Razon Social"/>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="83">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-18" width="595" height="92" backcolor="#006699" uuid="efd7c783-4ef3-4482-9573-78874ebea978"/>
+				<staticText>
+					<reportElement x="20" y="20" width="400" height="81" forecolor="#FFFFFF" uuid="652ae892-96db-4db5-ae04-3f51a8641017"/>
+					<textElement>
+						<font size="22" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TOP 10 CLIENTES (MÁS COMPRAS WEB)]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="230" y="60" width="120" height="22" forecolor="#FFFFFF" uuid="47799e25-9a62-4a00-975f-1174d7dba308"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[En el periodo de: ]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="485" y="63" width="100" height="22" forecolor="#FFFFFF" uuid="82bed354-02b2-4841-81ae-f55beddf8706"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{P_ENDDATE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="456" y="60" width="15" height="20" forecolor="#FFFFFF" uuid="9951bccc-1c5f-4575-bedf-32123d712d08"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[a]]></text>
+				</staticText>
+			</frame>
+			<textField>
+				<reportElement x="333" y="44" width="100" height="30" forecolor="#FFFFFF" uuid="f5c11d10-44a0-4693-ac87-f05a8e19628e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_STARTDATE}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="6a1217a8-3db9-40b3-96db-4954585dd67f"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="185" height="21" forecolor="#FFFFFF" backcolor="#006698" uuid="9ca6ecf3-a4db-4db7-ba4d-fa53e3e698b2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="09c2cfaf-0330-46f5-88e4-5e1ad2ade7c5"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de compras]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="185" y="0" width="185" height="21" forecolor="#FFFFFF" backcolor="#006698" uuid="dd2b48eb-65c4-406c-8bdf-68e1e9ab9a1d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3f82e2da-1f8a-4162-81e6-89b2eaa10cbe"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre o Denominacion Comercial]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="185" height="21" forecolor="#FFFFFF" backcolor="#006698" uuid="ce2d0caa-e2df-4e05-9452-6f812fb74424">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fb54fb39-6668-41ab-a7f1-1c2175fbe75e"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellido o Razon Social]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="65">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="47" width="555" height="1" uuid="07ebd9ae-685d-41d6-8a34-898c69d61fbd"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="13" width="185" height="30" uuid="4cf77fe4-aa65-460c-a10b-087fa879854d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="09c2cfaf-0330-46f5-88e4-5e1ad2ade7c5"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Total de compras}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="13" width="185" height="30" uuid="64805354-80db-433d-b020-f3041d59f0c6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3f82e2da-1f8a-4162-81e6-89b2eaa10cbe"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Nombre o Denominacion Comercial}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="13" width="185" height="30" uuid="512a7363-243f-4bed-9dc9-7047baeff56e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fb54fb39-6668-41ab-a7f1-1c2175fbe75e"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{Apellido o Razon Social}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="77c3bc21-9c39-428b-b6f3-f6756a9aa22b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="94c0d011-9a4d-4971-ba30-0c2e1a6eccae"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="af58c078-85f8-4b65-9c0d-4d45db0cab78"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
