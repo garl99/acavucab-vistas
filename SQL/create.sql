@@ -676,7 +676,7 @@ Create table detalle_factura(		/*Hubo cambios aqui: las fk estaban not null y un
 
 Create table compra(
 	id 						serial			not null,
-	fk_proveedor 			integer 		not null unique,
+	fk_proveedor 			integer 		not null,
 	fecha_compra 			date		not null,
 	created_at					timestamp,
 	updated_at 					timestamp,

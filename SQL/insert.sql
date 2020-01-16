@@ -4175,11 +4175,17 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_un
 
 --54)Compra
 
-insert into compra (fk_proveedor, fecha_compra) values (16, '2019-11-19');
-insert into compra (fk_proveedor, fecha_compra) values (17, '2019-08-24');
-insert into compra (fk_proveedor, fecha_compra) values (11, '2019-11-03');
-insert into compra (fk_proveedor, fecha_compra) values (7, '2019-09-17');
-insert into compra (fk_proveedor, fecha_compra) values (4, '2019-08-23');
+insert into compra (fk_proveedor, fecha_compra) values (16, '2019-12-20');
+insert into compra (fk_proveedor, fecha_compra) values (17, '2019-12-21');
+insert into compra (fk_proveedor, fecha_compra) values (11, '2019-12-22');
+insert into compra (fk_proveedor, fecha_compra) values (7, '2019-12-23');
+insert into compra (fk_proveedor, fecha_compra) values (4, '2019-12-24');
+insert into compra (fk_proveedor, fecha_compra) values (6, '2019-12-20');
+insert into compra (fk_proveedor, fecha_compra) values (8, '2019-12-07');
+insert into compra (fk_proveedor, fecha_compra) values (1, '2019-12-09');
+insert into compra (fk_proveedor, fecha_compra) values (19, '2019-12-10');
+insert into compra (fk_proveedor, fecha_compra) values (3, '2019-12-11');
+
 
 --55)Detalle Presupuesto
 
@@ -4223,11 +4229,16 @@ insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values 
 insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (5, 4, 0.5);
 
 --59)detalle Compra
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (35, 1, 1, 2000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (4, 2, 2, 6000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (28, 3, 3, 8000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (30, 4, 4, 10000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (44, 5, 5, 15000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 1, 1, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 2, 2, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 3, 3, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 4, 4, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 5, 5, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 6, 6, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 7, 7, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 8, 8, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 9, 9, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (1000, 10, 10,250000);
 
 --60)Inventario
 insert into inventario (cantidad_inicial, cantidad_actual, fk_tiendaO, fk_tiendaF, fk_cerveza) values (300, 112, 1, null, 1);
@@ -4756,3 +4767,8 @@ insert into compra_status (fk_compra, fk_status, fecha_status) values (2,2, '201
 insert into compra_status (fk_compra, fk_status, fecha_status) values (3,1, '2019-12-22');
 insert into compra_status (fk_compra, fk_status, fecha_status) values (4,3, '2019-12-23');
 insert into compra_status (fk_compra, fk_status, fecha_status) values (5,4, '2019-12-24');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (6,1, '2019-12-20');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (7,2, '2019-12-07');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (8,1, '2019-12-09');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (9,4, '2019-12-10');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (10,5, '2019-12-11');
