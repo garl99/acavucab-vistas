@@ -180,7 +180,7 @@ Create table movimiento_punto(
 	id 						serial   	not null,
 	puntos_iniciales		decimal(9,2)	not null,
 	puntos_actuales 		decimal(9,2)	not null,
-	fecha 					timestamp 	not null,
+	fecha 					date 	not null,
 	fk_historico 			integer 	not null,
 	fk_clienteN 			integer 	,
 	fk_clienteJ 			integer 	,
@@ -588,7 +588,7 @@ Create table venta_status(
 	id 				serial		not null,
 	fk_venta 		numeric(8) 	not null,
 	fk_status 		integer 	not null,
-	fecha_status	date	not null,
+	fecha_status	timestamp	not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_venta_status PRIMARY KEY(id),
@@ -599,7 +599,6 @@ Create table venta_status(
 Create table permiso(
 	id 				serial	 		not null, 
 	nombre 			varchar(60)		not null,
-	descripcion		varchar(100)		not null,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_permiso PRIMARY KEY(id)
@@ -677,14 +676,27 @@ Create table detalle_factura(		/*Hubo cambios aqui: las fk estaban not null y un
 
 Create table compra(
 	id 						serial			not null,
-	fk_proveedor 			integer 		not null unique,
+	fk_proveedor 			integer 		not null,
 	fecha_compra 			date		not null,
-	fk_efectivo 			integer 		not null unique,
 	created_at					timestamp,
 	updated_at 					timestamp,
 	CONSTRAINT PK_id_compra PRIMARY KEY(id),
-	CONSTRAINT FK_fk_proveedor_compra FOREIGN KEY(fk_proveedor) REFERENCES proveedor(id),
-	CONSTRAINT FK_fk_efectivo_compra FOREIGN KEY(fk_efectivo) REFERENCES efectivo(id)
+	CONSTRAINT FK_fk_proveedor_compra FOREIGN KEY(fk_proveedor) REFERENCES proveedor(id)
+);
+
+Create table compra_status(
+
+	id 						serial 			not null,
+	fk_compra				integer			not null, 
+	fk_status				integer 		not null, 
+	fecha_status			timestamp 		not null, 
+	created_at				timestamp,
+	updated_at 				timestamp,
+	CONSTRAINT PK_id_compra_status PRIMARY KEY(id),
+	CONSTRAINT FK_fk_compra_compra_status FOREIGN KEY(fk_compra) REFERENCES compra(id),
+	CONSTRAINT FK_fk_status_compra_status FOREIGN KEY(fk_status) REFERENCES status(id)
+
+
 );
 
 
@@ -807,7 +819,7 @@ Create table pago_cuota(
 
 Create table asistencia(
 	id 				serial  	not null,
-	fecha 			date 		not null, 
+	fecha 			date		not null, 
 	hora_entrada	time  	,
 	hora_salida		time 	,
 	fk_empleado 	integer 	not null,

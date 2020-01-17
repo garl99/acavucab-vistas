@@ -1843,8 +1843,13 @@ INSERT INTO valor_punto(precio_unitario_bs, fecha_inicio, fecha_final) values
 (0.75, '2020-01-01', '2020-12-31'),
 (1, '2021-01-01', '2021-12-31'),
 (1.25, '2022-01-01', '2022-12-31'),
-(1.25, '2022-01-01', '2022-12-31'),
-(1.50, '2022-01-31', null);
+(1.50, '2023-01-01', '2023-12-31'),
+(0.50, '2019-09-01', '2019-09-30'),
+(0.75, '2019-10-01', '2019-10-31'),
+(1, '2019-11-01', '2019-11-30'),
+(1.25, '2019-12-01', '2019-12-31'),
+(1.50, '2020-01-01', '2020-01-31'),
+(1.50, '2020-01-31', null);
 
 --14) Historico punto
 insert into historico_punto (fk_valor_punto , fk_punto ) values (1, 1);
@@ -1860,9 +1865,9 @@ insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_his
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 92814, '2019-09-10', 3, 3, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 7214, '2019-09-16', 4, 4, null);
 insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 14506, '2019-09-11', 5, 5, null);
-insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 1000, '2017-09-10', 3, 15, null);
-insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 2000, '2018-09-16', 4, 15, null);
-insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 3000, '2020-09-11', 5, 15, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (92914, 1000, '2019-09-10', 3, 15, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (7514, 2000, '2019-09-16', 4, 15, null);
+insert into movimiento_punto (puntos_iniciales, puntos_actuales , fecha , fk_historico , fk_clienteN 	, fk_clienteJ ) values (15006, 3000, '2019-09-11', 5, 15, null);
 
 
 
@@ -2131,6 +2136,30 @@ insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_provee
 insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (5500, '2019-10-01', '2019-11-01', 20);
 insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (6000, '2019-11-01', '2019-12-01', 20);
 insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (6500, '2019-12-01', '2020-01-01', 20);
+
+--Nuevas cuotas enero 2020
+
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 1);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 2);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 3);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 4);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 5);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 6);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 7);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 8);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 9);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 10);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 11);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 12);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 13);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 14);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 15);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 16);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 17);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 18);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 19);
+insert into cuota_afiliacion (monto_total, fecha_inicio, fecha_final , fk_proveedor) values (8000, '2020-01-01', '2020-02-01', 20);
+
 
 --18) Telefono
 
@@ -2828,7 +2857,7 @@ insert into entrada (fk_evento , fk_persona , numero_entrada, fk_efectivo	, fk_t
 
 --Tienda Online
 
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-03', 5000, null, 1, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (1, '2019-01-01', 5000, null, 1, 1); 
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (2, '2019-10-26', 5000, null, 2, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (3, '2019-11-19', 5000, null, 3, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tiendaO) values (4, '2019-06-02', 5000, null, 4, 1);
@@ -2936,7 +2965,7 @@ insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_tienda
 --Ventas en los eventos 
 
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (101, '2020-05-09', 6290, 19, null, 1);
-insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (102, '2020-05-11', 3490, 23, null, 1);
+insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (102, '2020-05-09', 6290, 1, null, 1);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (103, '2020-06-12', 8955, 4, null, 2);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (104, '2020-04-12', 8082, 12, null, 2);
 insert into venta (id, fecha, total_pagar	, fk_clienteN , fk_clienteJ, fk_evento) values (105, '2020-06-12', 1514, 2, null, 3);
@@ -3095,6 +3124,28 @@ insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto ,
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000098, null, 5, 1, null, null, 770000);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000099, null, 1, null, 1, null, 360000);
 insert into pago (fk_venta, fk_efectivo	, fk_tarjetaC , fk_tarjetaD , fk_punto , fk_cheque , monto_total	) values (00000100, null, 2, 2, null, null, 1150000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 --28) Departamento
@@ -3447,9 +3498,11 @@ insert into proveedor_evento (fk_evento, fk_proveedor) values (24, 2);
 --41)Status
 insert into status (nombre) values ('Pendiente');
 insert into status (nombre) values ('Listo para entregar');
-insert into status (nombre) values ('Entregado');
+insert into status (nombre) values ('Recibido');
 insert into status (nombre) values ('Demorado');
 insert into status (nombre) values ('Cancelado');
+insert into status (nombre) values ('Pagado');
+insert into status (nombre) values ('Entregado');
 
 --42)Ingrediente
 
@@ -3664,13 +3717,36 @@ insert into venta_status (fk_venta, fk_status, fecha_status) values (00000050, 3
 
 --47)Permiso
 
-insert into permiso (nombre, descripcion) values ('Acceso completo', 'Acceso a todos los datos y partes del sistema.');
-insert into permiso (nombre, descripcion) values ('Solo escritura', 'Solo puede escribir.');
-insert into permiso (nombre, descripcion) values ('Solo lectura', 'Solo puede leer.');
-insert into permiso (nombre, descripcion) values ('Acceso restringido', 'No tiene acceso a todos los datos o partes del sistema.');
-insert into permiso (nombre, descripcion) values ('Solo ventas', 'Solo puede vender.');
-insert into permiso (nombre, descripcion) values ('Solo compras', 'Solo puede comprar.');
-insert into permiso (nombre, descripcion) values ('Aprobacion', 'Puede aprobar la orden de reposicion');
+insert into permiso(nombre) values ('crear evento');
+insert into permiso(nombre) values ('modificar evento');
+insert into permiso(nombre) values ('eliminar evento');
+
+insert into permiso(nombre) values ('crear usuario');
+insert into permiso(nombre) values ('modificar usuario');
+insert into permiso(nombre) values ('eliminar usuario');
+
+insert into permiso(nombre) values ('crear rol');
+insert into permiso(nombre) values ('modificar rol');
+insert into permiso(nombre) values ('eliminar rol');
+
+insert into permiso(nombre) values ('crear proveedor');
+insert into permiso(nombre) values ('modificar proveedor'); --Ojo, falta modificar
+insert into permiso(nombre) values ('eliminar proveedor');
+
+insert into permiso(nombre) values ('crear cliente natural');
+insert into permiso(nombre) values ('modificar cliente natural'); --Ojo, falta
+insert into permiso(nombre) values ('eliminar cliente natural');
+
+insert into permiso(nombre) values ('crear cliente juridico');
+insert into permiso(nombre) values ('modificar cliente juridico'); --Ojo, falta
+insert into permiso(nombre) values ('eliminar cliente juridico');
+
+insert into permiso(nombre) values ('crear cerveza');
+insert into permiso(nombre) values ('modificar cerveza');
+insert into permiso(nombre) values ('eliminar cerveza');
+
+insert into permiso(nombre) values ('generar asistencia');
+
 --48)Rol
 
 insert into rol (nombre) values ('rol_admin');
@@ -3698,58 +3774,58 @@ insert into rol_permiso (fk_rol, fk_permiso) values (10, 3);
 
 --50)Usuario
 
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('bn7RTpadm', 1, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('aVazDXSNud', 2, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('mu2hhxXFrd21', 3, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('A8DthV', 4, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('AlBYRq7', 5, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('KRWGBoKUu', 6, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ZJPQ7oI', 7, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Mj8gZrZ', 8, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RvU1SN', 9, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IPySSE', 10, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dbtaTrP', 11, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('nDlqgE', 12, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('wfpyJXGNPI', 13, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iDVm0PtZE3a', 14, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('rqN1CD', 15, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('19uAQAHxQTsT', 16, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('fA50zVGFUWrM', 17, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('2D4H2T9XK76J', 18, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('yNgBFyqEX', 19, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('kPvJ8II', 20, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('XfCbHSH7', 21, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zAQthDvz', 22, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xt56GtyHPa', 23, 2);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('xUc7Zx', 24, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 1, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 2, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 3, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 4, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 5, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 6, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 7, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 8, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 9, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 10, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 11, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 12, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 13, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 14, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 15, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 16, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 17, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 18, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 19, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 20, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 21, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 22, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 23, 2);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 24, 2);
 
 
 --Para los clientes juridicos
 
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RKOPJW', 25, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('fMbFjm', 26, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('2rHwr715fk', 27, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ZHd6PSIzvQsj', 28, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('rWJK0G3oxL', 29, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('aicQwYW', 30, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('m4jkBYNYlLV', 31, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('0XW4EV', 32, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('5gFJG2Aex', 33, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('qoNH4v', 34, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('9onaBSW', 35, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('23O04C9M', 36, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('JdYfgigJ3', 37, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('RtgurbJgjVE', 38, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ayaAH5YzNTN', 39, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('i5MTjJBus', 40, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Cow40hf', 41, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('r3GdEPBoM', 42, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zgubMp4T', 43, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('qq3GSj', 44, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('zsGj9Hng', 45, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('r3pEqlSAIS', 46, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('3jfKDiawT3', 47, 3);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('K92rFiNZ', 48, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 25, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 26, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 27, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 28, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 29, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 30, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 31, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 32, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 33, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 34, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 35, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 36, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 37, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 38, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 39, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 40, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 41, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 42, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 43, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 44, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 45, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 46, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 47, 3);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 48, 3);
 
 
 --para los empleados
@@ -3757,46 +3833,46 @@ insert into usuario (contrasena, fk_correoE , fk_rol ) values ('K92rFiNZ', 48, 3
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 49, 1);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 50, 1);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 51, 1);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('6kySOgFjb', 52, 6);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('OrVltxSuo', 53, 7);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('b2QyPMVH', 54, 10);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('x1DCULY', 55, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ivYaolctr', 56, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xw9Klt4VT', 57, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('D8FRJSWGaY', 58, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('NCykWUnBci', 59, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('BGGPrbTiporj', 60, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iGrfCre7wqjk', 61, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('QJO1Pv', 62, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('7Y6pa60Y', 63, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ubsRLW', 64, 8);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dEQb0sOxvwGz', 65, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('O6aeDbH', 66, 9);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IW2ePkUc1', 67, 5);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 68, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 52, 6);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 53, 7);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 54, 10);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 55, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 56, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 57, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 58, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 59, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 60, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 61, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 62, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 63, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 64, 8);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 65, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 66, 9);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 67, 5);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 68, 8);
 
 --para los proveedores
 
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 69, 4);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 70, 4);
 insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 71, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('6kySOgFjb', 72, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('OrVltxSuo', 73, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('b2QyPMVH', 74, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('x1DCULY', 75, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ivYaolctr', 76, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('Xw9Klt4VT', 77, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('D8FRJSWGaY', 78, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('NCykWUnBci', 79, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('BGGPrbTiporj', 80, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('iGrfCre7wqjk', 81, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('QJO1Pv', 82, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('7Y6pa60Y', 83, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ubsRLW', 84, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('dEQb0sOxvwGz', 85, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('O6aeDbH', 86, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('IW2ePkUc1', 87, 4);
-insert into usuario (contrasena, fk_correoE , fk_rol ) values ('ztM6FoU', 88, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 72, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 73, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 74, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 75, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 76, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 77, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 78, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 79, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 80, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 81, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 82, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 83, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 84, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 85, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 86, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 87, 4);
+insert into usuario (contrasena, fk_correoE , fk_rol ) values ('12345678', 88, 4);
 
 --51)Cerveza(84 en total, 2 por cada tipo)
 
@@ -4046,7 +4122,6 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_un
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (10, 99, 2, 2500);
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (4, 100, 2, 2500);
 
-
 --Detalle-Factura de las ventas en eventos
 
 insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_unitario) values (5, 101, 2, 5986);
@@ -4102,11 +4177,17 @@ insert into detalle_factura (fk_cerveza , fk_venta, cantidad_cervezas, precio_un
 
 --54)Compra
 
-insert into compra (fk_proveedor, fecha_compra, fk_efectivo) values (16, '2019-11-19', 1);
-insert into compra (fk_proveedor, fecha_compra, fk_efectivo) values (17, '2019-08-24', 2);
-insert into compra (fk_proveedor, fecha_compra, fk_efectivo) values (11, '2019-11-03', 3);
-insert into compra (fk_proveedor, fecha_compra, fk_efectivo) values (7, '2019-09-17', 4);
-insert into compra (fk_proveedor, fecha_compra, fk_efectivo) values (4, '2019-08-23', 5);
+insert into compra (fk_proveedor, fecha_compra) values (16, '2019-12-20');
+insert into compra (fk_proveedor, fecha_compra) values (17, '2019-12-21');
+insert into compra (fk_proveedor, fecha_compra) values (11, '2019-12-22');
+insert into compra (fk_proveedor, fecha_compra) values (7, '2019-12-23');
+insert into compra (fk_proveedor, fecha_compra) values (4, '2019-12-24');
+insert into compra (fk_proveedor, fecha_compra) values (6, '2019-12-20');
+insert into compra (fk_proveedor, fecha_compra) values (8, '2019-12-07');
+insert into compra (fk_proveedor, fecha_compra) values (1, '2019-12-09');
+insert into compra (fk_proveedor, fecha_compra) values (19, '2019-12-10');
+insert into compra (fk_proveedor, fecha_compra) values (3, '2019-12-11');
+
 
 --55)Detalle Presupuesto
 
@@ -4150,11 +4231,16 @@ insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values 
 insert into detalle_diario (fk_cerveza, fk_diario, porcentaje_descuento) values (5, 4, 0.5);
 
 --59)detalle Compra
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (35, 1, 1, 2000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (4, 2, 2, 6000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (28, 3, 3, 8000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (30, 4, 4, 10000);
-insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (44, 5, 5, 15000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 1, 1, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 2, 2, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 3, 3, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 4, 4, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 5, 5, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 6, 6, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 7, 7, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 8, 8, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 9, 9, 250000);
+insert into detalle_compra (cantidad_cervezas, fk_cerveza, fk_compra, precio_unitario) values (10000, 10, 10,250000);
 
 --60)Inventario
 insert into inventario (cantidad_inicial, cantidad_actual, fk_tiendaO, fk_tiendaF, fk_cerveza) values (300, 112, 1, null, 1);
@@ -4624,53 +4710,67 @@ insert into pago_cuota (fk_cuota_afiliacion, fecha, monto_total, fk_tarjetaD, fk
 
 
 --64)Movimiento Inventario
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-02', 1, 80, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-13', 2, 50, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-23', 3, 9, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-11', 4, 7, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-17', 5, 57, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-01', 6, 78, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-29', 7, 30, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-06', 8, 7, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-22', 9, 51, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-21', 10, 37, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-30', 11, 52, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-03', 12, 82, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-02', 13, 75, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-27', 14, 2, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-23', 15, 32, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-02', 16, 32, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-22', 17, 61, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-12', 18, 54, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-15', 19, 15, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-08', 20, 47, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-24', 21, 52, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-08', 22, 56, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-27', 23, 84, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-05', 24, 76, null, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-09', null, 65, null, 00000002);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-14', null, 24, 4, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-06', null, 17, null, 00000009);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-03', null, 76, 3, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-14', null, 55, 2, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-12', null, 51, null, 00000005);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-29', null, 57, null, 00000008);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-19', null, 70, null, 00000008);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-23', null, 24, null, 00000001);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-01', null, 3, null, 00000003);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-28', null, 82, null, 00000001);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-10', null, 79, 3, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-29', null, 66, 1, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-07', null, 11, 1, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-14', null, 41, 1, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-18', null, 30, null, 00000007);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-11', null, 51, 2, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-21', null, 76, null, 00000004);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-22', null, 63, 1, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-18', null, 17, 3, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-20', null, 49, null, 00000007);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-01', null, 78, null, 00000001);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-03-10', null, 59, 1, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-08', null, 24, null, 00000004);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-01-15', null, 13, 3, null);
-insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2020-02-07', null, 67, null, 00000007);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-02', 1, 80, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-13', 2, 50, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-23', 3, 9, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-11', 4, 7, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-17', 5, 57, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-01', 6, 78, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-04-29', 7, 30, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-06', 8, 7, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-22', 9, 51, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-21', 10, 37, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-30', 11, 52, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-03', 12, 82, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-02', 13, 75, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-27', 14, 2, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-23', 15, 32, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-02', 16, 32, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-22', 17, 61, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-12', 18, 54, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-15', 19, 15, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-08', 20, 47, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-24', 21, 52, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-08', 22, 56, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-27', 23, 84, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-05', 24, 76, null, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-09', null, 65, null, 00000002);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-14', null, 24, 4, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-06', null, 17, null, 00000009);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-03', null, 76, 3, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-14', null, 55, 2, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-12', null, 51, null, 00000005);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-28', null, 57, null, 00000008);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-19', null, 70, null, 00000008);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-23', null, 24, null, 00000001);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-01', null, 3, null, 00000003);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-28', null, 82, null, 00000001);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-10', null, 79, 3, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-29', null, 66, 1, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-07', null, 11, 1, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-14', null, 41, 1, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-18', null, 30, null, 00000007);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-11', null, 51, 2, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-21', null, 76, null, 00000004);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-22', null, 63, 1, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-18', null, 17, 3, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-20', null, 49, null, 00000007);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-01', null, 78, null, 00000001);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-03-10', null, 59, 1, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-08', null, 24, null, 00000004);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-01-15', null, 13, 3, null);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-07', null, 67, null, 00000007);
+insert into movimiento_inventario (fecha, fk_cerveza_en_evento, fk_inventario, fk_compra, fk_venta) values ('2019-02-07', null, 67, null, 00000007);
+
+--65)Compra-status
+
+insert into compra_status (fk_compra, fk_status, fecha_status) values (1,1, '2019-12-20');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (2,6, '2019-12-21');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (3,1, '2019-12-22');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (4,3, '2019-12-23');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (5,3, '2019-12-24');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (6,1, '2019-12-20');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (7,6, '2019-12-07');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (8,1, '2019-12-09');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (9,3, '2019-12-10');
+insert into compra_status (fk_compra, fk_status, fecha_status) values (10,6, '2019-12-11');
